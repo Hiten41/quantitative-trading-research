@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ETH funding carry research</title><style>
+:root{color-scheme:dark;font-family:Inter,"Segoe UI",sans-serif;color:#e0e8f3;background:#0c1320}body{max-width:1500px;margin:auto;padding:32px clamp(14px,4vw,62px)}h1{font-size:clamp(32px,5vw,58px);letter-spacing:-.04em;font-weight:600;margin:0}p{line-height:1.55;color:#b2c0d2;max-width:86ch}a{color:#71ded0}header{border-bottom:1px solid #314057;padding-bottom:18px}.controls{display:flex;gap:12px;align-items:center;margin:20px 0;flex-wrap:wrap}select{background:#1a293c;color:#e8eef6;border:1px solid #455970;border-radius:5px;padding:8px;font:inherit}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}section{background:#131f30;border:1px solid #26384c;border-radius:8px;padding:12px;min-width:0}h2{font-size:17px;margin:6px 10px 0}.plot{height:310px}section:nth-child(10){grid-column:1/-1}section:nth-child(10) .plot{height:480px}footer{margin:22px 0;color:#adbdce}@media(max-width:850px){main{grid-template-columns:minmax(0,1fr)}body{padding:16px}}
+</style><script><!--library--></script></head><body><header><h1>ETH funding carry</h1><p>Historical ETHUSDT spot and perpetual hedges. Explore a fixed position (A), a lagged-funding rule (B) and its risk-controlled variant (C). PnL and costs are in USDT.</p><a href="research.md">Research paper</a> · <a href="../audit.md">Benchmark audit</a> · <a href="metrics.csv">Download metrics</a></header>
+<div class="controls"><label for="win">Historical window</label><select id="win"></select><span id="dates"></span></div><main><!--charts--></main>
+<footer>Expanded PnL uses simulated fills from one-minute spot and futures trades. Executable quotes and depth at order arrival are unknown. Liquidation markers show stress outcomes under assumed margin rules and minute-high prices. Historical liquidation fills and intraminute ordering are unknown. Equity curves sample hourly. All times UTC. <a href="sources.json">Source manifest</a></footer><script id="study" type="application/json"><!--data--></script><script>
+const data=JSON.parse(document.getElementById('study').textContent),windows=Object.keys(data.windows),policy=['A','B','C'],colors=['#63d3bf','#f4ba72','#9eb8ff'],sel=document.getElementById('win');
+for(const w of windows){sel.add(new Option(w,w));}sel.value='holdout_1';
+const layout={paper_bgcolor:'#131f30',plot_bgcolor:'#131f30',font:{color:'#d8e3ef',family:'Segoe UI, sans-serif'},margin:{l:63,r:19,t:12,b:55},colorway:colors,legend:{orientation:'h',y:1.14},hovermode:'closest',xaxis:{gridcolor:'#26384c'},yaxis:{gridcolor:'#26384c',zerolinecolor:'#435469'},autosize:true};
+const opts={responsive:true,displaylogo:false,modeBarButtonsToRemove:['lasso2d','select2d']};
+function line(x,y,name){return {x,y,name,mode:'lines',type:'scatter'};}
+function bar(x,y,name){return {x,y,name,type:'bar'};}
+function date(t){return new Date(t).toISOString();}
+async function render(){
+const w=sel.value,ser=data.series[w],all=data.metrics.filter(r=>r.scenario==='base'),base=policy.map(p=>all.find(r=>r.window===w&&r.policy===p)),local=data.metrics.filter(r=>r.window===w),range=data.windows[w];
+document.getElementById('dates').textContent=range.start.slice(0,16).replace('T',' ')+' to '+range.end.slice(0,16).replace('T',' ')+' UTC';
+let jobs=[];function draw(i,traces,unit,extra={}){jobs.push(Plotly.react('plot'+i,traces,{...layout,yaxis:{...layout.yaxis,title:{text:unit}},...extra},opts));}
+function curves(key,transform=v=>v){return policy.map(p=>{const s=ser[p].curves;return line(s.time.map(date),s[key].map(transform),p);});}
+draw(0,curves('equity'),'Equity · USDT');
+draw(1,policy.map(p=>{const f=ser[p].settlements;return {...bar(f.time.map(date),f.cashflow,p),text:f.source.map((v,i)=>v+" · mark "+f.mark[i]+" · gap "+f.gap_ms[i]+" ms · short "+f.short[i]+" ETH"),hovertemplate:"%{x}<br>%{y:.5f} USDT<br>%{text}<extra>%{fullData.name}</extra>"};} ),'Payment · USDT',{barmode:'group'});
+draw(2,[curves('basis_bps')[0]].map(t=>({...t,name:'Perp premium'})),'Basis points');
+draw(3,curves('funding'),'Funding · USDT');
+draw(4,policy.map(p=>bar(windows,windows.map(w=>all.find(r=>r.policy===p&&r.window===w).net),p)),'Net PnL · USDT',{barmode:'group'});
+draw(5,['funding_received','funding_paid','total_cost'].map((key,i)=>bar(policy,base.map(r=>r[key]),['Received','Paid','Costs'][i])),'USDT',{barmode:'group'});
+draw(6,curves('drawdown'),'Peak to close · USDT');
+draw(7,curves('margin',v=>100*v),'Maintenance / equity · %');
+let run=0;const fund=ser.A.settlements;draw(8,[bar(fund.time.map(date),fund.rate.map(v=>run=v<0?run+1:0),'Negative run')],'Consecutive events');
+const scenarios=[...new Set(local.map(r=>r.scenario))];draw(9,[{type:'heatmap',x:policy,y:scenarios,z:scenarios.map(s=>policy.map(p=>local.find(r=>r.scenario===s&&r.policy===p).net)),zmid:0,colorscale:[[0,'#ae5559'],[0.5,'#263448'],[1,'#5cc5ab']],colorbar:{title:{text:'USDT'}}}],'',{margin:{l:155,r:30,t:15,b:35}});
+draw(10,[bar(policy,base.map(r=>r.funding_received),'Actual receipts'),bar(policy,base.map(r=>r.breakeven_gross_receipts),'Break-even receipts')],'USDT',{barmode:'group'});
+const risk=data.risks.filter(r=>r.window===w),marks=policy.map(p=>({type:'scatter',mode:'markers',x:ser[p].fills.time.map(date),y:ser[p].fills.time.map(()=>p),text:ser[p].fills.venue.map((v,i)=>v+' '+ser[p].fills.side[i]),name:p+' fills'}));
+if(risk.length){marks.push({type:'scatter',mode:'markers',x:risk.map(r=>date(r.time)),y:risk.map(r=>r.policy),text:risk.map(r=>r.scenario+' · '+r.event),marker:{symbol:'x',size:10,color:'#ed9797'},name:'Stress events'});}
+draw(11,marks,'Policy');await Promise.all(jobs);document.body.dataset.loaded=w;}
+sel.addEventListener('change',render);render();
+</script></body></html>

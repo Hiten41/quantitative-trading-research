@@ -1,0 +1,6 @@
+{
+  "description": "Synthetic test only. The buy activates at 50 ms. Tied activation, wrong direction, an exact touch and zero volume precede two eligible prints. The mid changes on the first fill timestamp.",
+  "book_ms": [[0,99,101],[54,89,91],[1053,101,103],[5054,88,90]],
+  "trades_ms": [[0,98,5,true],[49,98,5,true],[50,98,5,true],[51,98,5,false],[52,99,5,true],[53,98,0,true],[54,98,0.4,true],[55,98,2,true]],
+  "stop_ms": 7000
+}

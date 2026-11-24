@@ -1,0 +1,20 @@
+{
+  "symbol": "ETHUSDT",
+  "capital_usdt": 10000,
+  "futures_collateral_usdt": 5000,
+  "hedge_eth": 0.5,
+  "spot_lot_eth": 0.0001,
+  "futures_lot_eth": 0.001,
+  "spot_taker_bps": 10,
+  "futures_taker_bps": 5,
+  "slippage_bps_per_leg": 2,
+  "depth_participation": 0.1,
+  "spot_latency_ms": 250,
+  "futures_latency_ms": 1250,
+  "max_book_age_ms": 5000,
+  "windows": [
+    {"name": "Primary", "enter_utc": "2023-10-01T12:00:00Z", "exit_utc": "2024-01-01T11:55:00Z"},
+    {"name": "Confirmation", "enter_utc": "2024-01-01T12:00:00Z", "exit_utc": "2024-04-01T11:55:00Z"}
+  ],
+  "stress": {"fee_multiplier": 2, "slippage_bps_per_leg": 10, "positive_funding_multiplier": 0.5}
+}

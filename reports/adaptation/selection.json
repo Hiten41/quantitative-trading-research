@@ -1,0 +1,301 @@
+{
+  "development": [
+    "2023-09-02",
+    "2023-09-06"
+  ],
+  "holdout": [
+    "2023-09-07",
+    "2023-09-11"
+  ],
+  "rule": "highest development net PnL minus terminal spread/5 bp exit cost minus half maximum drawdown; at least 20 touched orders and both sides",
+  "training_id": "ethusdt-925e8786a10f",
+  "trials": [
+    {
+      "strategy": "selective_maker",
+      "signal_half_life_s": 1800,
+      "entry_width_bps": 4.0,
+      "net_pnl": -32.80331934800233,
+      "drawdown": 37.14260331600053,
+      "fees": 10.307994348000028,
+      "fills": 3138,
+      "orders_with_fill": 649,
+      "both_sides": true,
+      "closing_cost": 0.08457947999998783,
+      "eligible": true,
+      "score": -51.45920048600259,
+      "daily_pnl": [
+        0.13236405299903709,
+        -5.916487194999718,
+        -2.244673954999598,
+        -6.549468453000372,
+        -18.22505379800168
+      ]
+    },
+    {
+      "strategy": "selective_maker",
+      "signal_half_life_s": 1800,
+      "entry_width_bps": 10.0,
+      "net_pnl": -10.923947666999084,
+      "drawdown": 11.613774216997626,
+      "fees": 1.0218376669999987,
+      "fills": 331,
+      "orders_with_fill": 67,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": -16.730834775497897,
+      "daily_pnl": [
+        -0.10302475000025879,
+        -0.9178171169987763,
+        -1.1835416000012629,
+        -0.6260328000007576,
+        -8.093531399998028
+      ]
+    },
+    {
+      "strategy": "selective_maker",
+      "signal_half_life_s": 7200,
+      "entry_width_bps": 4.0,
+      "net_pnl": -37.84408678900036,
+      "drawdown": 41.30534155699934,
+      "fees": 9.584031789,
+      "fills": 2797,
+      "orders_with_fill": 599,
+      "both_sides": true,
+      "closing_cost": 0.08457947999998783,
+      "eligible": true,
+      "score": -58.581337047500014,
+      "daily_pnl": [
+        -1.78102194100029,
+        -4.572549978000097,
+        -2.8543864689982,
+        -9.518052819001241,
+        -19.11807558200053
+      ]
+    },
+    {
+      "strategy": "selective_maker",
+      "signal_half_life_s": 7200,
+      "entry_width_bps": 10.0,
+      "net_pnl": -14.86555423199934,
+      "drawdown": 19.336359888000516,
+      "fees": 1.1132342320000004,
+      "fills": 268,
+      "orders_with_fill": 69,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": -24.533734175999598,
+      "daily_pnl": [
+        -0.050858999999036314,
+        0.035476467997796135,
+        0.4017394000020431,
+        -1.4110873000008723,
+        -13.84082379999927
+      ]
+    },
+    {
+      "strategy": "pullback_maker",
+      "signal_half_life_s": 1800,
+      "entry_width_bps": 4.0,
+      "net_pnl": -34.756363938000504,
+      "drawdown": 37.445960807999654,
+      "fees": 3.0287839380000015,
+      "fills": 834,
+      "orders_with_fill": 188,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": -53.47934434200033,
+      "daily_pnl": [
+        0.17866140000114683,
+        -6.480724408002061,
+        -6.499868199998673,
+        -11.224233100001584,
+        -10.730199629999333
+      ]
+    },
+    {
+      "strategy": "pullback_maker",
+      "signal_half_life_s": 1800,
+      "entry_width_bps": 10.0,
+      "net_pnl": -13.41005830999893,
+      "drawdown": 22.336358600003223,
+      "fees": 0.3271583100000002,
+      "fills": 99,
+      "orders_with_fill": 21,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": -24.578237610000542,
+      "daily_pnl": [
+        0.0,
+        -0.4156600999995135,
+        -0.3740201000000525,
+        0.32367469999917375,
+        -12.944052809998539
+      ]
+    },
+    {
+      "strategy": "pullback_maker",
+      "signal_half_life_s": 7200,
+      "entry_width_bps": 4.0,
+      "net_pnl": -54.633719330999156,
+      "drawdown": 60.53335133099972,
+      "fees": 1.9090293310000013,
+      "fills": 697,
+      "orders_with_fill": 124,
+      "both_sides": true,
+      "closing_cost": 0.4105799999999409,
+      "eligible": true,
+      "score": -85.31097499649896,
+      "daily_pnl": [
+        -3.1523546799999167,
+        -7.694163624999419,
+        -4.847920500002147,
+        -15.313498525998511,
+        -23.625781999999163
+      ]
+    },
+    {
+      "strategy": "pullback_maker",
+      "signal_half_life_s": 7200,
+      "entry_width_bps": 10.0,
+      "net_pnl": -21.41606535199935,
+      "drawdown": 29.567985800000315,
+      "fees": 0.40904535200000003,
+      "fills": 112,
+      "orders_with_fill": 26,
+      "both_sides": true,
+      "closing_cost": 0.4105799999999409,
+      "eligible": true,
+      "score": -36.61063825199945,
+      "daily_pnl": [
+        -0.01923665200047253,
+        0.4962059000008594,
+        -1.201303600000756,
+        -0.05742449999888777,
+        -20.634306500000093
+      ]
+    },
+    {
+      "strategy": "anchored_maker",
+      "signal_half_life_s": 900,
+      "entry_width_bps": 15.0,
+      "net_pnl": -28.19546096400154,
+      "drawdown": 35.18945544200142,
+      "fees": 10.798540963999992,
+      "fills": 3465,
+      "orders_with_fill": 684,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": -45.79018868500225,
+      "daily_pnl": [
+        1.6259250820003217,
+        -2.6761339719996613,
+        -9.300833571000112,
+        -5.247051535001447,
+        -12.597366968000642
+      ]
+    },
+    {
+      "strategy": "anchored_maker",
+      "signal_half_life_s": 900,
+      "entry_width_bps": 30.0,
+      "net_pnl": 10.1236818999987,
+      "drawdown": 14.6352052000002,
+      "fees": 3.6173180999999945,
+      "fills": 1171,
+      "orders_with_fill": 222,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": 2.8060792999986006,
+      "daily_pnl": [
+        0.6325636000001396,
+        3.757799899998645,
+        9.14600690000043,
+        3.623291200001404,
+        -7.035979700001917
+      ]
+    },
+    {
+      "strategy": "anchored_maker",
+      "signal_half_life_s": 3600,
+      "entry_width_bps": 15.0,
+      "net_pnl": -12.547358961995997,
+      "drawdown": 29.34003757699611,
+      "fees": 9.855038962000059,
+      "fills": 3342,
+      "orders_with_fill": 640,
+      "both_sides": true,
+      "closing_cost": 0.08211650000001092,
+      "eligible": true,
+      "score": -27.299494250494064,
+      "daily_pnl": [
+        0.014381603999936488,
+        1.0878312010008813,
+        -9.145687455997177,
+        -6.164760836998539,
+        1.6608765259989013
+      ]
+    },
+    {
+      "strategy": "anchored_maker",
+      "signal_half_life_s": 3600,
+      "entry_width_bps": 30.0,
+      "net_pnl": 21.208206194000013,
+      "drawdown": 11.019370736999917,
+      "fees": 4.56119380600001,
+      "fills": 1552,
+      "orders_with_fill": 286,
+      "both_sides": true,
+      "closing_cost": 0.0,
+      "eligible": true,
+      "score": 15.698520825500054,
+      "daily_pnl": [
+        5.1588645720003115,
+        4.8309430930003145,
+        10.918113747999087,
+        5.8007976449989656,
+        -5.500512863998665
+      ]
+    }
+  ],
+  "strategy": "anchored_maker",
+  "config": {
+    "symbol": "ETHUSDT",
+    "start": "2023-09-02",
+    "evaluation_start": "2023-09-07",
+    "end": "2023-09-11",
+    "capital": 10000.0,
+    "quantity": 0.1,
+    "inventory_limit": 0.5,
+    "spread_bps": 3.0,
+    "maker_fee_bps": 1.0,
+    "rebate_assumption": "",
+    "gamma": 0.8,
+    "horizon_s": 60,
+    "vol_window_s": 180,
+    "vol_width": 0.35,
+    "refresh_ms": 5000,
+    "new_latency_ms": 50,
+    "cancel_latency_ms": 80,
+    "lifetime_ms": 15000,
+    "stale_ms": 2000,
+    "replace_ticks": 2,
+    "participation": 0.1,
+    "fill_model": "through",
+    "tick": 0.01,
+    "step": 0.001,
+    "min_qty": 0.001,
+    "max_qty": 10000,
+    "min_price": 39.86,
+    "signal_half_life_s": 3600,
+    "entry_width_bps": 30.0,
+    "trend_band_bps": 10.0,
+    "max_price": 306177,
+    "min_notional": 20
+  }
+}

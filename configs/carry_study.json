@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "scan_end": "2025-12",
+  "selection": "Scan every available monthly funding archive through 2025-12. Among complete months ending before 2023-10 choose one negative-sum month with >=3 consecutive negative events, ranked by longest run, lowest sum, then date. Also choose one distinct mixed-sign month closest to 50% negative, then earliest. Limit each diagnostic class to one month, to avoid multiple counting and retrospective portfolio selection. Diagnostics are not holdouts.",
+  "periods": {
+    "development": "2023-06",
+    "validation": "2024-07",
+    "holdout_1": "2025-03",
+    "holdout_2": "2025-10"
+  },
+  "monthly_clock": "first day 01:00 UTC through last day 23:59 UTC; scheduled exit 15 minutes before end",
+  "capital": 10000,
+  "qty": 0.5,
+  "leverage": 1,
+  "collateral_reserve": 0.06,
+  "mmr": 0.01,
+  "liquidation_penalty": 0.005,
+  "margin_warning": 0.5,
+  "transfer_trigger": 0.25,
+  "transfer_amount": 100,
+  "transfer_delay": 60,
+  "transfer_limit": 1,
+  "fees_bps": [
+    10,
+    5
+  ],
+  "halfspread_bps": 0.5,
+  "slippage_bps": 2,
+  "tick": 0.01,
+  "lot": 0.001,
+  "min_notional": 5,
+  "participation": 0.02,
+  "hedge_delay": 1,
+  "exit_lead": 15,
+  "signals": {
+    "lookback": 9,
+    "publication_delay_minutes": 1,
+    "entry_bps": 0.5,
+    "exit_bps": 0,
+    "min_hold_hours": 24,
+    "max_hold_hours": 720,
+    "max_expense": 4,
+    "cooldown_hours": 48,
+    "forecast_events": 42,
+    "cost_buffer": 1.15
+  },
+  "risk": {
+    "max_abs_basis_bps": 30,
+    "allocation_fraction": 0.5,
+    "max_loss": 15,
+    "margin_ratio": 0.22,
+    "deterioration_negative_count": 3
+  },
+  "scenarios": {
+    "base": {},
+    "double_fees": {
+      "fee_factor": 2
+    },
+    "triple_fees": {
+      "fee_factor": 3
+    },
+    "double_slip": {
+      "slip_factor": 2
+    },
+    "triple_slip": {
+      "slip_factor": 3
+    },
+    "half_receipts": {
+      "credit": 0.5
+    },
+    "quarter_receipts": {
+      "credit": 0.25
+    },
+    "higher_margin": {
+      "mmr": 0.05
+    },
+    "reduced_capital": {
+      "capital": 3000
+    },
+    "delayed_hedge": {
+      "hedge_delay": 5
+    },
+    "expensive_exit": {
+      "exit_factor": 4
+    },
+    "lower_mark": {
+      "mark_choice": "lower"
+    },
+    "upper_mark": {
+      "mark_choice": "upper"
+    },
+    "leverage_2": {
+      "leverage": 2
+    },
+    "leverage_3": {
+      "leverage": 3
+    },
+    "leverage_5": {
+      "leverage": 5
+    },
+    "reduced_collateral": {
+      "collateral_factor": 0.55
+    },
+    "delayed_transfer": {
+      "transfer_delay": 1440
+    },
+    "delayed_transfer_5x": {
+      "leverage": 5,
+      "transfer_delay": 1440
+    }
+  }
+}

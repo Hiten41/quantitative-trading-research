@@ -1,0 +1,5568 @@
+{
+  "protocol_sha256": "e3ecacbfbb64e005484c6188fdb2c662596eec5fd653443364f812cd80ee15b4",
+  "config": {
+    "symbol": "ETHUSDT",
+    "capital_usdt": 10000,
+    "futures_collateral_usdt": 5000,
+    "hedge_eth": 0.5,
+    "spot_lot_eth": 0.0001,
+    "futures_lot_eth": 0.001,
+    "spot_taker_bps": 10,
+    "futures_taker_bps": 5,
+    "slippage_bps_per_leg": 2,
+    "depth_participation": 0.1,
+    "spot_latency_ms": 250,
+    "futures_latency_ms": 1250,
+    "max_book_age_ms": 5000,
+    "windows": [
+      {
+        "name": "Primary",
+        "enter_utc": "2023-10-01T12:00:00Z",
+        "exit_utc": "2024-01-01T11:55:00Z"
+      },
+      {
+        "name": "Confirmation",
+        "enter_utc": "2024-01-01T12:00:00Z",
+        "exit_utc": "2024-04-01T11:55:00Z"
+      }
+    ],
+    "stress": {
+      "fee_multiplier": 2,
+      "slippage_bps_per_leg": 10,
+      "positive_funding_multiplier": 0.5
+    }
+  },
+  "windows": {
+    "Primary": {
+      "window": {
+        "name": "Primary",
+        "enter_utc": "2023-10-01T12:00:00Z",
+        "exit_utc": "2024-01-01T11:55:00Z"
+      },
+      "cases": {
+        "base": {
+          "net_pnl": 32.15798680963417,
+          "return_pct": 0.32157986809634165,
+          "ending_cash": 10032.157986809634,
+          "ending_spot_cash": 5304.2463635852,
+          "ending_futures_cash": 4727.911623224435,
+          "basis_pnl_before_slippage": -1.7047239999997146,
+          "funding": 37.82388938270709,
+          "funding_receipts": 37.823889382707094,
+          "funding_debits": 0.0,
+          "funding_settlements": 276,
+          "funding_exact_marks": 187,
+          "spot_and_futures_fees": 2.9948553581332,
+          "extra_slippage": 0.7984189447998915,
+          "dust_eth_written_off": 9.94e-05,
+          "dust_cost": 0.16790427013919998,
+          "reconciliation_error": -9.094947017729282e-13,
+          "sampled_max_drawdown": 4.385114157576027,
+          "min_futures_equity_usdt": 4651.662986730281,
+          "min_futures_equity_over_notional": 3.800285706793897,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5006,
+              "arrival_ms": 1696161600250,
+              "book_local_us": 1696161600173927,
+              "book_exchange_us": 1696161600169000,
+              "raw_vwap": 1688.84,
+              "price": 1689.1777679999998,
+              "levels_used": 1,
+              "available_eth": 14.702440000000003
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1696161601250,
+              "book_local_us": 1696161601234702,
+              "book_exchange_us": 1696161601231000,
+              "raw_vwap": 1687.93,
+              "price": 1687.5924140000002,
+              "levels_used": 1,
+              "available_eth": 20.973
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110100250,
+              "book_local_us": 1704110100227789,
+              "book_exchange_us": 1704110100225000,
+              "raw_vwap": 2302.46,
+              "price": 2301.999508,
+              "levels_used": 1,
+              "available_eth": 17.97331
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1704110101250,
+              "book_local_us": 1704110101231169,
+              "book_exchange_us": 1704110101228000,
+              "raw_vwap": 2304.9594479999996,
+              "price": 2305.4204398895995,
+              "levels_used": 5,
+              "available_eth": 2.3634
+            }
+          ]
+        },
+        "higher_costs": {
+          "net_pnl": 25.970578155984185,
+          "return_pct": 0.25970578155984186,
+          "ending_cash": 10025.970578155984,
+          "ending_spot_cash": 5300.654610736,
+          "ending_futures_cash": 4725.315967419984,
+          "basis_pnl_before_slippage": -1.7047239999997146,
+          "funding": 37.82388938270709,
+          "funding_receipts": 37.823889382707094,
+          "funding_debits": 0.0,
+          "funding_settlements": 276,
+          "funding_exact_marks": 187,
+          "spot_and_futures_fees": 5.9911587821720005,
+          "extra_slippage": 3.9920947239997986,
+          "dust_eth_written_off": 9.78e-05,
+          "dust_cost": 0.165333720552,
+          "reconciliation_error": 6.110667527536862e-13,
+          "sampled_max_drawdown": 6.173808992723934,
+          "min_futures_equity_usdt": 4650.566591798781,
+          "min_futures_equity_over_notional": 3.7993899811149157,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5011,
+              "arrival_ms": 1696161600250,
+              "book_local_us": 1696161600173927,
+              "book_exchange_us": 1696161600169000,
+              "raw_vwap": 1688.84,
+              "price": 1690.5288399999997,
+              "levels_used": 1,
+              "available_eth": 14.702440000000003
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1696161601250,
+              "book_local_us": 1696161601234702,
+              "book_exchange_us": 1696161601231000,
+              "raw_vwap": 1687.93,
+              "price": 1686.24207,
+              "levels_used": 1,
+              "available_eth": 20.973
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110100250,
+              "book_local_us": 1704110100227789,
+              "book_exchange_us": 1704110100225000,
+              "raw_vwap": 2302.46,
+              "price": 2300.15754,
+              "levels_used": 1,
+              "available_eth": 17.97331
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1704110101250,
+              "book_local_us": 1704110101231169,
+              "book_exchange_us": 1704110101228000,
+              "raw_vwap": 2304.9594479999996,
+              "price": 2307.2644074479995,
+              "levels_used": 5,
+              "available_eth": 2.3634
+            }
+          ]
+        },
+        "combined_stress": {
+          "net_pnl": 7.058633464630475,
+          "return_pct": 0.07058633464630475,
+          "ending_cash": 10007.05863346463,
+          "ending_spot_cash": 5300.654610736,
+          "ending_futures_cash": 4706.4040227286305,
+          "basis_pnl_before_slippage": -1.7047239999997146,
+          "funding": 18.911944691353543,
+          "funding_receipts": 18.911944691353547,
+          "funding_debits": 0.0,
+          "funding_settlements": 276,
+          "funding_exact_marks": 187,
+          "spot_and_futures_fees": 5.9911587821720005,
+          "extra_slippage": 3.9920947239997986,
+          "dust_eth_written_off": 9.78e-05,
+          "dust_cost": 0.165333720552,
+          "reconciliation_error": 4.4497738826976274e-13,
+          "sampled_max_drawdown": 6.173808992723934,
+          "min_futures_equity_usdt": 4634.407348526891,
+          "min_futures_equity_over_notional": 3.7861883064850144,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5011,
+              "arrival_ms": 1696161600250,
+              "book_local_us": 1696161600173927,
+              "book_exchange_us": 1696161600169000,
+              "raw_vwap": 1688.84,
+              "price": 1690.5288399999997,
+              "levels_used": 1,
+              "available_eth": 14.702440000000003
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1696161601250,
+              "book_local_us": 1696161601234702,
+              "book_exchange_us": 1696161601231000,
+              "raw_vwap": 1687.93,
+              "price": 1686.24207,
+              "levels_used": 1,
+              "available_eth": 20.973
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110100250,
+              "book_local_us": 1704110100227789,
+              "book_exchange_us": 1704110100225000,
+              "raw_vwap": 2302.46,
+              "price": 2300.15754,
+              "levels_used": 1,
+              "available_eth": 17.97331
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1704110101250,
+              "book_local_us": 1704110101231169,
+              "book_exchange_us": 1704110101228000,
+              "raw_vwap": 2304.9594479999996,
+              "price": 2307.2644074479995,
+              "levels_used": 5,
+              "available_eth": 2.3634
+            }
+          ]
+        },
+        "no_positive_funding": {
+          "net_pnl": -5.665902573073254,
+          "return_pct": -0.05665902573073254,
+          "ending_cash": 9994.334097426927,
+          "ending_spot_cash": 5304.2463635852,
+          "ending_futures_cash": 4690.087733841728,
+          "basis_pnl_before_slippage": -1.7047239999997146,
+          "funding": 0.0,
+          "funding_receipts": 0.0,
+          "funding_debits": 0.0,
+          "funding_settlements": 276,
+          "funding_exact_marks": 187,
+          "spot_and_futures_fees": 2.9948553581332,
+          "extra_slippage": 0.7984189447998915,
+          "dust_eth_written_off": 9.94e-05,
+          "dust_cost": 0.16790427013919998,
+          "reconciliation_error": -1.247890679678676e-12,
+          "sampled_max_drawdown": 6.79808176430015,
+          "min_futures_equity_usdt": 4619.3445001865,
+          "min_futures_equity_over_notional": 3.7738823575340934,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5006,
+              "arrival_ms": 1696161600250,
+              "book_local_us": 1696161600173927,
+              "book_exchange_us": 1696161600169000,
+              "raw_vwap": 1688.84,
+              "price": 1689.1777679999998,
+              "levels_used": 1,
+              "available_eth": 14.702440000000003
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1696161601250,
+              "book_local_us": 1696161601234702,
+              "book_exchange_us": 1696161601231000,
+              "raw_vwap": 1687.93,
+              "price": 1687.5924140000002,
+              "levels_used": 1,
+              "available_eth": 20.973
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110100250,
+              "book_local_us": 1704110100227789,
+              "book_exchange_us": 1704110100225000,
+              "raw_vwap": 2302.46,
+              "price": 2301.999508,
+              "levels_used": 1,
+              "available_eth": 17.97331
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1704110101250,
+              "book_local_us": 1704110101231169,
+              "book_exchange_us": 1704110101228000,
+              "raw_vwap": 2304.9594479999996,
+              "price": 2305.4204398895995,
+              "levels_used": 5,
+              "available_eth": 2.3634
+            }
+          ]
+        }
+      },
+      "funding_events": [
+        {
+          "time_ms": 1696176000000,
+          "utc": "2023-10-01T16:00:00.000+00:00",
+          "rate": 3.599e-05,
+          "mark": 1683.09708922,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0302873321205139,
+          "opposite_extreme_cashflow": 0.03029476245
+        },
+        {
+          "time_ms": 1696204800000,
+          "utc": "2023-10-02T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1733.35646863,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08666782343150001,
+          "opposite_extreme_cashflow": 0.08672
+        },
+        {
+          "time_ms": 1696233600000,
+          "utc": "2023-10-02T08:00:00.000+00:00",
+          "rate": 6.308e-05,
+          "mark": 1728.79660127,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0545262448040558,
+          "opposite_extreme_cashflow": 0.0545872242
+        },
+        {
+          "time_ms": 1696262400000,
+          "utc": "2023-10-02T16:00:00.000+00:00",
+          "rate": 6.372e-05,
+          "mark": 1689.67335549,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.05383299310591141,
+          "opposite_extreme_cashflow": 0.053902341
+        },
+        {
+          "time_ms": 1696291200000,
+          "utc": "2023-10-03T00:00:00.000+00:00",
+          "rate": 3.9e-07,
+          "mark": 1661.48274367,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.00032398913501565003,
+          "opposite_extreme_cashflow": 0.00032413485000000003
+        },
+        {
+          "time_ms": 1696320000000,
+          "utc": "2023-10-03T08:00:00.000+00:00",
+          "rate": 1.728e-05,
+          "mark": 1661.64,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0143565696,
+          "opposite_extreme_cashflow": 0.014363049600000002
+        },
+        {
+          "time_ms": 1696348800000,
+          "utc": "2023-10-03T16:00:00.000+00:00",
+          "rate": 7.087e-05,
+          "mark": 1647.0921598,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.058364710682513005,
+          "opposite_extreme_cashflow": 0.05839156475
+        },
+        {
+          "time_ms": 1696377600000,
+          "utc": "2023-10-04T00:00:00.000+00:00",
+          "rate": 4.62e-05,
+          "mark": 1656.08249804,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.038255505704724,
+          "opposite_extreme_cashflow": 0.038271849
+        },
+        {
+          "time_ms": 1696406400000,
+          "utc": "2023-10-04T08:00:00.000+00:00",
+          "rate": 7.38e-06,
+          "mark": 1643.85658104,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0060658307840376,
+          "opposite_extreme_cashflow": 0.0060673194
+        },
+        {
+          "time_ms": 1696435200000,
+          "utc": "2023-10-04T16:00:00.000+00:00",
+          "rate": 2.618e-05,
+          "mark": 1631.26517059,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0213532610830231,
+          "opposite_extreme_cashflow": 0.021364712600000002
+        },
+        {
+          "time_ms": 1696464000000,
+          "utc": "2023-10-05T00:00:00.000+00:00",
+          "rate": 2.065e-05,
+          "mark": 1645.71,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.01699195575,
+          "opposite_extreme_cashflow": 0.01699908
+        },
+        {
+          "time_ms": 1696492800000,
+          "utc": "2023-10-05T08:00:00.000+00:00",
+          "rate": 2.685e-05,
+          "mark": 1634.66517041,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.021945379912754248,
+          "opposite_extreme_cashflow": 0.02195725875
+        },
+        {
+          "time_ms": 1696521600001,
+          "utc": "2023-10-05T16:00:00.001+00:00",
+          "rate": 2.072e-05,
+          "mark": 1616.09,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.016742692400000002,
+          "opposite_extreme_cashflow": 0.016761444000000004
+        },
+        {
+          "time_ms": 1696550400000,
+          "utc": "2023-10-06T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1611.13,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0805565,
+          "opposite_extreme_cashflow": 0.080592
+        },
+        {
+          "time_ms": 1696579200000,
+          "utc": "2023-10-06T08:00:00.000+00:00",
+          "rate": 8.473e-05,
+          "mark": 1630.09102353,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.06905880621184844,
+          "opposite_extreme_cashflow": 0.06910070419999999
+        },
+        {
+          "time_ms": 1696608000000,
+          "utc": "2023-10-06T16:00:00.000+00:00",
+          "rate": 5.905e-05,
+          "mark": 1641.90310294,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0484771891143035,
+          "opposite_extreme_cashflow": 0.04850278425
+        },
+        {
+          "time_ms": 1696636800000,
+          "utc": "2023-10-07T00:00:00.000+00:00",
+          "rate": 8.468e-05,
+          "mark": 1644.42176275,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.06962481743483499,
+          "opposite_extreme_cashflow": 0.06963871499999999
+        },
+        {
+          "time_ms": 1696665600000,
+          "utc": "2023-10-07T08:00:00.000+00:00",
+          "rate": 3.736e-05,
+          "mark": 1635.89412802,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0305585023114136,
+          "opposite_extreme_cashflow": 0.030561792141294803
+        },
+        {
+          "time_ms": 1696694400000,
+          "utc": "2023-10-07T16:00:00.000+00:00",
+          "rate": 3.615e-05,
+          "mark": 1637.70321961,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.029601485694450747,
+          "opposite_extreme_cashflow": 0.029607489039817497
+        },
+        {
+          "time_ms": 1696723200000,
+          "utc": "2023-10-08T00:00:00.000+00:00",
+          "rate": 9.048e-05,
+          "mark": 1632.95968195,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.073875096011418,
+          "opposite_extreme_cashflow": 0.0738850632
+        },
+        {
+          "time_ms": 1696752000001,
+          "utc": "2023-10-08T08:00:00.001+00:00",
+          "rate": 9.246e-05,
+          "mark": 1627.65800236,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0752466294491028,
+          "opposite_extreme_cashflow": 0.07526891220000001
+        },
+        {
+          "time_ms": 1696780800000,
+          "utc": "2023-10-08T16:00:00.000+00:00",
+          "rate": 9.791e-05,
+          "mark": 1630.46996078,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.07981965692998491,
+          "opposite_extreme_cashflow": 0.07984266770000001
+        },
+        {
+          "time_ms": 1696809600000,
+          "utc": "2023-10-09T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1632.04534599,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0816022672995,
+          "opposite_extreme_cashflow": 0.08162150000000001
+        },
+        {
+          "time_ms": 1696838400000,
+          "utc": "2023-10-09T08:00:00.000+00:00",
+          "rate": 6.572e-05,
+          "mark": 1619.35368692,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0532119621521912,
+          "opposite_extreme_cashflow": 0.0532516016
+        },
+        {
+          "time_ms": 1696867200000,
+          "utc": "2023-10-09T16:00:00.000+00:00",
+          "rate": 3.935e-05,
+          "mark": 1584.92956275,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.031183489147106253,
+          "opposite_extreme_cashflow": 0.031209272
+        },
+        {
+          "time_ms": 1696896000000,
+          "utc": "2023-10-10T00:00:00.000+00:00",
+          "rate": 6.268e-05,
+          "mark": 1578.85,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.049481159,
+          "opposite_extreme_cashflow": 0.04949839600000001
+        },
+        {
+          "time_ms": 1696924800000,
+          "utc": "2023-10-10T08:00:00.000+00:00",
+          "rate": 8.857e-05,
+          "mark": 1589.52070196,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0703919242862986,
+          "opposite_extreme_cashflow": 0.0704228927
+        },
+        {
+          "time_ms": 1696953600000,
+          "utc": "2023-10-10T16:00:00.000+00:00",
+          "rate": 5.511e-05,
+          "mark": 1566.3761098,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.043161493705539,
+          "opposite_extreme_cashflow": 0.04318557375
+        },
+        {
+          "time_ms": 1696982400000,
+          "utc": "2023-10-11T00:00:00.000+00:00",
+          "rate": 2.257e-05,
+          "mark": 1566.42691983,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.01767712779028155,
+          "opposite_extreme_cashflow": 0.0176824665
+        },
+        {
+          "time_ms": 1697011200000,
+          "utc": "2023-10-11T08:00:00.000+00:00",
+          "rate": 5.392e-05,
+          "mark": 1556.21,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0419554216,
+          "opposite_extreme_cashflow": 0.0419680928
+        },
+        {
+          "time_ms": 1697040000000,
+          "utc": "2023-10-11T16:00:00.000+00:00",
+          "rate": 4.725e-05,
+          "mark": 1558.83087059,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.03682737931768875,
+          "opposite_extreme_cashflow": 0.0368431875
+        },
+        {
+          "time_ms": 1697068800000,
+          "utc": "2023-10-12T00:00:00.000+00:00",
+          "rate": 4.026e-05,
+          "mark": 1564.87316245,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0315008967601185,
+          "opposite_extreme_cashflow": 0.0315255158775414
+        },
+        {
+          "time_ms": 1697097600000,
+          "utc": "2023-10-12T08:00:00.000+00:00",
+          "rate": 2.69e-05,
+          "mark": 1558.59,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.020963035499999998,
+          "opposite_extreme_cashflow": 0.0209815965
+        },
+        {
+          "time_ms": 1697126400000,
+          "utc": "2023-10-12T16:00:00.000+00:00",
+          "rate": 7.112e-05,
+          "mark": 1540.2701902,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.054772007963512,
+          "opposite_extreme_cashflow": 0.054806494399999996
+        },
+        {
+          "time_ms": 1697155200000,
+          "utc": "2023-10-13T00:00:00.000+00:00",
+          "rate": 3.69e-05,
+          "mark": 1538.78515686,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.028390586144067,
+          "opposite_extreme_cashflow": 0.028400638500000002
+        },
+        {
+          "time_ms": 1697184000000,
+          "utc": "2023-10-13T08:00:00.000+00:00",
+          "rate": 3.476e-05,
+          "mark": 1548.71769216,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.026916713489740802,
+          "opposite_extreme_cashflow": 0.0269273554
+        },
+        {
+          "time_ms": 1697212800000,
+          "utc": "2023-10-13T16:00:00.000+00:00",
+          "rate": 2.693e-05,
+          "mark": 1538.7226,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.020718899809,
+          "opposite_extreme_cashflow": 0.020722099528592754
+        },
+        {
+          "time_ms": 1697241600000,
+          "utc": "2023-10-14T00:00:00.000+00:00",
+          "rate": 1.068e-05,
+          "mark": 1551.26587131,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.008283759752795399,
+          "opposite_extreme_cashflow": 0.008287679999999999
+        },
+        {
+          "time_ms": 1697270400000,
+          "utc": "2023-10-14T08:00:00.000+00:00",
+          "rate": 3.108e-05,
+          "mark": 1547.34,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0240456636,
+          "opposite_extreme_cashflow": 0.024052812
+        },
+        {
+          "time_ms": 1697299200000,
+          "utc": "2023-10-14T16:00:00.000+00:00",
+          "rate": 6.65e-05,
+          "mark": 1555.35502215,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0517155544864875,
+          "opposite_extreme_cashflow": 0.051757947500000005
+        },
+        {
+          "time_ms": 1697328000000,
+          "utc": "2023-10-15T00:00:00.000+00:00",
+          "rate": 7.083e-05,
+          "mark": 1554.16824391,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.05504086835807265,
+          "opposite_extreme_cashflow": 0.055055804849999994
+        },
+        {
+          "time_ms": 1697356800000,
+          "utc": "2023-10-15T08:00:00.000+00:00",
+          "rate": 5.253e-05,
+          "mark": 1554.33657349,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.040824650102714855,
+          "opposite_extreme_cashflow": 0.04083160552279575
+        },
+        {
+          "time_ms": 1697385600000,
+          "utc": "2023-10-15T16:00:00.000+00:00",
+          "rate": 2.062e-05,
+          "mark": 1553.07028235,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0160121546110285,
+          "opposite_extreme_cashflow": 0.0160159664
+        },
+        {
+          "time_ms": 1697414400000,
+          "utc": "2023-10-16T00:00:00.000+00:00",
+          "rate": 5.18e-05,
+          "mark": 1556.89876718,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.040323678069962,
+          "opposite_extreme_cashflow": 0.040336947858815995
+        },
+        {
+          "time_ms": 1697443200000,
+          "utc": "2023-10-16T08:00:00.000+00:00",
+          "rate": 4.393e-05,
+          "mark": 1578.02,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0346612093,
+          "opposite_extreme_cashflow": 0.0347060179
+        },
+        {
+          "time_ms": 1697472000000,
+          "utc": "2023-10-16T16:00:00.000+00:00",
+          "rate": 8.412e-05,
+          "mark": 1576.51984599,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0663084247223394,
+          "opposite_extreme_cashflow": 0.066330723
+        },
+        {
+          "time_ms": 1697500800000,
+          "utc": "2023-10-17T00:00:00.000+00:00",
+          "rate": 1.957e-05,
+          "mark": 1598.54628481,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.015641775396865853,
+          "opposite_extreme_cashflow": 0.0156477806
+        },
+        {
+          "time_ms": 1697529600000,
+          "utc": "2023-10-17T08:00:00.000+00:00",
+          "rate": 2.557e-05,
+          "mark": 1589.01,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.020315492850000002,
+          "opposite_extreme_cashflow": 0.020330707
+        },
+        {
+          "time_ms": 1697558400000,
+          "utc": "2023-10-17T16:00:00.000+00:00",
+          "rate": 6.742e-05,
+          "mark": 1574.09240155,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0530626548562505,
+          "opposite_extreme_cashflow": 0.0530860579765565
+        },
+        {
+          "time_ms": 1697587200000,
+          "utc": "2023-10-18T00:00:00.000+00:00",
+          "rate": 5.947e-05,
+          "mark": 1563.91,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.04650286385,
+          "opposite_extreme_cashflow": 0.0465126764
+        },
+        {
+          "time_ms": 1697616000000,
+          "utc": "2023-10-18T08:00:00.000+00:00",
+          "rate": 1.385e-05,
+          "mark": 1571.18683137,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.01088046880723725,
+          "opposite_extreme_cashflow": 0.010883700324554749
+        },
+        {
+          "time_ms": 1697644800000,
+          "utc": "2023-10-18T16:00:00.000+00:00",
+          "rate": 6.495e-05,
+          "mark": 1569.13842549,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.05095777036778775,
+          "opposite_extreme_cashflow": 0.050968863
+        },
+        {
+          "time_ms": 1697673600000,
+          "utc": "2023-10-19T00:00:00.000+00:00",
+          "rate": 4.251e-05,
+          "mark": 1561.30610784,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0331855613221392,
+          "opposite_extreme_cashflow": 0.033214125750000004
+        },
+        {
+          "time_ms": 1697702400001,
+          "utc": "2023-10-19T08:00:00.001+00:00",
+          "rate": 2.988e-05,
+          "mark": 1550.95,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.023171193,
+          "opposite_extreme_cashflow": 0.023174147898487797
+        },
+        {
+          "time_ms": 1697731200000,
+          "utc": "2023-10-19T16:00:00.000+00:00",
+          "rate": 5.842e-05,
+          "mark": 1559.44386505,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0455513552981105,
+          "opposite_extreme_cashflow": 0.0456718797
+        },
+        {
+          "time_ms": 1697760000000,
+          "utc": "2023-10-20T00:00:00.000+00:00",
+          "rate": 3.868e-05,
+          "mark": 1565.90495274,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.030284601785991603,
+          "opposite_extreme_cashflow": 0.0302920486
+        },
+        {
+          "time_ms": 1697788800005,
+          "utc": "2023-10-20T08:00:00.005+00:00",
+          "rate": 5.912e-05,
+          "mark": 1582.52246078,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.04677936394065681,
+          "opposite_extreme_cashflow": 0.046793480000000005
+        },
+        {
+          "time_ms": 1697817600000,
+          "utc": "2023-10-20T16:00:00.000+00:00",
+          "rate": 7.072e-05,
+          "mark": 1604.6311902,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.056739758885472,
+          "opposite_extreme_cashflow": 0.056757396800000005
+        },
+        {
+          "time_ms": 1697846400000,
+          "utc": "2023-10-21T00:00:00.000+00:00",
+          "rate": 4.902e-05,
+          "mark": 1603.06897843,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0392912206613193,
+          "opposite_extreme_cashflow": 0.0393035007
+        },
+        {
+          "time_ms": 1697875200000,
+          "utc": "2023-10-21T08:00:00.000+00:00",
+          "rate": 1.735e-05,
+          "mark": 1605.76524902,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.013930013535248502,
+          "opposite_extreme_cashflow": 0.013933785000000002
+        },
+        {
+          "time_ms": 1697904000000,
+          "utc": "2023-10-21T16:00:00.000+00:00",
+          "rate": 3.771e-05,
+          "mark": 1627.22962451,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.03068141457013605,
+          "opposite_extreme_cashflow": 0.030696017656768652
+        },
+        {
+          "time_ms": 1697932800000,
+          "utc": "2023-10-22T00:00:00.000+00:00",
+          "rate": 7.554e-05,
+          "mark": 1628.04245882,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0614911636696314,
+          "opposite_extreme_cashflow": 0.061511466599999995
+        },
+        {
+          "time_ms": 1697961600000,
+          "utc": "2023-10-22T08:00:00.000+00:00",
+          "rate": 2.649e-05,
+          "mark": 1628.77982157,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.02157318873669465,
+          "opposite_extreme_cashflow": 0.02158331988911505
+        },
+        {
+          "time_ms": 1697990400000,
+          "utc": "2023-10-22T16:00:00.000+00:00",
+          "rate": 6.03e-06,
+          "mark": 1624.28878289,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.00489723068041335,
+          "opposite_extreme_cashflow": 0.0049000383
+        },
+        {
+          "time_ms": 1698019200000,
+          "utc": "2023-10-23T00:00:00.000+00:00",
+          "rate": 9.262e-05,
+          "mark": 1662.48054935,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.07698947424039851,
+          "opposite_extreme_cashflow": 0.0770464101
+        },
+        {
+          "time_ms": 1698048000001,
+          "utc": "2023-10-23T08:00:00.001+00:00",
+          "rate": 1.593e-05,
+          "mark": 1674.88,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.013340419200000002,
+          "opposite_extreme_cashflow": 0.013354517250000001
+        },
+        {
+          "time_ms": 1698076800001,
+          "utc": "2023-10-23T16:00:00.001+00:00",
+          "rate": 1.883e-05,
+          "mark": 1674.65390196,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.015766866486953402,
+          "opposite_extreme_cashflow": 0.0157761506
+        },
+        {
+          "time_ms": 1698105600000,
+          "utc": "2023-10-24T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1766.35,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0883175,
+          "opposite_extreme_cashflow": 0.08837600000000001
+        },
+        {
+          "time_ms": 1698134400000,
+          "utc": "2023-10-24T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1807.44931044,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.09037246552200001,
+          "opposite_extreme_cashflow": 0.090493986287
+        },
+        {
+          "time_ms": 1698163200000,
+          "utc": "2023-10-24T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1777.35106078,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.088867553039,
+          "opposite_extreme_cashflow": 0.08904500000000001
+        },
+        {
+          "time_ms": 1698192000000,
+          "utc": "2023-10-25T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1783.53646361,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0891768231805,
+          "opposite_extreme_cashflow": 0.0892343018625
+        },
+        {
+          "time_ms": 1698220800000,
+          "utc": "2023-10-25T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1768.47763333,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0884238816665,
+          "opposite_extreme_cashflow": 0.08858450000000001
+        },
+        {
+          "time_ms": 1698249600001,
+          "utc": "2023-10-25T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1804.13191373,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0902065956865,
+          "opposite_extreme_cashflow": 0.090318
+        },
+        {
+          "time_ms": 1698278400001,
+          "utc": "2023-10-26T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1786.43685643,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0893218428215,
+          "opposite_extreme_cashflow": 0.089366
+        },
+        {
+          "time_ms": 1698307200000,
+          "utc": "2023-10-26T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1848.5,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.09242500000000001,
+          "opposite_extreme_cashflow": 0.092557410049
+        },
+        {
+          "time_ms": 1698336000000,
+          "utc": "2023-10-26T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1776.83607549,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0888418037745,
+          "opposite_extreme_cashflow": 0.0889025
+        },
+        {
+          "time_ms": 1698364800000,
+          "utc": "2023-10-27T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1802.73822549,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0901369112745,
+          "opposite_extreme_cashflow": 0.0901775340195
+        },
+        {
+          "time_ms": 1698393600000,
+          "utc": "2023-10-27T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1776.55976569,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0888279882845,
+          "opposite_extreme_cashflow": 0.08886150000000001
+        },
+        {
+          "time_ms": 1698422400000,
+          "utc": "2023-10-27T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1781.77596197,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08908879809850001,
+          "opposite_extreme_cashflow": 0.089166
+        },
+        {
+          "time_ms": 1698451200000,
+          "utc": "2023-10-28T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1779.43,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08897150000000001,
+          "opposite_extreme_cashflow": 0.089006561316
+        },
+        {
+          "time_ms": 1698480000001,
+          "utc": "2023-10-28T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1787.8,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08939,
+          "opposite_extreme_cashflow": 0.08941001883300001
+        },
+        {
+          "time_ms": 1698508800000,
+          "utc": "2023-10-28T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1790.9,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08954500000000001,
+          "opposite_extreme_cashflow": 0.0895712842575
+        },
+        {
+          "time_ms": 1698537600000,
+          "utc": "2023-10-29T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1775.83,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0887915,
+          "opposite_extreme_cashflow": 0.088838
+        },
+        {
+          "time_ms": 1698566400000,
+          "utc": "2023-10-29T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1783.32,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.089166,
+          "opposite_extreme_cashflow": 0.0891992366265
+        },
+        {
+          "time_ms": 1698595200000,
+          "utc": "2023-10-29T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1792.19,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.08960950000000001,
+          "opposite_extreme_cashflow": 0.08964559779400001
+        },
+        {
+          "time_ms": 1698624000000,
+          "utc": "2023-10-30T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1795.38360066,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.089769180033,
+          "opposite_extreme_cashflow": 0.0898129763725
+        },
+        {
+          "time_ms": 1698652800000,
+          "utc": "2023-10-30T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1786.96600365,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0893483001825,
+          "opposite_extreme_cashflow": 0.0893922309805
+        },
+        {
+          "time_ms": 1698681600000,
+          "utc": "2023-10-30T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1820.41,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.0910205,
+          "opposite_extreme_cashflow": 0.09103849803900001
+        },
+        {
+          "time_ms": 1698710400001,
+          "utc": "2023-10-31T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1809.65,
+          "source": "adverse one-minute mark",
+          "cashflow": 0.09048250000000001,
+          "opposite_extreme_cashflow": 0.0905062934315
+        },
+        {
+          "time_ms": 1698739200000,
+          "utc": "2023-10-31T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1791.03990329,
+          "source": "reported settlement mark",
+          "cashflow": 0.0895519951645,
+          "opposite_extreme_cashflow": 0.0895519951645
+        },
+        {
+          "time_ms": 1698768000000,
+          "utc": "2023-10-31T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1792.26,
+          "source": "reported settlement mark",
+          "cashflow": 0.089613,
+          "opposite_extreme_cashflow": 0.089613
+        },
+        {
+          "time_ms": 1698796800000,
+          "utc": "2023-11-01T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1815.68,
+          "source": "reported settlement mark",
+          "cashflow": 0.090784,
+          "opposite_extreme_cashflow": 0.090784
+        },
+        {
+          "time_ms": 1698825600000,
+          "utc": "2023-11-01T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1805.10087255,
+          "source": "reported settlement mark",
+          "cashflow": 0.0902550436275,
+          "opposite_extreme_cashflow": 0.0902550436275
+        },
+        {
+          "time_ms": 1698854400000,
+          "utc": "2023-11-01T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1792.96543725,
+          "source": "reported settlement mark",
+          "cashflow": 0.0896482718625,
+          "opposite_extreme_cashflow": 0.0896482718625
+        },
+        {
+          "time_ms": 1698883200001,
+          "utc": "2023-11-02T00:00:00.001+00:00",
+          "rate": 0.00026784,
+          "mark": 1848.05576938,
+          "source": "reported settlement mark",
+          "cashflow": 0.24749162863536958,
+          "opposite_extreme_cashflow": 0.24749162863536958
+        },
+        {
+          "time_ms": 1698912000000,
+          "utc": "2023-11-02T08:00:00.000+00:00",
+          "rate": 0.00020558,
+          "mark": 1836.13,
+          "source": "reported settlement mark",
+          "cashflow": 0.1887358027,
+          "opposite_extreme_cashflow": 0.1887358027
+        },
+        {
+          "time_ms": 1698940800000,
+          "utc": "2023-11-02T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1803.52,
+          "source": "reported settlement mark",
+          "cashflow": 0.090176,
+          "opposite_extreme_cashflow": 0.090176
+        },
+        {
+          "time_ms": 1698969600000,
+          "utc": "2023-11-03T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1800.57006471,
+          "source": "reported settlement mark",
+          "cashflow": 0.0900285032355,
+          "opposite_extreme_cashflow": 0.0900285032355
+        },
+        {
+          "time_ms": 1698998400000,
+          "utc": "2023-11-03T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1798.73,
+          "source": "reported settlement mark",
+          "cashflow": 0.0899365,
+          "opposite_extreme_cashflow": 0.0899365
+        },
+        {
+          "time_ms": 1699027200000,
+          "utc": "2023-11-03T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1812.01,
+          "source": "reported settlement mark",
+          "cashflow": 0.0906005,
+          "opposite_extreme_cashflow": 0.0906005
+        },
+        {
+          "time_ms": 1699056000000,
+          "utc": "2023-11-04T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1832.47692308,
+          "source": "reported settlement mark",
+          "cashflow": 0.091623846154,
+          "opposite_extreme_cashflow": 0.091623846154
+        },
+        {
+          "time_ms": 1699084800000,
+          "utc": "2023-11-04T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1833.60480143,
+          "source": "reported settlement mark",
+          "cashflow": 0.0916802400715,
+          "opposite_extreme_cashflow": 0.0916802400715
+        },
+        {
+          "time_ms": 1699113600000,
+          "utc": "2023-11-04T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1831.73655251,
+          "source": "reported settlement mark",
+          "cashflow": 0.0915868276255,
+          "opposite_extreme_cashflow": 0.0915868276255
+        },
+        {
+          "time_ms": 1699142400000,
+          "utc": "2023-11-05T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1856.08,
+          "source": "reported settlement mark",
+          "cashflow": 0.092804,
+          "opposite_extreme_cashflow": 0.092804
+        },
+        {
+          "time_ms": 1699171200000,
+          "utc": "2023-11-05T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1885.79966078,
+          "source": "reported settlement mark",
+          "cashflow": 0.094289983039,
+          "opposite_extreme_cashflow": 0.094289983039
+        },
+        {
+          "time_ms": 1699200000000,
+          "utc": "2023-11-05T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1874.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.0937415,
+          "opposite_extreme_cashflow": 0.0937415
+        },
+        {
+          "time_ms": 1699228800000,
+          "utc": "2023-11-06T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1892.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.0946245,
+          "opposite_extreme_cashflow": 0.0946245
+        },
+        {
+          "time_ms": 1699257600001,
+          "utc": "2023-11-06T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1878.96193263,
+          "source": "reported settlement mark",
+          "cashflow": 0.09394809663150001,
+          "opposite_extreme_cashflow": 0.09394809663150001
+        },
+        {
+          "time_ms": 1699286400000,
+          "utc": "2023-11-06T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1901.59677255,
+          "source": "reported settlement mark",
+          "cashflow": 0.0950798386275,
+          "opposite_extreme_cashflow": 0.0950798386275
+        },
+        {
+          "time_ms": 1699315200001,
+          "utc": "2023-11-07T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1901.42825373,
+          "source": "reported settlement mark",
+          "cashflow": 0.0950714126865,
+          "opposite_extreme_cashflow": 0.0950714126865
+        },
+        {
+          "time_ms": 1699344000000,
+          "utc": "2023-11-07T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1892.59,
+          "source": "reported settlement mark",
+          "cashflow": 0.0946295,
+          "opposite_extreme_cashflow": 0.0946295
+        },
+        {
+          "time_ms": 1699372800000,
+          "utc": "2023-11-07T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1863.48078903,
+          "source": "reported settlement mark",
+          "cashflow": 0.0931740394515,
+          "opposite_extreme_cashflow": 0.0931740394515
+        },
+        {
+          "time_ms": 1699401600000,
+          "utc": "2023-11-08T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1885.79,
+          "source": "reported settlement mark",
+          "cashflow": 0.0942895,
+          "opposite_extreme_cashflow": 0.0942895
+        },
+        {
+          "time_ms": 1699430400000,
+          "utc": "2023-11-08T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1875.34123516,
+          "source": "reported settlement mark",
+          "cashflow": 0.09376706175800001,
+          "opposite_extreme_cashflow": 0.09376706175800001
+        },
+        {
+          "time_ms": 1699459200000,
+          "utc": "2023-11-08T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1889.62,
+          "source": "reported settlement mark",
+          "cashflow": 0.094481,
+          "opposite_extreme_cashflow": 0.094481
+        },
+        {
+          "time_ms": 1699488000000,
+          "utc": "2023-11-09T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1888.71,
+          "source": "reported settlement mark",
+          "cashflow": 0.0944355,
+          "opposite_extreme_cashflow": 0.0944355
+        },
+        {
+          "time_ms": 1699516800000,
+          "utc": "2023-11-09T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1912.43154852,
+          "source": "reported settlement mark",
+          "cashflow": 0.095621577426,
+          "opposite_extreme_cashflow": 0.095621577426
+        },
+        {
+          "time_ms": 1699545600000,
+          "utc": "2023-11-09T16:00:00.000+00:00",
+          "rate": 0.00071131,
+          "mark": 2039.55,
+          "source": "reported settlement mark",
+          "cashflow": 0.72537615525,
+          "opposite_extreme_cashflow": 0.72537615525
+        },
+        {
+          "time_ms": 1699574400000,
+          "utc": "2023-11-10T00:00:00.000+00:00",
+          "rate": 0.00027525,
+          "mark": 2122.68432489,
+          "source": "reported settlement mark",
+          "cashflow": 0.29213443021298624,
+          "opposite_extreme_cashflow": 0.29213443021298624
+        },
+        {
+          "time_ms": 1699603200000,
+          "utc": "2023-11-10T08:00:00.000+00:00",
+          "rate": 0.00041432,
+          "mark": 2104.639379,
+          "source": "reported settlement mark",
+          "cashflow": 0.43599709375364004,
+          "opposite_extreme_cashflow": 0.43599709375364004
+        },
+        {
+          "time_ms": 1699632000000,
+          "utc": "2023-11-10T16:00:00.000+00:00",
+          "rate": 0.00012656,
+          "mark": 2090.93946624,
+          "source": "reported settlement mark",
+          "cashflow": 0.13231464942366722,
+          "opposite_extreme_cashflow": 0.13231464942366722
+        },
+        {
+          "time_ms": 1699660800000,
+          "utc": "2023-11-11T00:00:00.000+00:00",
+          "rate": 0.00013604,
+          "mark": 2078.9673597,
+          "source": "reported settlement mark",
+          "cashflow": 0.141411359806794,
+          "opposite_extreme_cashflow": 0.141411359806794
+        },
+        {
+          "time_ms": 1699689600000,
+          "utc": "2023-11-11T08:00:00.000+00:00",
+          "rate": 0.00013371,
+          "mark": 2056.40684932,
+          "source": "reported settlement mark",
+          "cashflow": 0.1374810799112886,
+          "opposite_extreme_cashflow": 0.1374810799112886
+        },
+        {
+          "time_ms": 1699718400000,
+          "utc": "2023-11-11T16:00:00.000+00:00",
+          "rate": 0.00027449,
+          "mark": 2069.3,
+          "source": "reported settlement mark",
+          "cashflow": 0.28400107850000006,
+          "opposite_extreme_cashflow": 0.28400107850000006
+        },
+        {
+          "time_ms": 1699747200000,
+          "utc": "2023-11-12T00:00:00.000+00:00",
+          "rate": 0.00016325,
+          "mark": 2054.53,
+          "source": "reported settlement mark",
+          "cashflow": 0.16770101125000003,
+          "opposite_extreme_cashflow": 0.16770101125000003
+        },
+        {
+          "time_ms": 1699776000000,
+          "utc": "2023-11-12T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2058.9,
+          "source": "reported settlement mark",
+          "cashflow": 0.10294500000000001,
+          "opposite_extreme_cashflow": 0.10294500000000001
+        },
+        {
+          "time_ms": 1699804800001,
+          "utc": "2023-11-12T16:00:00.001+00:00",
+          "rate": 0.00024299,
+          "mark": 2058.36,
+          "source": "reported settlement mark",
+          "cashflow": 0.2500804482,
+          "opposite_extreme_cashflow": 0.2500804482
+        },
+        {
+          "time_ms": 1699833600000,
+          "utc": "2023-11-13T00:00:00.000+00:00",
+          "rate": 0.0003299,
+          "mark": 2046.01099578,
+          "source": "reported settlement mark",
+          "cashflow": 0.337489513753911,
+          "opposite_extreme_cashflow": 0.337489513753911
+        },
+        {
+          "time_ms": 1699862400000,
+          "utc": "2023-11-13T08:00:00.000+00:00",
+          "rate": 0.00022787,
+          "mark": 2049.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.23349497095,
+          "opposite_extreme_cashflow": 0.23349497095
+        },
+        {
+          "time_ms": 1699891200000,
+          "utc": "2023-11-13T16:00:00.000+00:00",
+          "rate": 0.00022833,
+          "mark": 2106.88,
+          "source": "reported settlement mark",
+          "cashflow": 0.2405319552,
+          "opposite_extreme_cashflow": 0.2405319552
+        },
+        {
+          "time_ms": 1699920000000,
+          "utc": "2023-11-14T00:00:00.000+00:00",
+          "rate": 0.00018828,
+          "mark": 2054.99,
+          "source": "reported settlement mark",
+          "cashflow": 0.19345675859999997,
+          "opposite_extreme_cashflow": 0.19345675859999997
+        },
+        {
+          "time_ms": 1699948800000,
+          "utc": "2023-11-14T08:00:00.000+00:00",
+          "rate": 0.00013623,
+          "mark": 2061.59,
+          "source": "reported settlement mark",
+          "cashflow": 0.14042520284999999,
+          "opposite_extreme_cashflow": 0.14042520284999999
+        },
+        {
+          "time_ms": 1699977600001,
+          "utc": "2023-11-14T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2039.18813291,
+          "source": "reported settlement mark",
+          "cashflow": 0.1019594066455,
+          "opposite_extreme_cashflow": 0.1019594066455
+        },
+        {
+          "time_ms": 1700006400000,
+          "utc": "2023-11-15T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1979.7528903,
+          "source": "reported settlement mark",
+          "cashflow": 0.098987644515,
+          "opposite_extreme_cashflow": 0.098987644515
+        },
+        {
+          "time_ms": 1700035200000,
+          "utc": "2023-11-15T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1983.98,
+          "source": "reported settlement mark",
+          "cashflow": 0.09919900000000001,
+          "opposite_extreme_cashflow": 0.09919900000000001
+        },
+        {
+          "time_ms": 1700064000000,
+          "utc": "2023-11-15T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2022.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.1011075,
+          "opposite_extreme_cashflow": 0.1011075
+        },
+        {
+          "time_ms": 1700092800000,
+          "utc": "2023-11-16T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2059.29,
+          "source": "reported settlement mark",
+          "cashflow": 0.1029645,
+          "opposite_extreme_cashflow": 0.1029645
+        },
+        {
+          "time_ms": 1700121600000,
+          "utc": "2023-11-16T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2054.31647619,
+          "source": "reported settlement mark",
+          "cashflow": 0.10271582380949999,
+          "opposite_extreme_cashflow": 0.10271582380949999
+        },
+        {
+          "time_ms": 1700150400001,
+          "utc": "2023-11-16T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1995.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.0997915,
+          "opposite_extreme_cashflow": 0.0997915
+        },
+        {
+          "time_ms": 1700179200000,
+          "utc": "2023-11-17T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1962.07922344,
+          "source": "reported settlement mark",
+          "cashflow": 0.09810396117200001,
+          "opposite_extreme_cashflow": 0.09810396117200001
+        },
+        {
+          "time_ms": 1700208000001,
+          "utc": "2023-11-17T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1970.53057875,
+          "source": "reported settlement mark",
+          "cashflow": 0.0985265289375,
+          "opposite_extreme_cashflow": 0.0985265289375
+        },
+        {
+          "time_ms": 1700236800001,
+          "utc": "2023-11-17T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 1918.85260256,
+          "source": "reported settlement mark",
+          "cashflow": 0.095942630128,
+          "opposite_extreme_cashflow": 0.095942630128
+        },
+        {
+          "time_ms": 1700265600000,
+          "utc": "2023-11-18T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1961.21,
+          "source": "reported settlement mark",
+          "cashflow": 0.09806050000000001,
+          "opposite_extreme_cashflow": 0.09806050000000001
+        },
+        {
+          "time_ms": 1700294400000,
+          "utc": "2023-11-18T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1936.47534066,
+          "source": "reported settlement mark",
+          "cashflow": 0.09682376703300001,
+          "opposite_extreme_cashflow": 0.09682376703300001
+        },
+        {
+          "time_ms": 1700323200000,
+          "utc": "2023-11-18T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1953.1734011,
+          "source": "reported settlement mark",
+          "cashflow": 0.09765867005500001,
+          "opposite_extreme_cashflow": 0.09765867005500001
+        },
+        {
+          "time_ms": 1700352000000,
+          "utc": "2023-11-19T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1963.03469597,
+          "source": "reported settlement mark",
+          "cashflow": 0.0981517347985,
+          "opposite_extreme_cashflow": 0.0981517347985
+        },
+        {
+          "time_ms": 1700380800000,
+          "utc": "2023-11-19T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1961.94580495,
+          "source": "reported settlement mark",
+          "cashflow": 0.0980972902475,
+          "opposite_extreme_cashflow": 0.0980972902475
+        },
+        {
+          "time_ms": 1700409600000,
+          "utc": "2023-11-19T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1966.83244139,
+          "source": "reported settlement mark",
+          "cashflow": 0.0983416220695,
+          "opposite_extreme_cashflow": 0.0983416220695
+        },
+        {
+          "time_ms": 1700438400000,
+          "utc": "2023-11-20T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2012.36017033,
+          "source": "reported settlement mark",
+          "cashflow": 0.1006180085165,
+          "opposite_extreme_cashflow": 0.1006180085165
+        },
+        {
+          "time_ms": 1700467200000,
+          "utc": "2023-11-20T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2019.69,
+          "source": "reported settlement mark",
+          "cashflow": 0.1009845,
+          "opposite_extreme_cashflow": 0.1009845
+        },
+        {
+          "time_ms": 1700496000000,
+          "utc": "2023-11-20T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2043.11663287,
+          "source": "reported settlement mark",
+          "cashflow": 0.1021558316435,
+          "opposite_extreme_cashflow": 0.1021558316435
+        },
+        {
+          "time_ms": 1700524800000,
+          "utc": "2023-11-21T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2022.53,
+          "source": "reported settlement mark",
+          "cashflow": 0.10112650000000001,
+          "opposite_extreme_cashflow": 0.10112650000000001
+        },
+        {
+          "time_ms": 1700553600000,
+          "utc": "2023-11-21T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2004.84465211,
+          "source": "reported settlement mark",
+          "cashflow": 0.1002422326055,
+          "opposite_extreme_cashflow": 0.1002422326055
+        },
+        {
+          "time_ms": 1700582400000,
+          "utc": "2023-11-21T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1988.95889744,
+          "source": "reported settlement mark",
+          "cashflow": 0.09944794487200001,
+          "opposite_extreme_cashflow": 0.09944794487200001
+        },
+        {
+          "time_ms": 1700611200000,
+          "utc": "2023-11-22T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1933.53839927,
+          "source": "reported settlement mark",
+          "cashflow": 0.0966769199635,
+          "opposite_extreme_cashflow": 0.0966769199635
+        },
+        {
+          "time_ms": 1700640000000,
+          "utc": "2023-11-22T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 1993.97,
+          "source": "reported settlement mark",
+          "cashflow": 0.09969850000000001,
+          "opposite_extreme_cashflow": 0.09969850000000001
+        },
+        {
+          "time_ms": 1700668800000,
+          "utc": "2023-11-22T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2033.87,
+          "source": "reported settlement mark",
+          "cashflow": 0.1016935,
+          "opposite_extreme_cashflow": 0.1016935
+        },
+        {
+          "time_ms": 1700697600000,
+          "utc": "2023-11-23T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2063.90136264,
+          "source": "reported settlement mark",
+          "cashflow": 0.10319506813200001,
+          "opposite_extreme_cashflow": 0.10319506813200001
+        },
+        {
+          "time_ms": 1700726400000,
+          "utc": "2023-11-23T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2066.5,
+          "source": "reported settlement mark",
+          "cashflow": 0.103325,
+          "opposite_extreme_cashflow": 0.103325
+        },
+        {
+          "time_ms": 1700755200001,
+          "utc": "2023-11-23T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2042.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.1021245,
+          "opposite_extreme_cashflow": 0.1021245
+        },
+        {
+          "time_ms": 1700784000000,
+          "utc": "2023-11-24T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2062.58464103,
+          "source": "reported settlement mark",
+          "cashflow": 0.10312923205150001,
+          "opposite_extreme_cashflow": 0.10312923205150001
+        },
+        {
+          "time_ms": 1700812800000,
+          "utc": "2023-11-24T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2080.5,
+          "source": "reported settlement mark",
+          "cashflow": 0.104025,
+          "opposite_extreme_cashflow": 0.104025
+        },
+        {
+          "time_ms": 1700841600000,
+          "utc": "2023-11-24T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2117.4400293,
+          "source": "reported settlement mark",
+          "cashflow": 0.105872001465,
+          "opposite_extreme_cashflow": 0.105872001465
+        },
+        {
+          "time_ms": 1700870400000,
+          "utc": "2023-11-25T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2081.11207013,
+          "source": "reported settlement mark",
+          "cashflow": 0.1040556035065,
+          "opposite_extreme_cashflow": 0.1040556035065
+        },
+        {
+          "time_ms": 1700899200000,
+          "utc": "2023-11-25T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2088.47,
+          "source": "reported settlement mark",
+          "cashflow": 0.10442349999999999,
+          "opposite_extreme_cashflow": 0.10442349999999999
+        },
+        {
+          "time_ms": 1700928000000,
+          "utc": "2023-11-25T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2078.0,
+          "source": "reported settlement mark",
+          "cashflow": 0.1039,
+          "opposite_extreme_cashflow": 0.1039
+        },
+        {
+          "time_ms": 1700956800000,
+          "utc": "2023-11-26T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2083.02988828,
+          "source": "reported settlement mark",
+          "cashflow": 0.104151494414,
+          "opposite_extreme_cashflow": 0.104151494414
+        },
+        {
+          "time_ms": 1700985600000,
+          "utc": "2023-11-26T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2089.19,
+          "source": "reported settlement mark",
+          "cashflow": 0.10445950000000001,
+          "opposite_extreme_cashflow": 0.10445950000000001
+        },
+        {
+          "time_ms": 1701014400000,
+          "utc": "2023-11-26T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2064.80736264,
+          "source": "reported settlement mark",
+          "cashflow": 0.10324036813200001,
+          "opposite_extreme_cashflow": 0.10324036813200001
+        },
+        {
+          "time_ms": 1701043200000,
+          "utc": "2023-11-27T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2061.97,
+          "source": "reported settlement mark",
+          "cashflow": 0.1030985,
+          "opposite_extreme_cashflow": 0.1030985
+        },
+        {
+          "time_ms": 1701072000001,
+          "utc": "2023-11-27T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2045.17966117,
+          "source": "reported settlement mark",
+          "cashflow": 0.1022589830585,
+          "opposite_extreme_cashflow": 0.1022589830585
+        },
+        {
+          "time_ms": 1701100800000,
+          "utc": "2023-11-27T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2002.77,
+          "source": "reported settlement mark",
+          "cashflow": 0.1001385,
+          "opposite_extreme_cashflow": 0.1001385
+        },
+        {
+          "time_ms": 1701129600000,
+          "utc": "2023-11-28T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2027.48098901,
+          "source": "reported settlement mark",
+          "cashflow": 0.1013740494505,
+          "opposite_extreme_cashflow": 0.1013740494505
+        },
+        {
+          "time_ms": 1701158400000,
+          "utc": "2023-11-28T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2014.43367582,
+          "source": "reported settlement mark",
+          "cashflow": 0.10072168379100001,
+          "opposite_extreme_cashflow": 0.10072168379100001
+        },
+        {
+          "time_ms": 1701187200000,
+          "utc": "2023-11-28T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2036.3,
+          "source": "reported settlement mark",
+          "cashflow": 0.101815,
+          "opposite_extreme_cashflow": 0.101815
+        },
+        {
+          "time_ms": 1701216000001,
+          "utc": "2023-11-29T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2048.2,
+          "source": "reported settlement mark",
+          "cashflow": 0.10241,
+          "opposite_extreme_cashflow": 0.10241
+        },
+        {
+          "time_ms": 1701244800000,
+          "utc": "2023-11-29T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2057.29296703,
+          "source": "reported settlement mark",
+          "cashflow": 0.1028646483515,
+          "opposite_extreme_cashflow": 0.1028646483515
+        },
+        {
+          "time_ms": 1701273600000,
+          "utc": "2023-11-29T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2031.31,
+          "source": "reported settlement mark",
+          "cashflow": 0.1015655,
+          "opposite_extreme_cashflow": 0.1015655
+        },
+        {
+          "time_ms": 1701302400000,
+          "utc": "2023-11-30T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2028.57204924,
+          "source": "reported settlement mark",
+          "cashflow": 0.10142860246200001,
+          "opposite_extreme_cashflow": 0.10142860246200001
+        },
+        {
+          "time_ms": 1701331200000,
+          "utc": "2023-11-30T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2035.52,
+          "source": "reported settlement mark",
+          "cashflow": 0.101776,
+          "opposite_extreme_cashflow": 0.101776
+        },
+        {
+          "time_ms": 1701360000000,
+          "utc": "2023-11-30T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2032.90660985,
+          "source": "reported settlement mark",
+          "cashflow": 0.1016453304925,
+          "opposite_extreme_cashflow": 0.1016453304925
+        },
+        {
+          "time_ms": 1701388800000,
+          "utc": "2023-12-01T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2051.77,
+          "source": "reported settlement mark",
+          "cashflow": 0.1025885,
+          "opposite_extreme_cashflow": 0.1025885
+        },
+        {
+          "time_ms": 1701417600000,
+          "utc": "2023-12-01T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2092.78875379,
+          "source": "reported settlement mark",
+          "cashflow": 0.10463943768950001,
+          "opposite_extreme_cashflow": 0.10463943768950001
+        },
+        {
+          "time_ms": 1701446400000,
+          "utc": "2023-12-01T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2079.57779167,
+          "source": "reported settlement mark",
+          "cashflow": 0.1039788895835,
+          "opposite_extreme_cashflow": 0.1039788895835
+        },
+        {
+          "time_ms": 1701475200000,
+          "utc": "2023-12-02T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2087.1210303,
+          "source": "reported settlement mark",
+          "cashflow": 0.10435605151499999,
+          "opposite_extreme_cashflow": 0.10435605151499999
+        },
+        {
+          "time_ms": 1701504000000,
+          "utc": "2023-12-02T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2095.65,
+          "source": "reported settlement mark",
+          "cashflow": 0.10478250000000001,
+          "opposite_extreme_cashflow": 0.10478250000000001
+        },
+        {
+          "time_ms": 1701532800000,
+          "utc": "2023-12-02T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2103.75,
+          "source": "reported settlement mark",
+          "cashflow": 0.1051875,
+          "opposite_extreme_cashflow": 0.1051875
+        },
+        {
+          "time_ms": 1701561600000,
+          "utc": "2023-12-03T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2165.35966872,
+          "source": "reported settlement mark",
+          "cashflow": 0.10826798343600001,
+          "opposite_extreme_cashflow": 0.10826798343600001
+        },
+        {
+          "time_ms": 1701590400000,
+          "utc": "2023-12-03T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2164.73536364,
+          "source": "reported settlement mark",
+          "cashflow": 0.108236768182,
+          "opposite_extreme_cashflow": 0.108236768182
+        },
+        {
+          "time_ms": 1701619200000,
+          "utc": "2023-12-03T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2160.35,
+          "source": "reported settlement mark",
+          "cashflow": 0.1080175,
+          "opposite_extreme_cashflow": 0.1080175
+        },
+        {
+          "time_ms": 1701648000000,
+          "utc": "2023-12-04T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2193.25,
+          "source": "reported settlement mark",
+          "cashflow": 0.10966250000000001,
+          "opposite_extreme_cashflow": 0.10966250000000001
+        },
+        {
+          "time_ms": 1701676800000,
+          "utc": "2023-12-04T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2247.34961789,
+          "source": "reported settlement mark",
+          "cashflow": 0.11236748089450001,
+          "opposite_extreme_cashflow": 0.11236748089450001
+        },
+        {
+          "time_ms": 1701705600000,
+          "utc": "2023-12-04T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2212.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.11060750000000001,
+          "opposite_extreme_cashflow": 0.11060750000000001
+        },
+        {
+          "time_ms": 1701734400000,
+          "utc": "2023-12-05T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2243.60849242,
+          "source": "reported settlement mark",
+          "cashflow": 0.112180424621,
+          "opposite_extreme_cashflow": 0.112180424621
+        },
+        {
+          "time_ms": 1701763200000,
+          "utc": "2023-12-05T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2200.19,
+          "source": "reported settlement mark",
+          "cashflow": 0.11000950000000001,
+          "opposite_extreme_cashflow": 0.11000950000000001
+        },
+        {
+          "time_ms": 1701792000000,
+          "utc": "2023-12-05T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2228.84545455,
+          "source": "reported settlement mark",
+          "cashflow": 0.1114422727275,
+          "opposite_extreme_cashflow": 0.1114422727275
+        },
+        {
+          "time_ms": 1701820800000,
+          "utc": "2023-12-06T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2293.72126894,
+          "source": "reported settlement mark",
+          "cashflow": 0.114686063447,
+          "opposite_extreme_cashflow": 0.114686063447
+        },
+        {
+          "time_ms": 1701849600000,
+          "utc": "2023-12-06T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2266.4,
+          "source": "reported settlement mark",
+          "cashflow": 0.11332,
+          "opposite_extreme_cashflow": 0.11332
+        },
+        {
+          "time_ms": 1701878400000,
+          "utc": "2023-12-06T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2252.84,
+          "source": "reported settlement mark",
+          "cashflow": 0.112642,
+          "opposite_extreme_cashflow": 0.112642
+        },
+        {
+          "time_ms": 1701907200000,
+          "utc": "2023-12-07T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2233.1662197,
+          "source": "reported settlement mark",
+          "cashflow": 0.11165831098500001,
+          "opposite_extreme_cashflow": 0.11165831098500001
+        },
+        {
+          "time_ms": 1701936000000,
+          "utc": "2023-12-07T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2261.96,
+          "source": "reported settlement mark",
+          "cashflow": 0.113098,
+          "opposite_extreme_cashflow": 0.113098
+        },
+        {
+          "time_ms": 1701964800000,
+          "utc": "2023-12-07T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2322.41451515,
+          "source": "reported settlement mark",
+          "cashflow": 0.11612072575750002,
+          "opposite_extreme_cashflow": 0.11612072575750002
+        },
+        {
+          "time_ms": 1701993600000,
+          "utc": "2023-12-08T00:00:00.000+00:00",
+          "rate": 0.00022693,
+          "mark": 2357.04,
+          "source": "reported settlement mark",
+          "cashflow": 0.2674415436,
+          "opposite_extreme_cashflow": 0.2674415436
+        },
+        {
+          "time_ms": 1702022400000,
+          "utc": "2023-12-08T08:00:00.000+00:00",
+          "rate": 0.00012399,
+          "mark": 2354.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.14595916815,
+          "opposite_extreme_cashflow": 0.14595916815
+        },
+        {
+          "time_ms": 1702051200000,
+          "utc": "2023-12-08T16:00:00.000+00:00",
+          "rate": 0.00010417,
+          "mark": 2347.44,
+          "source": "reported settlement mark",
+          "cashflow": 0.12226641240000001,
+          "opposite_extreme_cashflow": 0.12226641240000001
+        },
+        {
+          "time_ms": 1702080000000,
+          "utc": "2023-12-09T00:00:00.000+00:00",
+          "rate": 0.00022528,
+          "mark": 2360.37334848,
+          "source": "reported settlement mark",
+          "cashflow": 0.2658724539727872,
+          "opposite_extreme_cashflow": 0.2658724539727872
+        },
+        {
+          "time_ms": 1702108800000,
+          "utc": "2023-12-09T08:00:00.000+00:00",
+          "rate": 0.00031293,
+          "mark": 2385.42,
+          "source": "reported settlement mark",
+          "cashflow": 0.37323474030000003,
+          "opposite_extreme_cashflow": 0.37323474030000003
+        },
+        {
+          "time_ms": 1702137600000,
+          "utc": "2023-12-09T16:00:00.000+00:00",
+          "rate": 0.00033485,
+          "mark": 2364.32306626,
+          "source": "reported settlement mark",
+          "cashflow": 0.3958467893685805,
+          "opposite_extreme_cashflow": 0.3958467893685805
+        },
+        {
+          "time_ms": 1702166400000,
+          "utc": "2023-12-10T00:00:00.000+00:00",
+          "rate": 0.00016658,
+          "mark": 2342.21,
+          "source": "reported settlement mark",
+          "cashflow": 0.1950826709,
+          "opposite_extreme_cashflow": 0.1950826709
+        },
+        {
+          "time_ms": 1702195200000,
+          "utc": "2023-12-10T08:00:00.000+00:00",
+          "rate": 0.00015944,
+          "mark": 2355.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.1877796628,
+          "opposite_extreme_cashflow": 0.1877796628
+        },
+        {
+          "time_ms": 1702224000000,
+          "utc": "2023-12-10T16:00:00.000+00:00",
+          "rate": 0.00022842,
+          "mark": 2353.53,
+          "source": "reported settlement mark",
+          "cashflow": 0.2687966613,
+          "opposite_extreme_cashflow": 0.2687966613
+        },
+        {
+          "time_ms": 1702252800000,
+          "utc": "2023-12-11T00:00:00.000+00:00",
+          "rate": 0.00024112,
+          "mark": 2353.81954878,
+          "source": "reported settlement mark",
+          "cashflow": 0.2837764848009168,
+          "opposite_extreme_cashflow": 0.2837764848009168
+        },
+        {
+          "time_ms": 1702281600000,
+          "utc": "2023-12-11T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2237.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.11185750000000001,
+          "opposite_extreme_cashflow": 0.11185750000000001
+        },
+        {
+          "time_ms": 1702310400000,
+          "utc": "2023-12-11T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2220.05,
+          "source": "reported settlement mark",
+          "cashflow": 0.11100250000000002,
+          "opposite_extreme_cashflow": 0.11100250000000002
+        },
+        {
+          "time_ms": 1702339200000,
+          "utc": "2023-12-12T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2225.56,
+          "source": "reported settlement mark",
+          "cashflow": 0.111278,
+          "opposite_extreme_cashflow": 0.111278
+        },
+        {
+          "time_ms": 1702368000000,
+          "utc": "2023-12-12T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2233.91,
+          "source": "reported settlement mark",
+          "cashflow": 0.1116955,
+          "opposite_extreme_cashflow": 0.1116955
+        },
+        {
+          "time_ms": 1702396800000,
+          "utc": "2023-12-12T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2194.72817073,
+          "source": "reported settlement mark",
+          "cashflow": 0.1097364085365,
+          "opposite_extreme_cashflow": 0.1097364085365
+        },
+        {
+          "time_ms": 1702425600000,
+          "utc": "2023-12-13T00:00:00.000+00:00",
+          "rate": 0.00012813,
+          "mark": 2204.45285985,
+          "source": "reported settlement mark",
+          "cashflow": 0.14122827246629027,
+          "opposite_extreme_cashflow": 0.14122827246629027
+        },
+        {
+          "time_ms": 1702454400000,
+          "utc": "2023-12-13T08:00:00.000+00:00",
+          "rate": 0.00015058,
+          "mark": 2174.28468939,
+          "source": "reported settlement mark",
+          "cashflow": 0.16370189426417311,
+          "opposite_extreme_cashflow": 0.16370189426417311
+        },
+        {
+          "time_ms": 1702483200001,
+          "utc": "2023-12-13T16:00:00.001+00:00",
+          "rate": 0.00010581,
+          "mark": 2218.58796591,
+          "source": "reported settlement mark",
+          "cashflow": 0.11737439633646857,
+          "opposite_extreme_cashflow": 0.11737439633646857
+        },
+        {
+          "time_ms": 1702512000000,
+          "utc": "2023-12-14T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2261.1775303,
+          "source": "reported settlement mark",
+          "cashflow": 0.113058876515,
+          "opposite_extreme_cashflow": 0.113058876515
+        },
+        {
+          "time_ms": 1702540800000,
+          "utc": "2023-12-14T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2283.2,
+          "source": "reported settlement mark",
+          "cashflow": 0.11416,
+          "opposite_extreme_cashflow": 0.11416
+        },
+        {
+          "time_ms": 1702569600000,
+          "utc": "2023-12-14T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2275.96,
+          "source": "reported settlement mark",
+          "cashflow": 0.11379800000000001,
+          "opposite_extreme_cashflow": 0.11379800000000001
+        },
+        {
+          "time_ms": 1702598400000,
+          "utc": "2023-12-15T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2316.53,
+          "source": "reported settlement mark",
+          "cashflow": 0.11582650000000001,
+          "opposite_extreme_cashflow": 0.11582650000000001
+        },
+        {
+          "time_ms": 1702627200000,
+          "utc": "2023-12-15T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2272.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.11362449999999999,
+          "opposite_extreme_cashflow": 0.11362449999999999
+        },
+        {
+          "time_ms": 1702656000000,
+          "utc": "2023-12-15T16:00:00.000+00:00",
+          "rate": 0.00010419,
+          "mark": 2232.83531818,
+          "source": "reported settlement mark",
+          "cashflow": 0.1163195559005871,
+          "opposite_extreme_cashflow": 0.1163195559005871
+        },
+        {
+          "time_ms": 1702684800000,
+          "utc": "2023-12-16T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2221.42673485,
+          "source": "reported settlement mark",
+          "cashflow": 0.1110713367425,
+          "opposite_extreme_cashflow": 0.1110713367425
+        },
+        {
+          "time_ms": 1702713600000,
+          "utc": "2023-12-16T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2242.5092681,
+          "source": "reported settlement mark",
+          "cashflow": 0.11212546340500001,
+          "opposite_extreme_cashflow": 0.11212546340500001
+        },
+        {
+          "time_ms": 1702742400001,
+          "utc": "2023-12-16T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2257.44,
+          "source": "reported settlement mark",
+          "cashflow": 0.11287200000000001,
+          "opposite_extreme_cashflow": 0.11287200000000001
+        },
+        {
+          "time_ms": 1702771200000,
+          "utc": "2023-12-17T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2229.64,
+          "source": "reported settlement mark",
+          "cashflow": 0.111482,
+          "opposite_extreme_cashflow": 0.111482
+        },
+        {
+          "time_ms": 1702800000000,
+          "utc": "2023-12-17T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2209.78,
+          "source": "reported settlement mark",
+          "cashflow": 0.11048900000000002,
+          "opposite_extreme_cashflow": 0.11048900000000002
+        },
+        {
+          "time_ms": 1702828800000,
+          "utc": "2023-12-17T16:00:00.000+00:00",
+          "rate": 0.00011402,
+          "mark": 2223.0639053,
+          "source": "reported settlement mark",
+          "cashflow": 0.126736873241153,
+          "opposite_extreme_cashflow": 0.126736873241153
+        },
+        {
+          "time_ms": 1702857600000,
+          "utc": "2023-12-18T00:00:00.000+00:00",
+          "rate": 0.00015083,
+          "mark": 2197.34822348,
+          "source": "reported settlement mark",
+          "cashflow": 0.16571301627374418,
+          "opposite_extreme_cashflow": 0.16571301627374418
+        },
+        {
+          "time_ms": 1702886400001,
+          "utc": "2023-12-18T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2170.05,
+          "source": "reported settlement mark",
+          "cashflow": 0.10850250000000002,
+          "opposite_extreme_cashflow": 0.10850250000000002
+        },
+        {
+          "time_ms": 1702915200000,
+          "utc": "2023-12-18T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2156.12584848,
+          "source": "reported settlement mark",
+          "cashflow": 0.10780629242400001,
+          "opposite_extreme_cashflow": 0.10780629242400001
+        },
+        {
+          "time_ms": 1702944000000,
+          "utc": "2023-12-19T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2220.52,
+          "source": "reported settlement mark",
+          "cashflow": 0.111026,
+          "opposite_extreme_cashflow": 0.111026
+        },
+        {
+          "time_ms": 1702972800000,
+          "utc": "2023-12-19T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2248.57,
+          "source": "reported settlement mark",
+          "cashflow": 0.11242850000000001,
+          "opposite_extreme_cashflow": 0.11242850000000001
+        },
+        {
+          "time_ms": 1703001600000,
+          "utc": "2023-12-19T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2192.86,
+          "source": "reported settlement mark",
+          "cashflow": 0.10964300000000002,
+          "opposite_extreme_cashflow": 0.10964300000000002
+        },
+        {
+          "time_ms": 1703030400000,
+          "utc": "2023-12-20T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2178.71327812,
+          "source": "reported settlement mark",
+          "cashflow": 0.108935663906,
+          "opposite_extreme_cashflow": 0.108935663906
+        },
+        {
+          "time_ms": 1703059200000,
+          "utc": "2023-12-20T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2217.69,
+          "source": "reported settlement mark",
+          "cashflow": 0.11088450000000001,
+          "opposite_extreme_cashflow": 0.11088450000000001
+        },
+        {
+          "time_ms": 1703088000000,
+          "utc": "2023-12-20T16:00:00.000+00:00",
+          "rate": 0.00023154,
+          "mark": 2248.59913636,
+          "source": "reported settlement mark",
+          "cashflow": 0.2603203220163972,
+          "opposite_extreme_cashflow": 0.2603203220163972
+        },
+        {
+          "time_ms": 1703116800000,
+          "utc": "2023-12-21T00:00:00.000+00:00",
+          "rate": 0.00026163,
+          "mark": 2203.87649002,
+          "source": "reported settlement mark",
+          "cashflow": 0.2883001030419663,
+          "opposite_extreme_cashflow": 0.2883001030419663
+        },
+        {
+          "time_ms": 1703145600000,
+          "utc": "2023-12-21T08:00:00.000+00:00",
+          "rate": 0.0002655,
+          "mark": 2216.76559091,
+          "source": "reported settlement mark",
+          "cashflow": 0.2942756321933025,
+          "opposite_extreme_cashflow": 0.2942756321933025
+        },
+        {
+          "time_ms": 1703174400000,
+          "utc": "2023-12-21T16:00:00.000+00:00",
+          "rate": 0.00042074,
+          "mark": 2234.5,
+          "source": "reported settlement mark",
+          "cashflow": 0.47007176500000003,
+          "opposite_extreme_cashflow": 0.47007176500000003
+        },
+        {
+          "time_ms": 1703203200000,
+          "utc": "2023-12-22T00:00:00.000+00:00",
+          "rate": 0.00044152,
+          "mark": 2241.35,
+          "source": "reported settlement mark",
+          "cashflow": 0.49480042599999996,
+          "opposite_extreme_cashflow": 0.49480042599999996
+        },
+        {
+          "time_ms": 1703232000000,
+          "utc": "2023-12-22T08:00:00.000+00:00",
+          "rate": 0.00043341,
+          "mark": 2275.26,
+          "source": "reported settlement mark",
+          "cashflow": 0.4930602183000001,
+          "opposite_extreme_cashflow": 0.4930602183000001
+        },
+        {
+          "time_ms": 1703260800000,
+          "utc": "2023-12-22T16:00:00.000+00:00",
+          "rate": 0.00051141,
+          "mark": 2321.73,
+          "source": "reported settlement mark",
+          "cashflow": 0.59367796965,
+          "opposite_extreme_cashflow": 0.59367796965
+        },
+        {
+          "time_ms": 1703289600000,
+          "utc": "2023-12-23T00:00:00.000+00:00",
+          "rate": 0.0001854,
+          "mark": 2326.23586742,
+          "source": "reported settlement mark",
+          "cashflow": 0.215642064909834,
+          "opposite_extreme_cashflow": 0.215642064909834
+        },
+        {
+          "time_ms": 1703318400001,
+          "utc": "2023-12-23T08:00:00.001+00:00",
+          "rate": 0.00012586,
+          "mark": 2284.9579697,
+          "source": "reported settlement mark",
+          "cashflow": 0.143792405033221,
+          "opposite_extreme_cashflow": 0.143792405033221
+        },
+        {
+          "time_ms": 1703347200000,
+          "utc": "2023-12-23T16:00:00.000+00:00",
+          "rate": 0.00017945,
+          "mark": 2286.91638696,
+          "source": "reported settlement mark",
+          "cashflow": 0.20519357281998601,
+          "opposite_extreme_cashflow": 0.20519357281998601
+        },
+        {
+          "time_ms": 1703376000000,
+          "utc": "2023-12-24T00:00:00.000+00:00",
+          "rate": 0.00013318,
+          "mark": 2310.34407935,
+          "source": "reported settlement mark",
+          "cashflow": 0.1538458122439165,
+          "opposite_extreme_cashflow": 0.1538458122439165
+        },
+        {
+          "time_ms": 1703404800000,
+          "utc": "2023-12-24T08:00:00.000+00:00",
+          "rate": 0.00021857,
+          "mark": 2296.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.25093475275,
+          "opposite_extreme_cashflow": 0.25093475275
+        },
+        {
+          "time_ms": 1703433600000,
+          "utc": "2023-12-24T16:00:00.000+00:00",
+          "rate": 0.00019769,
+          "mark": 2294.48,
+          "source": "reported settlement mark",
+          "cashflow": 0.2267978756,
+          "opposite_extreme_cashflow": 0.2267978756
+        },
+        {
+          "time_ms": 1703462400000,
+          "utc": "2023-12-25T00:00:00.000+00:00",
+          "rate": 0.00013827,
+          "mark": 2265.43,
+          "source": "reported settlement mark",
+          "cashflow": 0.15662050304999997,
+          "opposite_extreme_cashflow": 0.15662050304999997
+        },
+        {
+          "time_ms": 1703491200000,
+          "utc": "2023-12-25T08:00:00.000+00:00",
+          "rate": 0.00021479,
+          "mark": 2282.03294697,
+          "source": "reported settlement mark",
+          "cashflow": 0.24507892833984316,
+          "opposite_extreme_cashflow": 0.24507892833984316
+        },
+        {
+          "time_ms": 1703520000000,
+          "utc": "2023-12-25T16:00:00.000+00:00",
+          "rate": 0.0004388,
+          "mark": 2288.44595833,
+          "source": "reported settlement mark",
+          "cashflow": 0.502085043257602,
+          "opposite_extreme_cashflow": 0.502085043257602
+        },
+        {
+          "time_ms": 1703548800000,
+          "utc": "2023-12-26T00:00:00.000+00:00",
+          "rate": 0.00050051,
+          "mark": 2273.21,
+          "source": "reported settlement mark",
+          "cashflow": 0.5688821685500001,
+          "opposite_extreme_cashflow": 0.5688821685500001
+        },
+        {
+          "time_ms": 1703577600000,
+          "utc": "2023-12-26T08:00:00.000+00:00",
+          "rate": 0.00029501,
+          "mark": 2242.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.33077848745,
+          "opposite_extreme_cashflow": 0.33077848745
+        },
+        {
+          "time_ms": 1703606400000,
+          "utc": "2023-12-26T16:00:00.000+00:00",
+          "rate": 0.00036888,
+          "mark": 2230.50639015,
+          "source": "reported settlement mark",
+          "cashflow": 0.4113945985992659,
+          "opposite_extreme_cashflow": 0.4113945985992659
+        },
+        {
+          "time_ms": 1703635200000,
+          "utc": "2023-12-27T00:00:00.000+00:00",
+          "rate": 0.0003153,
+          "mark": 2232.44,
+          "source": "reported settlement mark",
+          "cashflow": 0.35194416600000006,
+          "opposite_extreme_cashflow": 0.35194416600000006
+        },
+        {
+          "time_ms": 1703664000000,
+          "utc": "2023-12-27T08:00:00.000+00:00",
+          "rate": 0.00040955,
+          "mark": 2230.44007562,
+          "source": "reported settlement mark",
+          "cashflow": 0.4567383664850855,
+          "opposite_extreme_cashflow": 0.4567383664850855
+        },
+        {
+          "time_ms": 1703692800000,
+          "utc": "2023-12-27T16:00:00.000+00:00",
+          "rate": 0.00049072,
+          "mark": 2344.62087879,
+          "source": "reported settlement mark",
+          "cashflow": 0.5752761788199144,
+          "opposite_extreme_cashflow": 0.5752761788199144
+        },
+        {
+          "time_ms": 1703721600000,
+          "utc": "2023-12-28T00:00:00.000+00:00",
+          "rate": 0.00027263,
+          "mark": 2380.28011742,
+          "source": "reported settlement mark",
+          "cashflow": 0.3244678842061073,
+          "opposite_extreme_cashflow": 0.3244678842061073
+        },
+        {
+          "time_ms": 1703750400000,
+          "utc": "2023-12-28T08:00:00.000+00:00",
+          "rate": 0.00057135,
+          "mark": 2383.06,
+          "source": "reported settlement mark",
+          "cashflow": 0.6807806654999999,
+          "opposite_extreme_cashflow": 0.6807806654999999
+        },
+        {
+          "time_ms": 1703779200000,
+          "utc": "2023-12-28T16:00:00.000+00:00",
+          "rate": 0.00049862,
+          "mark": 2360.96809848,
+          "source": "reported settlement mark",
+          "cashflow": 0.5886129566320488,
+          "opposite_extreme_cashflow": 0.5886129566320488
+        },
+        {
+          "time_ms": 1703808000001,
+          "utc": "2023-12-29T00:00:00.001+00:00",
+          "rate": 0.00044508,
+          "mark": 2345.66,
+          "source": "reported settlement mark",
+          "cashflow": 0.5220031763999999,
+          "opposite_extreme_cashflow": 0.5220031763999999
+        },
+        {
+          "time_ms": 1703836800000,
+          "utc": "2023-12-29T08:00:00.000+00:00",
+          "rate": 0.00049499,
+          "mark": 2334.99907197,
+          "source": "reported settlement mark",
+          "cashflow": 0.577900595317215,
+          "opposite_extreme_cashflow": 0.577900595317215
+        },
+        {
+          "time_ms": 1703865600000,
+          "utc": "2023-12-29T16:00:00.000+00:00",
+          "rate": 0.00047123,
+          "mark": 2328.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.54870728045,
+          "opposite_extreme_cashflow": 0.54870728045
+        },
+        {
+          "time_ms": 1703894400001,
+          "utc": "2023-12-30T00:00:00.001+00:00",
+          "rate": 0.00027255,
+          "mark": 2300.60762699,
+          "source": "reported settlement mark",
+          "cashflow": 0.31351530436806224,
+          "opposite_extreme_cashflow": 0.31351530436806224
+        },
+        {
+          "time_ms": 1703923200000,
+          "utc": "2023-12-30T08:00:00.000+00:00",
+          "rate": 0.00031443,
+          "mark": 2297.61885247,
+          "source": "reported settlement mark",
+          "cashflow": 0.36122014789107104,
+          "opposite_extreme_cashflow": 0.36122014789107104
+        },
+        {
+          "time_ms": 1703952000000,
+          "utc": "2023-12-30T16:00:00.000+00:00",
+          "rate": 0.00026513,
+          "mark": 2314.57,
+          "source": "reported settlement mark",
+          "cashflow": 0.30683097205,
+          "opposite_extreme_cashflow": 0.30683097205
+        },
+        {
+          "time_ms": 1703980800000,
+          "utc": "2023-12-31T00:00:00.000+00:00",
+          "rate": 0.00021714,
+          "mark": 2293.07001515,
+          "source": "reported settlement mark",
+          "cashflow": 0.2489586115448355,
+          "opposite_extreme_cashflow": 0.2489586115448355
+        },
+        {
+          "time_ms": 1704009600001,
+          "utc": "2023-12-31T08:00:00.001+00:00",
+          "rate": 0.00027824,
+          "mark": 2296.94,
+          "source": "reported settlement mark",
+          "cashflow": 0.3195502928,
+          "opposite_extreme_cashflow": 0.3195502928
+        },
+        {
+          "time_ms": 1704038400000,
+          "utc": "2023-12-31T16:00:00.000+00:00",
+          "rate": 0.00031621,
+          "mark": 2300.6,
+          "source": "reported settlement mark",
+          "cashflow": 0.36373636299999995,
+          "opposite_extreme_cashflow": 0.36373636299999995
+        },
+        {
+          "time_ms": 1704067200000,
+          "utc": "2024-01-01T00:00:00.000+00:00",
+          "rate": 0.00027858,
+          "mark": 2283.75151515,
+          "source": "reported settlement mark",
+          "cashflow": 0.31810374854524354,
+          "opposite_extreme_cashflow": 0.31810374854524354
+        },
+        {
+          "time_ms": 1704096000000,
+          "utc": "2024-01-01T08:00:00.000+00:00",
+          "rate": 0.00031096,
+          "mark": 2286.35660167,
+          "source": "reported settlement mark",
+          "cashflow": 0.3554827244276516,
+          "opposite_extreme_cashflow": 0.3554827244276516
+        }
+      ]
+    },
+    "Confirmation": {
+      "window": {
+        "name": "Confirmation",
+        "enter_utc": "2024-01-01T12:00:00Z",
+        "exit_utc": "2024-04-01T11:55:00Z"
+      },
+      "cases": {
+        "base": {
+          "net_pnl": 87.71247822014266,
+          "return_pct": 0.8771247822014265,
+          "ending_cash": 10087.712478220143,
+          "ending_spot_cash": 5613.034142264601,
+          "ending_futures_cash": 4474.678335955542,
+          "basis_pnl_before_slippage": -0.004999999999881766,
+          "funding": 93.50003313304103,
+          "funding_receipts": 93.50003313304103,
+          "funding_debits": 0.0,
+          "funding_settlements": 273,
+          "funding_exact_marks": 273,
+          "spot_and_futures_fees": 4.3844437820364,
+          "extra_slippage": 1.1690009999997528,
+          "dust_eth_written_off": 9.94e-05,
+          "dust_cost": 0.22911013086359996,
+          "reconciliation_error": 1.2647660696529783e-12,
+          "sampled_max_drawdown": 3.7913826209987747,
+          "min_futures_equity_usdt": 4165.616467962357,
+          "min_futures_equity_over_notional": 2.0330979137592196,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5006,
+              "arrival_ms": 1704110400250,
+              "book_local_us": 1704110400174477,
+              "book_exchange_us": 1704110400172000,
+              "raw_vwap": 2304.47,
+              "price": 2304.9308939999996,
+              "levels_used": 1,
+              "available_eth": 3.95129
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110401250,
+              "book_local_us": 1704110401245768,
+              "book_exchange_us": 1704110401241000,
+              "raw_vwap": 2306.99,
+              "price": 2306.528602,
+              "levels_used": 1,
+              "available_eth": 2.237
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1711972500250,
+              "book_local_us": 1711972500223831,
+              "book_exchange_us": 1711972500221000,
+              "raw_vwap": 3538.01,
+              "price": 3537.3023980000003,
+              "levels_used": 1,
+              "available_eth": 9.750820000000001
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1711972501250,
+              "book_local_us": 1711972501210685,
+              "book_exchange_us": 1711972501208000,
+              "raw_vwap": 3540.54,
+              "price": 3541.248108,
+              "levels_used": 1,
+              "available_eth": 5.903700000000001
+            }
+          ]
+        },
+        "higher_costs": {
+          "net_pnl": 78.653722451043,
+          "return_pct": 0.78653722451043,
+          "ending_cash": 10078.653722451043,
+          "ending_spot_cash": 5607.776836093,
+          "ending_futures_cash": 4470.876886358042,
+          "basis_pnl_before_slippage": -0.004999999999881766,
+          "funding": 93.50003313304103,
+          "funding_receipts": 93.50003313304103,
+          "funding_debits": 0.0,
+          "funding_settlements": 273,
+          "funding_exact_marks": 273,
+          "spot_and_futures_fees": 8.770703138834,
+          "extra_slippage": 5.845004999999674,
+          "dust_eth_written_off": 9.78e-05,
+          "dust_cost": 0.22560254316599995,
+          "reconciliation_error": 1.5205614545266144e-12,
+          "sampled_max_drawdown": 9.275351654998303,
+          "min_futures_equity_usdt": 4164.117962607857,
+          "min_futures_equity_over_notional": 2.032366543472631,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5011,
+              "arrival_ms": 1704110400250,
+              "book_local_us": 1704110400174477,
+              "book_exchange_us": 1704110400172000,
+              "raw_vwap": 2304.47,
+              "price": 2306.7744699999994,
+              "levels_used": 1,
+              "available_eth": 3.95129
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110401250,
+              "book_local_us": 1704110401245768,
+              "book_exchange_us": 1704110401241000,
+              "raw_vwap": 2306.99,
+              "price": 2304.6830099999997,
+              "levels_used": 1,
+              "available_eth": 2.237
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1711972500250,
+              "book_local_us": 1711972500223831,
+              "book_exchange_us": 1711972500221000,
+              "raw_vwap": 3538.01,
+              "price": 3534.47199,
+              "levels_used": 1,
+              "available_eth": 9.750820000000001
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1711972501250,
+              "book_local_us": 1711972501210685,
+              "book_exchange_us": 1711972501208000,
+              "raw_vwap": 3540.54,
+              "price": 3544.0805399999995,
+              "levels_used": 1,
+              "available_eth": 5.903700000000001
+            }
+          ]
+        },
+        "combined_stress": {
+          "net_pnl": 31.903705884520605,
+          "return_pct": 0.31903705884520606,
+          "ending_cash": 10031.90370588452,
+          "ending_spot_cash": 5607.776836093,
+          "ending_futures_cash": 4424.126869791521,
+          "basis_pnl_before_slippage": -0.004999999999881766,
+          "funding": 46.750016566520515,
+          "funding_receipts": 46.750016566520515,
+          "funding_debits": 0.0,
+          "funding_settlements": 273,
+          "funding_exact_marks": 273,
+          "spot_and_futures_fees": 8.770703138834,
+          "extra_slippage": 5.845004999999674,
+          "dust_eth_written_off": 9.78e-05,
+          "dust_cost": 0.22560254316599995,
+          "reconciliation_error": -3.517186542012496e-13,
+          "sampled_max_drawdown": 9.275351655000122,
+          "min_futures_equity_usdt": 4133.203033696429,
+          "min_futures_equity_over_notional": 2.017278001846862,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5011,
+              "arrival_ms": 1704110400250,
+              "book_local_us": 1704110400174477,
+              "book_exchange_us": 1704110400172000,
+              "raw_vwap": 2304.47,
+              "price": 2306.7744699999994,
+              "levels_used": 1,
+              "available_eth": 3.95129
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110401250,
+              "book_local_us": 1704110401245768,
+              "book_exchange_us": 1704110401241000,
+              "raw_vwap": 2306.99,
+              "price": 2304.6830099999997,
+              "levels_used": 1,
+              "available_eth": 2.237
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1711972500250,
+              "book_local_us": 1711972500223831,
+              "book_exchange_us": 1711972500221000,
+              "raw_vwap": 3538.01,
+              "price": 3534.47199,
+              "levels_used": 1,
+              "available_eth": 9.750820000000001
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1711972501250,
+              "book_local_us": 1711972501210685,
+              "book_exchange_us": 1711972501208000,
+              "raw_vwap": 3540.54,
+              "price": 3544.0805399999995,
+              "levels_used": 1,
+              "available_eth": 5.903700000000001
+            }
+          ]
+        },
+        "no_positive_funding": {
+          "net_pnl": -5.787554912898486,
+          "return_pct": -0.057875549128984856,
+          "ending_cash": 9994.212445087102,
+          "ending_spot_cash": 5613.034142264601,
+          "ending_futures_cash": 4381.178302822501,
+          "basis_pnl_before_slippage": -0.004999999999881766,
+          "funding": 0.0,
+          "funding_receipts": 0.0,
+          "funding_debits": 0.0,
+          "funding_settlements": 273,
+          "funding_exact_marks": 273,
+          "spot_and_futures_fees": 4.3844437820364,
+          "extra_slippage": 1.1690009999997528,
+          "dust_eth_written_off": 9.94e-05,
+          "dust_cost": 0.22911013086359996,
+          "reconciliation_error": 1.149302875091962e-12,
+          "sampled_max_drawdown": 7.012349491898931,
+          "min_futures_equity_usdt": 4103.7866101395,
+          "min_futures_equity_over_notional": 2.002920830507681,
+          "fills": [
+            {
+              "venue": "binance",
+              "side": "buy",
+              "quantity": 0.5006,
+              "arrival_ms": 1704110400250,
+              "book_local_us": 1704110400174477,
+              "book_exchange_us": 1704110400172000,
+              "raw_vwap": 2304.47,
+              "price": 2304.9308939999996,
+              "levels_used": 1,
+              "available_eth": 3.95129
+            },
+            {
+              "venue": "binance-futures",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1704110401250,
+              "book_local_us": 1704110401245768,
+              "book_exchange_us": 1704110401241000,
+              "raw_vwap": 2306.99,
+              "price": 2306.528602,
+              "levels_used": 1,
+              "available_eth": 2.237
+            },
+            {
+              "venue": "binance",
+              "side": "sell",
+              "quantity": 0.5,
+              "arrival_ms": 1711972500250,
+              "book_local_us": 1711972500223831,
+              "book_exchange_us": 1711972500221000,
+              "raw_vwap": 3538.01,
+              "price": 3537.3023980000003,
+              "levels_used": 1,
+              "available_eth": 9.750820000000001
+            },
+            {
+              "venue": "binance-futures",
+              "side": "buy",
+              "quantity": 0.5,
+              "arrival_ms": 1711972501250,
+              "book_local_us": 1711972501210685,
+              "book_exchange_us": 1711972501208000,
+              "raw_vwap": 3540.54,
+              "price": 3541.248108,
+              "levels_used": 1,
+              "available_eth": 5.903700000000001
+            }
+          ]
+        }
+      },
+      "funding_events": [
+        {
+          "time_ms": 1704124800000,
+          "utc": "2024-01-01T16:00:00.000+00:00",
+          "rate": 0.00043011,
+          "mark": 2316.73945076,
+          "source": "reported settlement mark",
+          "cashflow": 0.49822640258319184,
+          "opposite_extreme_cashflow": 0.49822640258319184
+        },
+        {
+          "time_ms": 1704153600000,
+          "utc": "2024-01-02T00:00:00.000+00:00",
+          "rate": 0.00053505,
+          "mark": 2354.62,
+          "source": "reported settlement mark",
+          "cashflow": 0.6299197155,
+          "opposite_extreme_cashflow": 0.6299197155
+        },
+        {
+          "time_ms": 1704182400000,
+          "utc": "2024-01-02T08:00:00.000+00:00",
+          "rate": 0.0005124,
+          "mark": 2387.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.611762046,
+          "opposite_extreme_cashflow": 0.611762046
+        },
+        {
+          "time_ms": 1704211200000,
+          "utc": "2024-01-02T16:00:00.000+00:00",
+          "rate": 0.00063801,
+          "mark": 2359.18379545,
+          "source": "reported settlement mark",
+          "cashflow": 0.7525914266675273,
+          "opposite_extreme_cashflow": 0.7525914266675273
+        },
+        {
+          "time_ms": 1704240000000,
+          "utc": "2024-01-03T00:00:00.000+00:00",
+          "rate": 0.00028538,
+          "mark": 2356.81500379,
+          "source": "reported settlement mark",
+          "cashflow": 0.3362939328907951,
+          "opposite_extreme_cashflow": 0.3362939328907951
+        },
+        {
+          "time_ms": 1704268800000,
+          "utc": "2024-01-03T08:00:00.000+00:00",
+          "rate": 0.00024384,
+          "mark": 2362.82,
+          "source": "reported settlement mark",
+          "cashflow": 0.2880750144,
+          "opposite_extreme_cashflow": 0.2880750144
+        },
+        {
+          "time_ms": 1704297600000,
+          "utc": "2024-01-03T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2240.81591288,
+          "source": "reported settlement mark",
+          "cashflow": 0.11204079564399999,
+          "opposite_extreme_cashflow": 0.11204079564399999
+        },
+        {
+          "time_ms": 1704326400000,
+          "utc": "2024-01-04T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2210.33935985,
+          "source": "reported settlement mark",
+          "cashflow": 0.11051696799250002,
+          "opposite_extreme_cashflow": 0.11051696799250002
+        },
+        {
+          "time_ms": 1704355200000,
+          "utc": "2024-01-04T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2222.58849621,
+          "source": "reported settlement mark",
+          "cashflow": 0.1111294248105,
+          "opposite_extreme_cashflow": 0.1111294248105
+        },
+        {
+          "time_ms": 1704384000000,
+          "utc": "2024-01-04T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2277.70839015,
+          "source": "reported settlement mark",
+          "cashflow": 0.1138854195075,
+          "opposite_extreme_cashflow": 0.1138854195075
+        },
+        {
+          "time_ms": 1704412800001,
+          "utc": "2024-01-05T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2267.60702033,
+          "source": "reported settlement mark",
+          "cashflow": 0.11338035101650001,
+          "opposite_extreme_cashflow": 0.11338035101650001
+        },
+        {
+          "time_ms": 1704441600000,
+          "utc": "2024-01-05T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2252.67449242,
+          "source": "reported settlement mark",
+          "cashflow": 0.11263372462100002,
+          "opposite_extreme_cashflow": 0.11263372462100002
+        },
+        {
+          "time_ms": 1704470400000,
+          "utc": "2024-01-05T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2225.09448106,
+          "source": "reported settlement mark",
+          "cashflow": 0.111254724053,
+          "opposite_extreme_cashflow": 0.111254724053
+        },
+        {
+          "time_ms": 1704499200000,
+          "utc": "2024-01-06T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2268.55259756,
+          "source": "reported settlement mark",
+          "cashflow": 0.113427629878,
+          "opposite_extreme_cashflow": 0.113427629878
+        },
+        {
+          "time_ms": 1704528000000,
+          "utc": "2024-01-06T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2233.09,
+          "source": "reported settlement mark",
+          "cashflow": 0.11165450000000002,
+          "opposite_extreme_cashflow": 0.11165450000000002
+        },
+        {
+          "time_ms": 1704556800000,
+          "utc": "2024-01-06T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2246.27,
+          "source": "reported settlement mark",
+          "cashflow": 0.11231350000000001,
+          "opposite_extreme_cashflow": 0.11231350000000001
+        },
+        {
+          "time_ms": 1704585600000,
+          "utc": "2024-01-07T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2240.44394318,
+          "source": "reported settlement mark",
+          "cashflow": 0.11202219715900001,
+          "opposite_extreme_cashflow": 0.11202219715900001
+        },
+        {
+          "time_ms": 1704614400001,
+          "utc": "2024-01-07T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2248.88,
+          "source": "reported settlement mark",
+          "cashflow": 0.11244400000000002,
+          "opposite_extreme_cashflow": 0.11244400000000002
+        },
+        {
+          "time_ms": 1704643200001,
+          "utc": "2024-01-07T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2229.9,
+          "source": "reported settlement mark",
+          "cashflow": 0.11149500000000001,
+          "opposite_extreme_cashflow": 0.11149500000000001
+        },
+        {
+          "time_ms": 1704672000000,
+          "utc": "2024-01-08T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2220.87,
+          "source": "reported settlement mark",
+          "cashflow": 0.1110435,
+          "opposite_extreme_cashflow": 0.1110435
+        },
+        {
+          "time_ms": 1704700800000,
+          "utc": "2024-01-08T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2223.6850963,
+          "source": "reported settlement mark",
+          "cashflow": 0.11118425481500001,
+          "opposite_extreme_cashflow": 0.11118425481500001
+        },
+        {
+          "time_ms": 1704729600000,
+          "utc": "2024-01-08T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2269.52795076,
+          "source": "reported settlement mark",
+          "cashflow": 0.113476397538,
+          "opposite_extreme_cashflow": 0.113476397538
+        },
+        {
+          "time_ms": 1704758400001,
+          "utc": "2024-01-09T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2331.05410707,
+          "source": "reported settlement mark",
+          "cashflow": 0.11655270535350001,
+          "opposite_extreme_cashflow": 0.11655270535350001
+        },
+        {
+          "time_ms": 1704787200000,
+          "utc": "2024-01-09T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2306.09,
+          "source": "reported settlement mark",
+          "cashflow": 0.11530450000000002,
+          "opposite_extreme_cashflow": 0.11530450000000002
+        },
+        {
+          "time_ms": 1704816000000,
+          "utc": "2024-01-09T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2257.03263258,
+          "source": "reported settlement mark",
+          "cashflow": 0.11285163162900001,
+          "opposite_extreme_cashflow": 0.11285163162900001
+        },
+        {
+          "time_ms": 1704844800000,
+          "utc": "2024-01-10T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2344.44,
+          "source": "reported settlement mark",
+          "cashflow": 0.117222,
+          "opposite_extreme_cashflow": 0.117222
+        },
+        {
+          "time_ms": 1704873600000,
+          "utc": "2024-01-10T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2369.32956857,
+          "source": "reported settlement mark",
+          "cashflow": 0.1184664784285,
+          "opposite_extreme_cashflow": 0.1184664784285
+        },
+        {
+          "time_ms": 1704902400000,
+          "utc": "2024-01-10T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2450.23,
+          "source": "reported settlement mark",
+          "cashflow": 0.12251150000000001,
+          "opposite_extreme_cashflow": 0.12251150000000001
+        },
+        {
+          "time_ms": 1704931200000,
+          "utc": "2024-01-11T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2584.4290303,
+          "source": "reported settlement mark",
+          "cashflow": 0.129221451515,
+          "opposite_extreme_cashflow": 0.129221451515
+        },
+        {
+          "time_ms": 1704960000000,
+          "utc": "2024-01-11T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2589.40712879,
+          "source": "reported settlement mark",
+          "cashflow": 0.1294703564395,
+          "opposite_extreme_cashflow": 0.1294703564395
+        },
+        {
+          "time_ms": 1704988800000,
+          "utc": "2024-01-11T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2614.23185606,
+          "source": "reported settlement mark",
+          "cashflow": 0.13071159280300002,
+          "opposite_extreme_cashflow": 0.13071159280300002
+        },
+        {
+          "time_ms": 1705017600001,
+          "utc": "2024-01-12T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2618.59,
+          "source": "reported settlement mark",
+          "cashflow": 0.1309295,
+          "opposite_extreme_cashflow": 0.1309295
+        },
+        {
+          "time_ms": 1705046400000,
+          "utc": "2024-01-12T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2597.21351515,
+          "source": "reported settlement mark",
+          "cashflow": 0.12986067575750002,
+          "opposite_extreme_cashflow": 0.12986067575750002
+        },
+        {
+          "time_ms": 1705075200000,
+          "utc": "2024-01-12T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2648.56,
+          "source": "reported settlement mark",
+          "cashflow": 0.132428,
+          "opposite_extreme_cashflow": 0.132428
+        },
+        {
+          "time_ms": 1705104000000,
+          "utc": "2024-01-13T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2523.12903409,
+          "source": "reported settlement mark",
+          "cashflow": 0.12615645170450002,
+          "opposite_extreme_cashflow": 0.12615645170450002
+        },
+        {
+          "time_ms": 1705132800000,
+          "utc": "2024-01-13T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2550.91017803,
+          "source": "reported settlement mark",
+          "cashflow": 0.12754550890150002,
+          "opposite_extreme_cashflow": 0.12754550890150002
+        },
+        {
+          "time_ms": 1705161600001,
+          "utc": "2024-01-13T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2564.28,
+          "source": "reported settlement mark",
+          "cashflow": 0.12821400000000002,
+          "opposite_extreme_cashflow": 0.12821400000000002
+        },
+        {
+          "time_ms": 1705190400000,
+          "utc": "2024-01-14T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2578.43028788,
+          "source": "reported settlement mark",
+          "cashflow": 0.12892151439400001,
+          "opposite_extreme_cashflow": 0.12892151439400001
+        },
+        {
+          "time_ms": 1705219200000,
+          "utc": "2024-01-14T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2551.43821591,
+          "source": "reported settlement mark",
+          "cashflow": 0.1275719107955,
+          "opposite_extreme_cashflow": 0.1275719107955
+        },
+        {
+          "time_ms": 1705248000001,
+          "utc": "2024-01-14T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2538.17,
+          "source": "reported settlement mark",
+          "cashflow": 0.1269085,
+          "opposite_extreme_cashflow": 0.1269085
+        },
+        {
+          "time_ms": 1705276800000,
+          "utc": "2024-01-15T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2474.13,
+          "source": "reported settlement mark",
+          "cashflow": 0.12370650000000001,
+          "opposite_extreme_cashflow": 0.12370650000000001
+        },
+        {
+          "time_ms": 1705305600000,
+          "utc": "2024-01-15T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2514.25229167,
+          "source": "reported settlement mark",
+          "cashflow": 0.1257126145835,
+          "opposite_extreme_cashflow": 0.1257126145835
+        },
+        {
+          "time_ms": 1705334400000,
+          "utc": "2024-01-15T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2515.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.1257685,
+          "opposite_extreme_cashflow": 0.1257685
+        },
+        {
+          "time_ms": 1705363200000,
+          "utc": "2024-01-16T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2512.2,
+          "source": "reported settlement mark",
+          "cashflow": 0.12561,
+          "opposite_extreme_cashflow": 0.12561
+        },
+        {
+          "time_ms": 1705392000000,
+          "utc": "2024-01-16T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2527.97039394,
+          "source": "reported settlement mark",
+          "cashflow": 0.126398519697,
+          "opposite_extreme_cashflow": 0.126398519697
+        },
+        {
+          "time_ms": 1705420800001,
+          "utc": "2024-01-16T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2559.46878409,
+          "source": "reported settlement mark",
+          "cashflow": 0.12797343920450002,
+          "opposite_extreme_cashflow": 0.12797343920450002
+        },
+        {
+          "time_ms": 1705449600000,
+          "utc": "2024-01-17T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2587.57931818,
+          "source": "reported settlement mark",
+          "cashflow": 0.129378965909,
+          "opposite_extreme_cashflow": 0.129378965909
+        },
+        {
+          "time_ms": 1705478400000,
+          "utc": "2024-01-17T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2552.39315909,
+          "source": "reported settlement mark",
+          "cashflow": 0.1276196579545,
+          "opposite_extreme_cashflow": 0.1276196579545
+        },
+        {
+          "time_ms": 1705507200000,
+          "utc": "2024-01-17T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2539.47984977,
+          "source": "reported settlement mark",
+          "cashflow": 0.1269739924885,
+          "opposite_extreme_cashflow": 0.1269739924885
+        },
+        {
+          "time_ms": 1705536000001,
+          "utc": "2024-01-18T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2530.53208712,
+          "source": "reported settlement mark",
+          "cashflow": 0.12652660435600002,
+          "opposite_extreme_cashflow": 0.12652660435600002
+        },
+        {
+          "time_ms": 1705564800000,
+          "utc": "2024-01-18T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2538.88,
+          "source": "reported settlement mark",
+          "cashflow": 0.126944,
+          "opposite_extreme_cashflow": 0.126944
+        },
+        {
+          "time_ms": 1705593600000,
+          "utc": "2024-01-18T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2526.12,
+          "source": "reported settlement mark",
+          "cashflow": 0.126306,
+          "opposite_extreme_cashflow": 0.126306
+        },
+        {
+          "time_ms": 1705622400000,
+          "utc": "2024-01-19T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2470.45503788,
+          "source": "reported settlement mark",
+          "cashflow": 0.123522751894,
+          "opposite_extreme_cashflow": 0.123522751894
+        },
+        {
+          "time_ms": 1705651200000,
+          "utc": "2024-01-19T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2465.61653409,
+          "source": "reported settlement mark",
+          "cashflow": 0.12328082670450001,
+          "opposite_extreme_cashflow": 0.12328082670450001
+        },
+        {
+          "time_ms": 1705680000002,
+          "utc": "2024-01-19T16:00:00.002+00:00",
+          "rate": 0.0001,
+          "mark": 2463.45,
+          "source": "reported settlement mark",
+          "cashflow": 0.12317249999999999,
+          "opposite_extreme_cashflow": 0.12317249999999999
+        },
+        {
+          "time_ms": 1705708800000,
+          "utc": "2024-01-20T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2492.2176849,
+          "source": "reported settlement mark",
+          "cashflow": 0.12461088424500001,
+          "opposite_extreme_cashflow": 0.12461088424500001
+        },
+        {
+          "time_ms": 1705737600003,
+          "utc": "2024-01-20T08:00:00.003+00:00",
+          "rate": 0.0001,
+          "mark": 2478.74349199,
+          "source": "reported settlement mark",
+          "cashflow": 0.12393717459950002,
+          "opposite_extreme_cashflow": 0.12393717459950002
+        },
+        {
+          "time_ms": 1705766400000,
+          "utc": "2024-01-20T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2464.20482955,
+          "source": "reported settlement mark",
+          "cashflow": 0.1232102414775,
+          "opposite_extreme_cashflow": 0.1232102414775
+        },
+        {
+          "time_ms": 1705795200000,
+          "utc": "2024-01-21T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2472.24386483,
+          "source": "reported settlement mark",
+          "cashflow": 0.1236121932415,
+          "opposite_extreme_cashflow": 0.1236121932415
+        },
+        {
+          "time_ms": 1705824000000,
+          "utc": "2024-01-21T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2475.83113636,
+          "source": "reported settlement mark",
+          "cashflow": 0.12379155681800001,
+          "opposite_extreme_cashflow": 0.12379155681800001
+        },
+        {
+          "time_ms": 1705852800000,
+          "utc": "2024-01-21T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2468.1,
+          "source": "reported settlement mark",
+          "cashflow": 0.123405,
+          "opposite_extreme_cashflow": 0.123405
+        },
+        {
+          "time_ms": 1705881600000,
+          "utc": "2024-01-22T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2456.79434848,
+          "source": "reported settlement mark",
+          "cashflow": 0.122839717424,
+          "opposite_extreme_cashflow": 0.122839717424
+        },
+        {
+          "time_ms": 1705910400000,
+          "utc": "2024-01-22T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2420.75290152,
+          "source": "reported settlement mark",
+          "cashflow": 0.121037645076,
+          "opposite_extreme_cashflow": 0.121037645076
+        },
+        {
+          "time_ms": 1705939200000,
+          "utc": "2024-01-22T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2379.05630682,
+          "source": "reported settlement mark",
+          "cashflow": 0.118952815341,
+          "opposite_extreme_cashflow": 0.118952815341
+        },
+        {
+          "time_ms": 1705968000000,
+          "utc": "2024-01-23T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2314.33,
+          "source": "reported settlement mark",
+          "cashflow": 0.1157165,
+          "opposite_extreme_cashflow": 0.1157165
+        },
+        {
+          "time_ms": 1705996800000,
+          "utc": "2024-01-23T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2323.48176136,
+          "source": "reported settlement mark",
+          "cashflow": 0.116174088068,
+          "opposite_extreme_cashflow": 0.116174088068
+        },
+        {
+          "time_ms": 1706025600000,
+          "utc": "2024-01-23T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2219.42948864,
+          "source": "reported settlement mark",
+          "cashflow": 0.11097147443199999,
+          "opposite_extreme_cashflow": 0.11097147443199999
+        },
+        {
+          "time_ms": 1706054400000,
+          "utc": "2024-01-24T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2241.92282927,
+          "source": "reported settlement mark",
+          "cashflow": 0.1120961414635,
+          "opposite_extreme_cashflow": 0.1120961414635
+        },
+        {
+          "time_ms": 1706083200000,
+          "utc": "2024-01-24T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2233.49910227,
+          "source": "reported settlement mark",
+          "cashflow": 0.11167495511350001,
+          "opposite_extreme_cashflow": 0.11167495511350001
+        },
+        {
+          "time_ms": 1706112000000,
+          "utc": "2024-01-24T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2234.1825963,
+          "source": "reported settlement mark",
+          "cashflow": 0.11170912981500002,
+          "opposite_extreme_cashflow": 0.11170912981500002
+        },
+        {
+          "time_ms": 1706140800000,
+          "utc": "2024-01-25T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2234.62,
+          "source": "reported settlement mark",
+          "cashflow": 0.111731,
+          "opposite_extreme_cashflow": 0.111731
+        },
+        {
+          "time_ms": 1706169600001,
+          "utc": "2024-01-25T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2227.10170732,
+          "source": "reported settlement mark",
+          "cashflow": 0.11135508536600001,
+          "opposite_extreme_cashflow": 0.11135508536600001
+        },
+        {
+          "time_ms": 1706198400000,
+          "utc": "2024-01-25T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2187.70160227,
+          "source": "reported settlement mark",
+          "cashflow": 0.1093850801135,
+          "opposite_extreme_cashflow": 0.1093850801135
+        },
+        {
+          "time_ms": 1706227200001,
+          "utc": "2024-01-26T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2218.01,
+          "source": "reported settlement mark",
+          "cashflow": 0.11090050000000001,
+          "opposite_extreme_cashflow": 0.11090050000000001
+        },
+        {
+          "time_ms": 1706256000000,
+          "utc": "2024-01-26T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2196.99,
+          "source": "reported settlement mark",
+          "cashflow": 0.10984949999999999,
+          "opposite_extreme_cashflow": 0.10984949999999999
+        },
+        {
+          "time_ms": 1706284800000,
+          "utc": "2024-01-26T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2256.71063415,
+          "source": "reported settlement mark",
+          "cashflow": 0.11283553170749999,
+          "opposite_extreme_cashflow": 0.11283553170749999
+        },
+        {
+          "time_ms": 1706313600000,
+          "utc": "2024-01-27T00:00:00.000+00:00",
+          "rate": 6.877e-05,
+          "mark": 2266.73,
+          "source": "reported settlement mark",
+          "cashflow": 0.07794151105,
+          "opposite_extreme_cashflow": 0.07794151105
+        },
+        {
+          "time_ms": 1706342400000,
+          "utc": "2024-01-27T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2257.79,
+          "source": "reported settlement mark",
+          "cashflow": 0.1128895,
+          "opposite_extreme_cashflow": 0.1128895
+        },
+        {
+          "time_ms": 1706371200000,
+          "utc": "2024-01-27T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2269.29,
+          "source": "reported settlement mark",
+          "cashflow": 0.11346450000000001,
+          "opposite_extreme_cashflow": 0.11346450000000001
+        },
+        {
+          "time_ms": 1706400000000,
+          "utc": "2024-01-28T00:00:00.000+00:00",
+          "rate": 6.557e-05,
+          "mark": 2266.99,
+          "source": "reported settlement mark",
+          "cashflow": 0.07432326714999998,
+          "opposite_extreme_cashflow": 0.07432326714999998
+        },
+        {
+          "time_ms": 1706428800000,
+          "utc": "2024-01-28T08:00:00.000+00:00",
+          "rate": 6.135e-05,
+          "mark": 2281.84,
+          "source": "reported settlement mark",
+          "cashflow": 0.069995442,
+          "opposite_extreme_cashflow": 0.069995442
+        },
+        {
+          "time_ms": 1706457600000,
+          "utc": "2024-01-28T16:00:00.000+00:00",
+          "rate": 8.266e-05,
+          "mark": 2269.16,
+          "source": "reported settlement mark",
+          "cashflow": 0.0937843828,
+          "opposite_extreme_cashflow": 0.0937843828
+        },
+        {
+          "time_ms": 1706486400000,
+          "utc": "2024-01-29T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2256.11057011,
+          "source": "reported settlement mark",
+          "cashflow": 0.1128055285055,
+          "opposite_extreme_cashflow": 0.1128055285055
+        },
+        {
+          "time_ms": 1706515200001,
+          "utc": "2024-01-29T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2258.42,
+          "source": "reported settlement mark",
+          "cashflow": 0.11292100000000001,
+          "opposite_extreme_cashflow": 0.11292100000000001
+        },
+        {
+          "time_ms": 1706544000000,
+          "utc": "2024-01-29T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2275.164,
+          "source": "reported settlement mark",
+          "cashflow": 0.11375820000000002,
+          "opposite_extreme_cashflow": 0.11375820000000002
+        },
+        {
+          "time_ms": 1706572800000,
+          "utc": "2024-01-30T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2316.79295076,
+          "source": "reported settlement mark",
+          "cashflow": 0.11583964753800001,
+          "opposite_extreme_cashflow": 0.11583964753800001
+        },
+        {
+          "time_ms": 1706601600000,
+          "utc": "2024-01-30T08:00:00.000+00:00",
+          "rate": 6.195e-05,
+          "mark": 2308.27,
+          "source": "reported settlement mark",
+          "cashflow": 0.07149866325,
+          "opposite_extreme_cashflow": 0.07149866325
+        },
+        {
+          "time_ms": 1706630400001,
+          "utc": "2024-01-30T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2340.43,
+          "source": "reported settlement mark",
+          "cashflow": 0.1170215,
+          "opposite_extreme_cashflow": 0.1170215
+        },
+        {
+          "time_ms": 1706659200000,
+          "utc": "2024-01-31T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2342.25398864,
+          "source": "reported settlement mark",
+          "cashflow": 0.117112699432,
+          "opposite_extreme_cashflow": 0.117112699432
+        },
+        {
+          "time_ms": 1706688000000,
+          "utc": "2024-01-31T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2340.24780303,
+          "source": "reported settlement mark",
+          "cashflow": 0.1170123901515,
+          "opposite_extreme_cashflow": 0.1170123901515
+        },
+        {
+          "time_ms": 1706716800000,
+          "utc": "2024-01-31T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2328.82088258,
+          "source": "reported settlement mark",
+          "cashflow": 0.11644104412900001,
+          "opposite_extreme_cashflow": 0.11644104412900001
+        },
+        {
+          "time_ms": 1706745600000,
+          "utc": "2024-02-01T00:00:00.000+00:00",
+          "rate": 5.527e-05,
+          "mark": 2282.1538447,
+          "source": "reported settlement mark",
+          "cashflow": 0.06306732149828449,
+          "opposite_extreme_cashflow": 0.06306732149828449
+        },
+        {
+          "time_ms": 1706774400000,
+          "utc": "2024-02-01T08:00:00.000+00:00",
+          "rate": 7.871e-05,
+          "mark": 2270.91404545,
+          "source": "reported settlement mark",
+          "cashflow": 0.08937182225868474,
+          "opposite_extreme_cashflow": 0.08937182225868474
+        },
+        {
+          "time_ms": 1706803200002,
+          "utc": "2024-02-01T16:00:00.002+00:00",
+          "rate": 0.0001,
+          "mark": 2288.28,
+          "source": "reported settlement mark",
+          "cashflow": 0.11441400000000002,
+          "opposite_extreme_cashflow": 0.11441400000000002
+        },
+        {
+          "time_ms": 1706832000000,
+          "utc": "2024-02-02T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2303.55129231,
+          "source": "reported settlement mark",
+          "cashflow": 0.11517756461550001,
+          "opposite_extreme_cashflow": 0.11517756461550001
+        },
+        {
+          "time_ms": 1706860800000,
+          "utc": "2024-02-02T08:00:00.000+00:00",
+          "rate": 3.678e-05,
+          "mark": 2312.6005014,
+          "source": "reported settlement mark",
+          "cashflow": 0.042528723220746,
+          "opposite_extreme_cashflow": 0.042528723220746
+        },
+        {
+          "time_ms": 1706889600000,
+          "utc": "2024-02-02T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2313.09896591,
+          "source": "reported settlement mark",
+          "cashflow": 0.1156549482955,
+          "opposite_extreme_cashflow": 0.1156549482955
+        },
+        {
+          "time_ms": 1706918400000,
+          "utc": "2024-02-03T00:00:00.000+00:00",
+          "rate": 8.15e-05,
+          "mark": 2308.21922729,
+          "source": "reported settlement mark",
+          "cashflow": 0.09405993351206751,
+          "opposite_extreme_cashflow": 0.09405993351206751
+        },
+        {
+          "time_ms": 1706947200000,
+          "utc": "2024-02-03T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2313.44,
+          "source": "reported settlement mark",
+          "cashflow": 0.11567200000000001,
+          "opposite_extreme_cashflow": 0.11567200000000001
+        },
+        {
+          "time_ms": 1706976000001,
+          "utc": "2024-02-03T16:00:00.001+00:00",
+          "rate": 4.476e-05,
+          "mark": 2302.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.051537335399999995,
+          "opposite_extreme_cashflow": 0.051537335399999995
+        },
+        {
+          "time_ms": 1707004800000,
+          "utc": "2024-02-04T00:00:00.000+00:00",
+          "rate": 3.18e-05,
+          "mark": 2295.43727831,
+          "source": "reported settlement mark",
+          "cashflow": 0.036497452725129,
+          "opposite_extreme_cashflow": 0.036497452725129
+        },
+        {
+          "time_ms": 1707033600004,
+          "utc": "2024-02-04T08:00:00.004+00:00",
+          "rate": 9.094e-05,
+          "mark": 2289.7828116,
+          "source": "reported settlement mark",
+          "cashflow": 0.104116424443452,
+          "opposite_extreme_cashflow": 0.104116424443452
+        },
+        {
+          "time_ms": 1707062400000,
+          "utc": "2024-02-04T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2300.98432317,
+          "source": "reported settlement mark",
+          "cashflow": 0.11504921615850001,
+          "opposite_extreme_cashflow": 0.11504921615850001
+        },
+        {
+          "time_ms": 1707091200000,
+          "utc": "2024-02-05T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2288.76719557,
+          "source": "reported settlement mark",
+          "cashflow": 0.11443835977849999,
+          "opposite_extreme_cashflow": 0.11443835977849999
+        },
+        {
+          "time_ms": 1707120000000,
+          "utc": "2024-02-05T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2309.74,
+          "source": "reported settlement mark",
+          "cashflow": 0.11548699999999999,
+          "opposite_extreme_cashflow": 0.11548699999999999
+        },
+        {
+          "time_ms": 1707148800000,
+          "utc": "2024-02-05T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2297.5794697,
+          "source": "reported settlement mark",
+          "cashflow": 0.11487897348500001,
+          "opposite_extreme_cashflow": 0.11487897348500001
+        },
+        {
+          "time_ms": 1707177600000,
+          "utc": "2024-02-06T00:00:00.000+00:00",
+          "rate": 5.691e-05,
+          "mark": 2300.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.06547011765,
+          "opposite_extreme_cashflow": 0.06547011765
+        },
+        {
+          "time_ms": 1707206400001,
+          "utc": "2024-02-06T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2326.24939394,
+          "source": "reported settlement mark",
+          "cashflow": 0.11631246969700001,
+          "opposite_extreme_cashflow": 0.11631246969700001
+        },
+        {
+          "time_ms": 1707235200000,
+          "utc": "2024-02-06T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2342.8633447,
+          "source": "reported settlement mark",
+          "cashflow": 0.11714316723500001,
+          "opposite_extreme_cashflow": 0.11714316723500001
+        },
+        {
+          "time_ms": 1707264000000,
+          "utc": "2024-02-07T00:00:00.000+00:00",
+          "rate": 7.659e-05,
+          "mark": 2371.74,
+          "source": "reported settlement mark",
+          "cashflow": 0.09082578329999999,
+          "opposite_extreme_cashflow": 0.09082578329999999
+        },
+        {
+          "time_ms": 1707292800000,
+          "utc": "2024-02-07T08:00:00.000+00:00",
+          "rate": 4.883e-05,
+          "mark": 2362.07,
+          "source": "reported settlement mark",
+          "cashflow": 0.05766993905,
+          "opposite_extreme_cashflow": 0.05766993905
+        },
+        {
+          "time_ms": 1707321600000,
+          "utc": "2024-02-07T16:00:00.000+00:00",
+          "rate": 4.309e-05,
+          "mark": 2368.69,
+          "source": "reported settlement mark",
+          "cashflow": 0.051033426050000004,
+          "opposite_extreme_cashflow": 0.051033426050000004
+        },
+        {
+          "time_ms": 1707350400000,
+          "utc": "2024-02-08T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2424.22,
+          "source": "reported settlement mark",
+          "cashflow": 0.121211,
+          "opposite_extreme_cashflow": 0.121211
+        },
+        {
+          "time_ms": 1707379200000,
+          "utc": "2024-02-08T08:00:00.000+00:00",
+          "rate": 7.523e-05,
+          "mark": 2420.3278423,
+          "source": "reported settlement mark",
+          "cashflow": 0.0910406317881145,
+          "opposite_extreme_cashflow": 0.0910406317881145
+        },
+        {
+          "time_ms": 1707408000000,
+          "utc": "2024-02-08T16:00:00.000+00:00",
+          "rate": 9.802e-05,
+          "mark": 2452.61854924,
+          "source": "reported settlement mark",
+          "cashflow": 0.1202028350982524,
+          "opposite_extreme_cashflow": 0.1202028350982524
+        },
+        {
+          "time_ms": 1707436800000,
+          "utc": "2024-02-09T00:00:00.000+00:00",
+          "rate": 7.752e-05,
+          "mark": 2418.77,
+          "source": "reported settlement mark",
+          "cashflow": 0.0937515252,
+          "opposite_extreme_cashflow": 0.0937515252
+        },
+        {
+          "time_ms": 1707465600000,
+          "utc": "2024-02-09T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2452.86,
+          "source": "reported settlement mark",
+          "cashflow": 0.12264300000000002,
+          "opposite_extreme_cashflow": 0.12264300000000002
+        },
+        {
+          "time_ms": 1707494400001,
+          "utc": "2024-02-09T16:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2494.26447154,
+          "source": "reported settlement mark",
+          "cashflow": 0.12471322357700002,
+          "opposite_extreme_cashflow": 0.12471322357700002
+        },
+        {
+          "time_ms": 1707523200001,
+          "utc": "2024-02-10T00:00:00.001+00:00",
+          "rate": 7.838e-05,
+          "mark": 2485.29861789,
+          "source": "reported settlement mark",
+          "cashflow": 0.09739885283510911,
+          "opposite_extreme_cashflow": 0.09739885283510911
+        },
+        {
+          "time_ms": 1707552000000,
+          "utc": "2024-02-10T08:00:00.000+00:00",
+          "rate": 9.615e-05,
+          "mark": 2494.18473171,
+          "source": "reported settlement mark",
+          "cashflow": 0.11990793097695826,
+          "opposite_extreme_cashflow": 0.11990793097695826
+        },
+        {
+          "time_ms": 1707580800000,
+          "utc": "2024-02-10T16:00:00.000+00:00",
+          "rate": 9.995e-05,
+          "mark": 2489.7492561,
+          "source": "reported settlement mark",
+          "cashflow": 0.1244252190735975,
+          "opposite_extreme_cashflow": 0.1244252190735975
+        },
+        {
+          "time_ms": 1707609600000,
+          "utc": "2024-02-11T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2499.41170383,
+          "source": "reported settlement mark",
+          "cashflow": 0.1249705851915,
+          "opposite_extreme_cashflow": 0.1249705851915
+        },
+        {
+          "time_ms": 1707638400001,
+          "utc": "2024-02-11T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2526.93,
+          "source": "reported settlement mark",
+          "cashflow": 0.1263465,
+          "opposite_extreme_cashflow": 0.1263465
+        },
+        {
+          "time_ms": 1707667200000,
+          "utc": "2024-02-11T16:00:00.000+00:00",
+          "rate": 4.792e-05,
+          "mark": 2507.85180174,
+          "source": "reported settlement mark",
+          "cashflow": 0.060088129169690405,
+          "opposite_extreme_cashflow": 0.060088129169690405
+        },
+        {
+          "time_ms": 1707696000000,
+          "utc": "2024-02-12T00:00:00.000+00:00",
+          "rate": 5.076e-05,
+          "mark": 2506.11,
+          "source": "reported settlement mark",
+          "cashflow": 0.06360507180000001,
+          "opposite_extreme_cashflow": 0.06360507180000001
+        },
+        {
+          "time_ms": 1707724800000,
+          "utc": "2024-02-12T08:00:00.000+00:00",
+          "rate": 9.971e-05,
+          "mark": 2500.9,
+          "source": "reported settlement mark",
+          "cashflow": 0.12468236950000001,
+          "opposite_extreme_cashflow": 0.12468236950000001
+        },
+        {
+          "time_ms": 1707753600000,
+          "utc": "2024-02-12T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2557.33,
+          "source": "reported settlement mark",
+          "cashflow": 0.1278665,
+          "opposite_extreme_cashflow": 0.1278665
+        },
+        {
+          "time_ms": 1707782400000,
+          "utc": "2024-02-13T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2660.11561382,
+          "source": "reported settlement mark",
+          "cashflow": 0.133005780691,
+          "opposite_extreme_cashflow": 0.133005780691
+        },
+        {
+          "time_ms": 1707811200000,
+          "utc": "2024-02-13T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2650.26,
+          "source": "reported settlement mark",
+          "cashflow": 0.13251300000000002,
+          "opposite_extreme_cashflow": 0.13251300000000002
+        },
+        {
+          "time_ms": 1707840000000,
+          "utc": "2024-02-13T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2632.47865909,
+          "source": "reported settlement mark",
+          "cashflow": 0.1316239329545,
+          "opposite_extreme_cashflow": 0.1316239329545
+        },
+        {
+          "time_ms": 1707868800000,
+          "utc": "2024-02-14T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2640.72,
+          "source": "reported settlement mark",
+          "cashflow": 0.132036,
+          "opposite_extreme_cashflow": 0.132036
+        },
+        {
+          "time_ms": 1707897600000,
+          "utc": "2024-02-14T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2653.62,
+          "source": "reported settlement mark",
+          "cashflow": 0.132681,
+          "opposite_extreme_cashflow": 0.132681
+        },
+        {
+          "time_ms": 1707926400000,
+          "utc": "2024-02-14T16:00:00.000+00:00",
+          "rate": 0.00013082,
+          "mark": 2750.43993939,
+          "source": "reported settlement mark",
+          "cashflow": 0.1799062764354999,
+          "opposite_extreme_cashflow": 0.1799062764354999
+        },
+        {
+          "time_ms": 1707955200000,
+          "utc": "2024-02-15T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2776.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.1388075,
+          "opposite_extreme_cashflow": 0.1388075
+        },
+        {
+          "time_ms": 1707984000000,
+          "utc": "2024-02-15T08:00:00.000+00:00",
+          "rate": 0.00012136,
+          "mark": 2773.76693182,
+          "source": "reported settlement mark",
+          "cashflow": 0.1683121774228376,
+          "opposite_extreme_cashflow": 0.1683121774228376
+        },
+        {
+          "time_ms": 1708012800000,
+          "utc": "2024-02-15T16:00:00.000+00:00",
+          "rate": 0.00015412,
+          "mark": 2827.40701515,
+          "source": "reported settlement mark",
+          "cashflow": 0.217879984587459,
+          "opposite_extreme_cashflow": 0.217879984587459
+        },
+        {
+          "time_ms": 1708041600000,
+          "utc": "2024-02-16T00:00:00.000+00:00",
+          "rate": 0.00011125,
+          "mark": 2824.38874621,
+          "source": "reported settlement mark",
+          "cashflow": 0.15710662400793124,
+          "opposite_extreme_cashflow": 0.15710662400793124
+        },
+        {
+          "time_ms": 1708070400000,
+          "utc": "2024-02-16T08:00:00.000+00:00",
+          "rate": 0.00011597,
+          "mark": 2817.08,
+          "source": "reported settlement mark",
+          "cashflow": 0.1633483838,
+          "opposite_extreme_cashflow": 0.1633483838
+        },
+        {
+          "time_ms": 1708099200000,
+          "utc": "2024-02-16T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2776.94585227,
+          "source": "reported settlement mark",
+          "cashflow": 0.1388472926135,
+          "opposite_extreme_cashflow": 0.1388472926135
+        },
+        {
+          "time_ms": 1708128000000,
+          "utc": "2024-02-17T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2803.3795303,
+          "source": "reported settlement mark",
+          "cashflow": 0.14016897651500002,
+          "opposite_extreme_cashflow": 0.14016897651500002
+        },
+        {
+          "time_ms": 1708156800000,
+          "utc": "2024-02-17T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2797.20009091,
+          "source": "reported settlement mark",
+          "cashflow": 0.13986000454550002,
+          "opposite_extreme_cashflow": 0.13986000454550002
+        },
+        {
+          "time_ms": 1708185600000,
+          "utc": "2024-02-17T16:00:00.000+00:00",
+          "rate": 0.00013519,
+          "mark": 2756.34,
+          "source": "reported settlement mark",
+          "cashflow": 0.18631480230000003,
+          "opposite_extreme_cashflow": 0.18631480230000003
+        },
+        {
+          "time_ms": 1708214400000,
+          "utc": "2024-02-18T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2787.41532509,
+          "source": "reported settlement mark",
+          "cashflow": 0.1393707662545,
+          "opposite_extreme_cashflow": 0.1393707662545
+        },
+        {
+          "time_ms": 1708243200000,
+          "utc": "2024-02-18T08:00:00.000+00:00",
+          "rate": 0.0001114,
+          "mark": 2802.28,
+          "source": "reported settlement mark",
+          "cashflow": 0.156086996,
+          "opposite_extreme_cashflow": 0.156086996
+        },
+        {
+          "time_ms": 1708272000000,
+          "utc": "2024-02-18T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2808.47803659,
+          "source": "reported settlement mark",
+          "cashflow": 0.14042390182950001,
+          "opposite_extreme_cashflow": 0.14042390182950001
+        },
+        {
+          "time_ms": 1708300800000,
+          "utc": "2024-02-19T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2882.59928788,
+          "source": "reported settlement mark",
+          "cashflow": 0.144129964394,
+          "opposite_extreme_cashflow": 0.144129964394
+        },
+        {
+          "time_ms": 1708329600000,
+          "utc": "2024-02-19T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2927.87375379,
+          "source": "reported settlement mark",
+          "cashflow": 0.1463936876895,
+          "opposite_extreme_cashflow": 0.1463936876895
+        },
+        {
+          "time_ms": 1708358400000,
+          "utc": "2024-02-19T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2910.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.1455185,
+          "opposite_extreme_cashflow": 0.1455185
+        },
+        {
+          "time_ms": 1708387200000,
+          "utc": "2024-02-20T00:00:00.000+00:00",
+          "rate": 0.000265,
+          "mark": 2946.80467073,
+          "source": "reported settlement mark",
+          "cashflow": 0.39045161887172497,
+          "opposite_extreme_cashflow": 0.39045161887172497
+        },
+        {
+          "time_ms": 1708416000000,
+          "utc": "2024-02-20T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2923.08121591,
+          "source": "reported settlement mark",
+          "cashflow": 0.1461540607955,
+          "opposite_extreme_cashflow": 0.1461540607955
+        },
+        {
+          "time_ms": 1708444800000,
+          "utc": "2024-02-20T16:00:00.000+00:00",
+          "rate": 0.00025431,
+          "mark": 2926.77094318,
+          "source": "reported settlement mark",
+          "cashflow": 0.3721535592800529,
+          "opposite_extreme_cashflow": 0.3721535592800529
+        },
+        {
+          "time_ms": 1708473600000,
+          "utc": "2024-02-21T00:00:00.000+00:00",
+          "rate": 0.00020319,
+          "mark": 3017.13858333,
+          "source": "reported settlement mark",
+          "cashflow": 0.3065261943734114,
+          "opposite_extreme_cashflow": 0.3065261943734114
+        },
+        {
+          "time_ms": 1708502400000,
+          "utc": "2024-02-21T08:00:00.000+00:00",
+          "rate": 0.00011802,
+          "mark": 2941.49182955,
+          "source": "reported settlement mark",
+          "cashflow": 0.1735774328617455,
+          "opposite_extreme_cashflow": 0.1735774328617455
+        },
+        {
+          "time_ms": 1708531200000,
+          "utc": "2024-02-21T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2915.43171212,
+          "source": "reported settlement mark",
+          "cashflow": 0.145771585606,
+          "opposite_extreme_cashflow": 0.145771585606
+        },
+        {
+          "time_ms": 1708560000001,
+          "utc": "2024-02-22T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2969.4,
+          "source": "reported settlement mark",
+          "cashflow": 0.14847000000000002,
+          "opposite_extreme_cashflow": 0.14847000000000002
+        },
+        {
+          "time_ms": 1708588800001,
+          "utc": "2024-02-22T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2995.6,
+          "source": "reported settlement mark",
+          "cashflow": 0.14978,
+          "opposite_extreme_cashflow": 0.14978
+        },
+        {
+          "time_ms": 1708617600000,
+          "utc": "2024-02-22T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2988.32,
+          "source": "reported settlement mark",
+          "cashflow": 0.14941600000000002,
+          "opposite_extreme_cashflow": 0.14941600000000002
+        },
+        {
+          "time_ms": 1708646400000,
+          "utc": "2024-02-23T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2972.68395455,
+          "source": "reported settlement mark",
+          "cashflow": 0.14863419772750003,
+          "opposite_extreme_cashflow": 0.14863419772750003
+        },
+        {
+          "time_ms": 1708675200000,
+          "utc": "2024-02-23T08:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2935.0,
+          "source": "reported settlement mark",
+          "cashflow": 0.14675000000000002,
+          "opposite_extreme_cashflow": 0.14675000000000002
+        },
+        {
+          "time_ms": 1708704000000,
+          "utc": "2024-02-23T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2916.8,
+          "source": "reported settlement mark",
+          "cashflow": 0.14584000000000003,
+          "opposite_extreme_cashflow": 0.14584000000000003
+        },
+        {
+          "time_ms": 1708732800000,
+          "utc": "2024-02-24T00:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2922.82679924,
+          "source": "reported settlement mark",
+          "cashflow": 0.14614133996200002,
+          "opposite_extreme_cashflow": 0.14614133996200002
+        },
+        {
+          "time_ms": 1708761600001,
+          "utc": "2024-02-24T08:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2964.89457197,
+          "source": "reported settlement mark",
+          "cashflow": 0.14824472859850002,
+          "opposite_extreme_cashflow": 0.14824472859850002
+        },
+        {
+          "time_ms": 1708790400000,
+          "utc": "2024-02-24T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 2956.51,
+          "source": "reported settlement mark",
+          "cashflow": 0.14782550000000003,
+          "opposite_extreme_cashflow": 0.14782550000000003
+        },
+        {
+          "time_ms": 1708819200001,
+          "utc": "2024-02-25T00:00:00.001+00:00",
+          "rate": 0.0001,
+          "mark": 2994.38,
+          "source": "reported settlement mark",
+          "cashflow": 0.14971900000000002,
+          "opposite_extreme_cashflow": 0.14971900000000002
+        },
+        {
+          "time_ms": 1708848000000,
+          "utc": "2024-02-25T08:00:00.000+00:00",
+          "rate": 0.00025856,
+          "mark": 3032.26183537,
+          "source": "reported settlement mark",
+          "cashflow": 0.39201081007663363,
+          "opposite_extreme_cashflow": 0.39201081007663363
+        },
+        {
+          "time_ms": 1708876800000,
+          "utc": "2024-02-25T16:00:00.000+00:00",
+          "rate": 0.0002111,
+          "mark": 3045.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.3214514695,
+          "opposite_extreme_cashflow": 0.3214514695
+        },
+        {
+          "time_ms": 1708905600000,
+          "utc": "2024-02-26T00:00:00.000+00:00",
+          "rate": 0.00059496,
+          "mark": 3115.0844187,
+          "source": "reported settlement mark",
+          "cashflow": 0.9266753128748758,
+          "opposite_extreme_cashflow": 0.9266753128748758
+        },
+        {
+          "time_ms": 1708934400000,
+          "utc": "2024-02-26T08:00:00.000+00:00",
+          "rate": 0.00018258,
+          "mark": 3089.23470325,
+          "source": "reported settlement mark",
+          "cashflow": 0.2820162360596925,
+          "opposite_extreme_cashflow": 0.2820162360596925
+        },
+        {
+          "time_ms": 1708963200000,
+          "utc": "2024-02-26T16:00:00.000+00:00",
+          "rate": 0.00020172,
+          "mark": 3146.94853862,
+          "source": "reported settlement mark",
+          "cashflow": 0.3174012296052132,
+          "opposite_extreme_cashflow": 0.3174012296052132
+        },
+        {
+          "time_ms": 1708992000000,
+          "utc": "2024-02-27T00:00:00.000+00:00",
+          "rate": 0.00028561,
+          "mark": 3178.6,
+          "source": "reported settlement mark",
+          "cashflow": 0.453919973,
+          "opposite_extreme_cashflow": 0.453919973
+        },
+        {
+          "time_ms": 1709020800000,
+          "utc": "2024-02-27T08:00:00.000+00:00",
+          "rate": 0.00066751,
+          "mark": 3219.38048106,
+          "source": "reported settlement mark",
+          "cashflow": 1.0744843324561801,
+          "opposite_extreme_cashflow": 1.0744843324561801
+        },
+        {
+          "time_ms": 1709049600000,
+          "utc": "2024-02-27T16:00:00.000+00:00",
+          "rate": 0.00029666,
+          "mark": 3231.53806061,
+          "source": "reported settlement mark",
+          "cashflow": 0.4793340405302813,
+          "opposite_extreme_cashflow": 0.4793340405302813
+        },
+        {
+          "time_ms": 1709078400000,
+          "utc": "2024-02-28T00:00:00.000+00:00",
+          "rate": 0.00033546,
+          "mark": 3244.81687121,
+          "source": "reported settlement mark",
+          "cashflow": 0.5442531338080533,
+          "opposite_extreme_cashflow": 0.5442531338080533
+        },
+        {
+          "time_ms": 1709107200000,
+          "utc": "2024-02-28T08:00:00.000+00:00",
+          "rate": 0.00032021,
+          "mark": 3305.31056061,
+          "source": "reported settlement mark",
+          "cashflow": 0.529196747306464,
+          "opposite_extreme_cashflow": 0.529196747306464
+        },
+        {
+          "time_ms": 1709136000000,
+          "utc": "2024-02-28T16:00:00.000+00:00",
+          "rate": 0.00043581,
+          "mark": 3350.69,
+          "source": "reported settlement mark",
+          "cashflow": 0.73013210445,
+          "opposite_extreme_cashflow": 0.73013210445
+        },
+        {
+          "time_ms": 1709164800000,
+          "utc": "2024-02-29T00:00:00.000+00:00",
+          "rate": 0.00062574,
+          "mark": 3386.44542803,
+          "source": "reported settlement mark",
+          "cashflow": 1.0595171810677462,
+          "opposite_extreme_cashflow": 1.0595171810677462
+        },
+        {
+          "time_ms": 1709193600000,
+          "utc": "2024-02-29T08:00:00.000+00:00",
+          "rate": 0.00073381,
+          "mark": 3470.79112879,
+          "source": "reported settlement mark",
+          "cashflow": 1.273450619108695,
+          "opposite_extreme_cashflow": 1.273450619108695
+        },
+        {
+          "time_ms": 1709222400000,
+          "utc": "2024-02-29T16:00:00.000+00:00",
+          "rate": 0.00075727,
+          "mark": 3470.41,
+          "source": "reported settlement mark",
+          "cashflow": 1.31401869035,
+          "opposite_extreme_cashflow": 1.31401869035
+        },
+        {
+          "time_ms": 1709251200000,
+          "utc": "2024-03-01T00:00:00.000+00:00",
+          "rate": 0.0005304,
+          "mark": 3343.06219697,
+          "source": "reported settlement mark",
+          "cashflow": 0.886580094636444,
+          "opposite_extreme_cashflow": 0.886580094636444
+        },
+        {
+          "time_ms": 1709280000000,
+          "utc": "2024-03-01T08:00:00.000+00:00",
+          "rate": 0.00039096,
+          "mark": 3367.47848485,
+          "source": "reported settlement mark",
+          "cashflow": 0.658274694218478,
+          "opposite_extreme_cashflow": 0.658274694218478
+        },
+        {
+          "time_ms": 1709308800000,
+          "utc": "2024-03-01T16:00:00.000+00:00",
+          "rate": 0.00052446,
+          "mark": 3393.63,
+          "source": "reported settlement mark",
+          "cashflow": 0.8899115949,
+          "opposite_extreme_cashflow": 0.8899115949
+        },
+        {
+          "time_ms": 1709337600000,
+          "utc": "2024-03-02T00:00:00.000+00:00",
+          "rate": 0.00048856,
+          "mark": 3435.82,
+          "source": "reported settlement mark",
+          "cashflow": 0.8393021096,
+          "opposite_extreme_cashflow": 0.8393021096
+        },
+        {
+          "time_ms": 1709366400001,
+          "utc": "2024-03-02T08:00:00.001+00:00",
+          "rate": 0.00057488,
+          "mark": 3433.7,
+          "source": "reported settlement mark",
+          "cashflow": 0.9869827280000001,
+          "opposite_extreme_cashflow": 0.9869827280000001
+        },
+        {
+          "time_ms": 1709395200000,
+          "utc": "2024-03-02T16:00:00.000+00:00",
+          "rate": 0.00055344,
+          "mark": 3421.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.9467615063999999,
+          "opposite_extreme_cashflow": 0.9467615063999999
+        },
+        {
+          "time_ms": 1709424000000,
+          "utc": "2024-03-03T00:00:00.000+00:00",
+          "rate": 0.00039105,
+          "mark": 3424.23709091,
+          "source": "reported settlement mark",
+          "cashflow": 0.6695239572001778,
+          "opposite_extreme_cashflow": 0.6695239572001778
+        },
+        {
+          "time_ms": 1709452800000,
+          "utc": "2024-03-03T08:00:00.000+00:00",
+          "rate": 0.00038668,
+          "mark": 3394.38,
+          "source": "reported settlement mark",
+          "cashflow": 0.6562694292,
+          "opposite_extreme_cashflow": 0.6562694292
+        },
+        {
+          "time_ms": 1709481600000,
+          "utc": "2024-03-03T16:00:00.000+00:00",
+          "rate": 0.00037021,
+          "mark": 3424.31,
+          "source": "reported settlement mark",
+          "cashflow": 0.6338569025499999,
+          "opposite_extreme_cashflow": 0.6338569025499999
+        },
+        {
+          "time_ms": 1709510400000,
+          "utc": "2024-03-04T00:00:00.000+00:00",
+          "rate": 0.00041907,
+          "mark": 3491.58519697,
+          "source": "reported settlement mark",
+          "cashflow": 0.731609304247109,
+          "opposite_extreme_cashflow": 0.731609304247109
+        },
+        {
+          "time_ms": 1709539200000,
+          "utc": "2024-03-04T08:00:00.000+00:00",
+          "rate": 0.00028996,
+          "mark": 3480.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.5045840426,
+          "opposite_extreme_cashflow": 0.5045840426
+        },
+        {
+          "time_ms": 1709568000000,
+          "utc": "2024-03-04T16:00:00.000+00:00",
+          "rate": 0.00050061,
+          "mark": 3562.64,
+          "source": "reported settlement mark",
+          "cashflow": 0.8917466051999999,
+          "opposite_extreme_cashflow": 0.8917466051999999
+        },
+        {
+          "time_ms": 1709596800000,
+          "utc": "2024-03-05T00:00:00.000+00:00",
+          "rate": 0.00038776,
+          "mark": 3629.1607803,
+          "source": "reported settlement mark",
+          "cashflow": 0.703621692084564,
+          "opposite_extreme_cashflow": 0.703621692084564
+        },
+        {
+          "time_ms": 1709625600000,
+          "utc": "2024-03-05T08:00:00.000+00:00",
+          "rate": 0.00101724,
+          "mark": 3678.01,
+          "source": "reported settlement mark",
+          "cashflow": 1.8707094462,
+          "opposite_extreme_cashflow": 1.8707094462
+        },
+        {
+          "time_ms": 1709654400000,
+          "utc": "2024-03-05T16:00:00.000+00:00",
+          "rate": 0.00082409,
+          "mark": 3786.7,
+          "source": "reported settlement mark",
+          "cashflow": 1.5602908014999999,
+          "opposite_extreme_cashflow": 1.5602908014999999
+        },
+        {
+          "time_ms": 1709683200000,
+          "utc": "2024-03-06T00:00:00.000+00:00",
+          "rate": 0.0002058,
+          "mark": 3555.0104697,
+          "source": "reported settlement mark",
+          "cashflow": 0.36581057733213,
+          "opposite_extreme_cashflow": 0.36581057733213
+        },
+        {
+          "time_ms": 1709712000001,
+          "utc": "2024-03-06T08:00:00.001+00:00",
+          "rate": 0.00038362,
+          "mark": 3789.66,
+          "source": "reported settlement mark",
+          "cashflow": 0.7268946846,
+          "opposite_extreme_cashflow": 0.7268946846
+        },
+        {
+          "time_ms": 1709740800000,
+          "utc": "2024-03-06T16:00:00.000+00:00",
+          "rate": 0.00040511,
+          "mark": 3793.30100758,
+          "source": "reported settlement mark",
+          "cashflow": 0.7683520855903668,
+          "opposite_extreme_cashflow": 0.7683520855903668
+        },
+        {
+          "time_ms": 1709769600000,
+          "utc": "2024-03-07T00:00:00.000+00:00",
+          "rate": 0.00035699,
+          "mark": 3821.36624797,
+          "source": "reported settlement mark",
+          "cashflow": 0.6820947684314052,
+          "opposite_extreme_cashflow": 0.6820947684314052
+        },
+        {
+          "time_ms": 1709798400000,
+          "utc": "2024-03-07T08:00:00.000+00:00",
+          "rate": 0.00039169,
+          "mark": 3792.06,
+          "source": "reported settlement mark",
+          "cashflow": 0.7426559907,
+          "opposite_extreme_cashflow": 0.7426559907
+        },
+        {
+          "time_ms": 1709827200000,
+          "utc": "2024-03-07T16:00:00.000+00:00",
+          "rate": 0.00044218,
+          "mark": 3840.37,
+          "source": "reported settlement mark",
+          "cashflow": 0.8490674033000001,
+          "opposite_extreme_cashflow": 0.8490674033000001
+        },
+        {
+          "time_ms": 1709856000000,
+          "utc": "2024-03-08T00:00:00.000+00:00",
+          "rate": 0.00042931,
+          "mark": 3871.69,
+          "source": "reported settlement mark",
+          "cashflow": 0.83107761695,
+          "opposite_extreme_cashflow": 0.83107761695
+        },
+        {
+          "time_ms": 1709884800000,
+          "utc": "2024-03-08T08:00:00.000+00:00",
+          "rate": 0.00057985,
+          "mark": 3913.42878455,
+          "source": "reported settlement mark",
+          "cashflow": 1.1346008403606587,
+          "opposite_extreme_cashflow": 1.1346008403606587
+        },
+        {
+          "time_ms": 1709913600000,
+          "utc": "2024-03-08T16:00:00.000+00:00",
+          "rate": 0.00048823,
+          "mark": 3904.59637602,
+          "source": "reported settlement mark",
+          "cashflow": 0.9531705443321223,
+          "opposite_extreme_cashflow": 0.9531705443321223
+        },
+        {
+          "time_ms": 1709942400000,
+          "utc": "2024-03-09T00:00:00.000+00:00",
+          "rate": 0.00033201,
+          "mark": 3886.03,
+          "source": "reported settlement mark",
+          "cashflow": 0.64510041015,
+          "opposite_extreme_cashflow": 0.64510041015
+        },
+        {
+          "time_ms": 1709971200001,
+          "utc": "2024-03-09T08:00:00.001+00:00",
+          "rate": 0.0003653,
+          "mark": 3928.65231818,
+          "source": "reported settlement mark",
+          "cashflow": 0.7175683459155769,
+          "opposite_extreme_cashflow": 0.7175683459155769
+        },
+        {
+          "time_ms": 1710000000000,
+          "utc": "2024-03-09T16:00:00.000+00:00",
+          "rate": 0.00035498,
+          "mark": 3920.24,
+          "source": "reported settlement mark",
+          "cashflow": 0.6958033976,
+          "opposite_extreme_cashflow": 0.6958033976
+        },
+        {
+          "time_ms": 1710028800000,
+          "utc": "2024-03-10T00:00:00.000+00:00",
+          "rate": 0.00034688,
+          "mark": 3908.15,
+          "source": "reported settlement mark",
+          "cashflow": 0.677829536,
+          "opposite_extreme_cashflow": 0.677829536
+        },
+        {
+          "time_ms": 1710057600000,
+          "utc": "2024-03-10T08:00:00.000+00:00",
+          "rate": 0.00049375,
+          "mark": 3948.48,
+          "source": "reported settlement mark",
+          "cashflow": 0.9747810000000001,
+          "opposite_extreme_cashflow": 0.9747810000000001
+        },
+        {
+          "time_ms": 1710086400000,
+          "utc": "2024-03-10T16:00:00.000+00:00",
+          "rate": 0.00029818,
+          "mark": 3886.0,
+          "source": "reported settlement mark",
+          "cashflow": 0.57936374,
+          "opposite_extreme_cashflow": 0.57936374
+        },
+        {
+          "time_ms": 1710115200000,
+          "utc": "2024-03-11T00:00:00.000+00:00",
+          "rate": 0.00029368,
+          "mark": 3880.96,
+          "source": "reported settlement mark",
+          "cashflow": 0.5698801663999999,
+          "opposite_extreme_cashflow": 0.5698801663999999
+        },
+        {
+          "time_ms": 1710144000000,
+          "utc": "2024-03-11T08:00:00.000+00:00",
+          "rate": 0.00067235,
+          "mark": 4013.23932317,
+          "source": "reported settlement mark",
+          "cashflow": 1.3491507294666747,
+          "opposite_extreme_cashflow": 1.3491507294666747
+        },
+        {
+          "time_ms": 1710172800000,
+          "utc": "2024-03-11T16:00:00.000+00:00",
+          "rate": 0.00064296,
+          "mark": 4020.36,
+          "source": "reported settlement mark",
+          "cashflow": 1.2924653328000002,
+          "opposite_extreme_cashflow": 1.2924653328000002
+        },
+        {
+          "time_ms": 1710201600000,
+          "utc": "2024-03-12T00:00:00.000+00:00",
+          "rate": 0.00068106,
+          "mark": 4070.52,
+          "source": "reported settlement mark",
+          "cashflow": 1.3861341756,
+          "opposite_extreme_cashflow": 1.3861341756
+        },
+        {
+          "time_ms": 1710230400000,
+          "utc": "2024-03-12T08:00:00.000+00:00",
+          "rate": 0.00037542,
+          "mark": 4030.06338258,
+          "source": "reported settlement mark",
+          "cashflow": 0.7564831975440919,
+          "opposite_extreme_cashflow": 0.7564831975440919
+        },
+        {
+          "time_ms": 1710259200000,
+          "utc": "2024-03-12T16:00:00.000+00:00",
+          "rate": 0.00048306,
+          "mark": 3991.80411017,
+          "source": "reported settlement mark",
+          "cashflow": 0.9641404467293602,
+          "opposite_extreme_cashflow": 0.9641404467293602
+        },
+        {
+          "time_ms": 1710288000000,
+          "utc": "2024-03-13T00:00:00.000+00:00",
+          "rate": 0.00046983,
+          "mark": 3983.90856818,
+          "source": "reported settlement mark",
+          "cashflow": 0.9358798812940048,
+          "opposite_extreme_cashflow": 0.9358798812940048
+        },
+        {
+          "time_ms": 1710316800001,
+          "utc": "2024-03-13T08:00:00.001+00:00",
+          "rate": 0.00060121,
+          "mark": 4043.26235606,
+          "source": "reported settlement mark",
+          "cashflow": 1.2154248805434162,
+          "opposite_extreme_cashflow": 1.2154248805434162
+        },
+        {
+          "time_ms": 1710345600000,
+          "utc": "2024-03-13T16:00:00.000+00:00",
+          "rate": 0.00044242,
+          "mark": 3965.67,
+          "source": "reported settlement mark",
+          "cashflow": 0.8772458607,
+          "opposite_extreme_cashflow": 0.8772458607
+        },
+        {
+          "time_ms": 1710374400001,
+          "utc": "2024-03-14T00:00:00.001+00:00",
+          "rate": 0.00040995,
+          "mark": 4008.6728775,
+          "source": "reported settlement mark",
+          "cashflow": 0.8216777230655625,
+          "opposite_extreme_cashflow": 0.8216777230655625
+        },
+        {
+          "time_ms": 1710403200000,
+          "utc": "2024-03-14T08:00:00.000+00:00",
+          "rate": 0.00050365,
+          "mark": 3966.67,
+          "source": "reported settlement mark",
+          "cashflow": 0.99890667275,
+          "opposite_extreme_cashflow": 0.99890667275
+        },
+        {
+          "time_ms": 1710432000000,
+          "utc": "2024-03-14T16:00:00.000+00:00",
+          "rate": 0.00035217,
+          "mark": 3848.4,
+          "source": "reported settlement mark",
+          "cashflow": 0.6776455140000001,
+          "opposite_extreme_cashflow": 0.6776455140000001
+        },
+        {
+          "time_ms": 1710460800000,
+          "utc": "2024-03-15T00:00:00.000+00:00",
+          "rate": 0.00040271,
+          "mark": 3885.0,
+          "source": "reported settlement mark",
+          "cashflow": 0.782264175,
+          "opposite_extreme_cashflow": 0.782264175
+        },
+        {
+          "time_ms": 1710489600000,
+          "utc": "2024-03-15T08:00:00.000+00:00",
+          "rate": 0.00023171,
+          "mark": 3756.08,
+          "source": "reported settlement mark",
+          "cashflow": 0.43516064839999996,
+          "opposite_extreme_cashflow": 0.43516064839999996
+        },
+        {
+          "time_ms": 1710518400000,
+          "utc": "2024-03-15T16:00:00.000+00:00",
+          "rate": 0.00033557,
+          "mark": 3691.55970455,
+          "source": "reported settlement mark",
+          "cashflow": 0.6193883450279217,
+          "opposite_extreme_cashflow": 0.6193883450279217
+        },
+        {
+          "time_ms": 1710547200000,
+          "utc": "2024-03-16T00:00:00.000+00:00",
+          "rate": 0.00018856,
+          "mark": 3743.72145455,
+          "source": "reported settlement mark",
+          "cashflow": 0.352958058734974,
+          "opposite_extreme_cashflow": 0.352958058734974
+        },
+        {
+          "time_ms": 1710576000000,
+          "utc": "2024-03-16T08:00:00.000+00:00",
+          "rate": 0.0002749,
+          "mark": 3742.92765152,
+          "source": "reported settlement mark",
+          "cashflow": 0.514465405701424,
+          "opposite_extreme_cashflow": 0.514465405701424
+        },
+        {
+          "time_ms": 1710604800000,
+          "utc": "2024-03-16T16:00:00.000+00:00",
+          "rate": 0.00028914,
+          "mark": 3681.49,
+          "source": "reported settlement mark",
+          "cashflow": 0.5322330093,
+          "opposite_extreme_cashflow": 0.5322330093
+        },
+        {
+          "time_ms": 1710633600000,
+          "utc": "2024-03-17T00:00:00.000+00:00",
+          "rate": 0.00013396,
+          "mark": 3525.57,
+          "source": "reported settlement mark",
+          "cashflow": 0.23614267860000002,
+          "opposite_extreme_cashflow": 0.23614267860000002
+        },
+        {
+          "time_ms": 1710662400000,
+          "utc": "2024-03-17T08:00:00.000+00:00",
+          "rate": 0.00011824,
+          "mark": 3474.48,
+          "source": "reported settlement mark",
+          "cashflow": 0.2054112576,
+          "opposite_extreme_cashflow": 0.2054112576
+        },
+        {
+          "time_ms": 1710691200000,
+          "utc": "2024-03-17T16:00:00.000+00:00",
+          "rate": 0.00030376,
+          "mark": 3629.96,
+          "source": "reported settlement mark",
+          "cashflow": 0.5513183248,
+          "opposite_extreme_cashflow": 0.5513183248
+        },
+        {
+          "time_ms": 1710720000000,
+          "utc": "2024-03-18T00:00:00.000+00:00",
+          "rate": 0.00017304,
+          "mark": 3646.99,
+          "source": "reported settlement mark",
+          "cashflow": 0.3155375748,
+          "opposite_extreme_cashflow": 0.3155375748
+        },
+        {
+          "time_ms": 1710748800000,
+          "utc": "2024-03-18T08:00:00.000+00:00",
+          "rate": 0.00026393,
+          "mark": 3628.86566667,
+          "source": "reported settlement mark",
+          "cashflow": 0.47888325770210655,
+          "opposite_extreme_cashflow": 0.47888325770210655
+        },
+        {
+          "time_ms": 1710777600001,
+          "utc": "2024-03-18T16:00:00.001+00:00",
+          "rate": 0.00029608,
+          "mark": 3527.93,
+          "source": "reported settlement mark",
+          "cashflow": 0.5222747571999999,
+          "opposite_extreme_cashflow": 0.5222747571999999
+        },
+        {
+          "time_ms": 1710806400000,
+          "utc": "2024-03-19T00:00:00.000+00:00",
+          "rate": 0.00028148,
+          "mark": 3522.92542045,
+          "source": "reported settlement mark",
+          "cashflow": 0.49581652367413304,
+          "opposite_extreme_cashflow": 0.49581652367413304
+        },
+        {
+          "time_ms": 1710835200000,
+          "utc": "2024-03-19T08:00:00.000+00:00",
+          "rate": 0.00023311,
+          "mark": 3361.6,
+          "source": "reported settlement mark",
+          "cashflow": 0.391811288,
+          "opposite_extreme_cashflow": 0.391811288
+        },
+        {
+          "time_ms": 1710864000001,
+          "utc": "2024-03-19T16:00:00.001+00:00",
+          "rate": 0.00013469,
+          "mark": 3304.63,
+          "source": "reported settlement mark",
+          "cashflow": 0.22255030735,
+          "opposite_extreme_cashflow": 0.22255030735
+        },
+        {
+          "time_ms": 1710892800000,
+          "utc": "2024-03-20T00:00:00.000+00:00",
+          "rate": 0.00016096,
+          "mark": 3161.03,
+          "source": "reported settlement mark",
+          "cashflow": 0.25439969440000004,
+          "opposite_extreme_cashflow": 0.25439969440000004
+        },
+        {
+          "time_ms": 1710921600004,
+          "utc": "2024-03-20T08:00:00.004+00:00",
+          "rate": 0.0001,
+          "mark": 3220.02,
+          "source": "reported settlement mark",
+          "cashflow": 0.161001,
+          "opposite_extreme_cashflow": 0.161001
+        },
+        {
+          "time_ms": 1710950400000,
+          "utc": "2024-03-20T16:00:00.000+00:00",
+          "rate": 0.0001,
+          "mark": 3294.56567026,
+          "source": "reported settlement mark",
+          "cashflow": 0.164728283513,
+          "opposite_extreme_cashflow": 0.164728283513
+        },
+        {
+          "time_ms": 1710979200000,
+          "utc": "2024-03-21T00:00:00.000+00:00",
+          "rate": 0.00019507,
+          "mark": 3517.8,
+          "source": "reported settlement mark",
+          "cashflow": 0.343108623,
+          "opposite_extreme_cashflow": 0.343108623
+        },
+        {
+          "time_ms": 1711008000000,
+          "utc": "2024-03-21T08:00:00.000+00:00",
+          "rate": 0.00013771,
+          "mark": 3518.8,
+          "source": "reported settlement mark",
+          "cashflow": 0.24228697400000002,
+          "opposite_extreme_cashflow": 0.24228697400000002
+        },
+        {
+          "time_ms": 1711036800000,
+          "utc": "2024-03-21T16:00:00.000+00:00",
+          "rate": 0.00017743,
+          "mark": 3499.52586742,
+          "source": "reported settlement mark",
+          "cashflow": 0.31046043732816525,
+          "opposite_extreme_cashflow": 0.31046043732816525
+        },
+        {
+          "time_ms": 1711065600000,
+          "utc": "2024-03-22T00:00:00.000+00:00",
+          "rate": 0.00022775,
+          "mark": 3495.16,
+          "source": "reported settlement mark",
+          "cashflow": 0.398011345,
+          "opposite_extreme_cashflow": 0.398011345
+        },
+        {
+          "time_ms": 1711094400000,
+          "utc": "2024-03-22T08:00:00.000+00:00",
+          "rate": 0.00023317,
+          "mark": 3514.12125379,
+          "source": "reported settlement mark",
+          "cashflow": 0.40969382637310714,
+          "opposite_extreme_cashflow": 0.40969382637310714
+        },
+        {
+          "time_ms": 1711123200000,
+          "utc": "2024-03-22T16:00:00.000+00:00",
+          "rate": 0.00016092,
+          "mark": 3351.01666667,
+          "source": "reported settlement mark",
+          "cashflow": 0.2696228010002682,
+          "opposite_extreme_cashflow": 0.2696228010002682
+        },
+        {
+          "time_ms": 1711152000000,
+          "utc": "2024-03-23T00:00:00.000+00:00",
+          "rate": 0.00010552,
+          "mark": 3337.90121591,
+          "source": "reported settlement mark",
+          "cashflow": 0.1761076681514116,
+          "opposite_extreme_cashflow": 0.1761076681514116
+        },
+        {
+          "time_ms": 1711180800000,
+          "utc": "2024-03-23T08:00:00.000+00:00",
+          "rate": 0.00012459,
+          "mark": 3367.62,
+          "source": "reported settlement mark",
+          "cashflow": 0.2097858879,
+          "opposite_extreme_cashflow": 0.2097858879
+        },
+        {
+          "time_ms": 1711209600000,
+          "utc": "2024-03-23T16:00:00.000+00:00",
+          "rate": 0.00013906,
+          "mark": 3407.55015152,
+          "source": "reported settlement mark",
+          "cashflow": 0.23692696203518557,
+          "opposite_extreme_cashflow": 0.23692696203518557
+        },
+        {
+          "time_ms": 1711238400000,
+          "utc": "2024-03-24T00:00:00.000+00:00",
+          "rate": 0.00012767,
+          "mark": 3330.83,
+          "source": "reported settlement mark",
+          "cashflow": 0.21262353305,
+          "opposite_extreme_cashflow": 0.21262353305
+        },
+        {
+          "time_ms": 1711267200000,
+          "utc": "2024-03-24T08:00:00.000+00:00",
+          "rate": 0.00017907,
+          "mark": 3344.28006818,
+          "source": "reported settlement mark",
+          "cashflow": 0.2994301159044963,
+          "opposite_extreme_cashflow": 0.2994301159044963
+        },
+        {
+          "time_ms": 1711296000000,
+          "utc": "2024-03-24T16:00:00.000+00:00",
+          "rate": 0.00017171,
+          "mark": 3399.54067424,
+          "source": "reported settlement mark",
+          "cashflow": 0.2918675645868752,
+          "opposite_extreme_cashflow": 0.2918675645868752
+        },
+        {
+          "time_ms": 1711324800000,
+          "utc": "2024-03-25T00:00:00.000+00:00",
+          "rate": 0.00020242,
+          "mark": 3456.55247727,
+          "source": "reported settlement mark",
+          "cashflow": 0.3498376762244967,
+          "opposite_extreme_cashflow": 0.3498376762244967
+        },
+        {
+          "time_ms": 1711353600001,
+          "utc": "2024-03-25T08:00:00.001+00:00",
+          "rate": 0.00011009,
+          "mark": 3446.71,
+          "source": "reported settlement mark",
+          "cashflow": 0.18972415195,
+          "opposite_extreme_cashflow": 0.18972415195
+        },
+        {
+          "time_ms": 1711382400000,
+          "utc": "2024-03-25T16:00:00.000+00:00",
+          "rate": 0.00022958,
+          "mark": 3583.72524242,
+          "source": "reported settlement mark",
+          "cashflow": 0.4113758205773918,
+          "opposite_extreme_cashflow": 0.4113758205773918
+        },
+        {
+          "time_ms": 1711411200000,
+          "utc": "2024-03-26T00:00:00.000+00:00",
+          "rate": 0.00039028,
+          "mark": 3592.94,
+          "source": "reported settlement mark",
+          "cashflow": 0.7011263116,
+          "opposite_extreme_cashflow": 0.7011263116
+        },
+        {
+          "time_ms": 1711440000000,
+          "utc": "2024-03-26T08:00:00.000+00:00",
+          "rate": 0.00018,
+          "mark": 3637.47,
+          "source": "reported settlement mark",
+          "cashflow": 0.3273723,
+          "opposite_extreme_cashflow": 0.3273723
+        },
+        {
+          "time_ms": 1711468800000,
+          "utc": "2024-03-26T16:00:00.000+00:00",
+          "rate": 0.00026242,
+          "mark": 3595.92137879,
+          "source": "reported settlement mark",
+          "cashflow": 0.4718208441110359,
+          "opposite_extreme_cashflow": 0.4718208441110359
+        },
+        {
+          "time_ms": 1711497600000,
+          "utc": "2024-03-27T00:00:00.000+00:00",
+          "rate": 0.00024667,
+          "mark": 3589.64,
+          "source": "reported settlement mark",
+          "cashflow": 0.4427282494,
+          "opposite_extreme_cashflow": 0.4427282494
+        },
+        {
+          "time_ms": 1711526400001,
+          "utc": "2024-03-27T08:00:00.001+00:00",
+          "rate": 0.00021635,
+          "mark": 3567.44473864,
+          "source": "reported settlement mark",
+          "cashflow": 0.385908334602382,
+          "opposite_extreme_cashflow": 0.385908334602382
+        },
+        {
+          "time_ms": 1711555200000,
+          "utc": "2024-03-27T16:00:00.000+00:00",
+          "rate": 0.00035332,
+          "mark": 3517.15614015,
+          "source": "reported settlement mark",
+          "cashflow": 0.621340803718899,
+          "opposite_extreme_cashflow": 0.621340803718899
+        },
+        {
+          "time_ms": 1711584000000,
+          "utc": "2024-03-28T00:00:00.000+00:00",
+          "rate": 0.00038952,
+          "mark": 3504.60600758,
+          "source": "reported settlement mark",
+          "cashflow": 0.6825570660362809,
+          "opposite_extreme_cashflow": 0.6825570660362809
+        },
+        {
+          "time_ms": 1711612800000,
+          "utc": "2024-03-28T08:00:00.000+00:00",
+          "rate": 0.00035672,
+          "mark": 3576.6429053,
+          "source": "reported settlement mark",
+          "cashflow": 0.637930028589308,
+          "opposite_extreme_cashflow": 0.637930028589308
+        },
+        {
+          "time_ms": 1711641600000,
+          "utc": "2024-03-28T16:00:00.000+00:00",
+          "rate": 0.00036879,
+          "mark": 3580.63596212,
+          "source": "reported settlement mark",
+          "cashflow": 0.6602513682351174,
+          "opposite_extreme_cashflow": 0.6602513682351174
+        },
+        {
+          "time_ms": 1711670400000,
+          "utc": "2024-03-29T00:00:00.000+00:00",
+          "rate": 0.00034117,
+          "mark": 3563.42986742,
+          "source": "reported settlement mark",
+          "cashflow": 0.6078676839338407,
+          "opposite_extreme_cashflow": 0.6078676839338407
+        },
+        {
+          "time_ms": 1711699200000,
+          "utc": "2024-03-29T08:00:00.000+00:00",
+          "rate": 0.00030332,
+          "mark": 3522.13951894,
+          "source": "reported settlement mark",
+          "cashflow": 0.5341676794424404,
+          "opposite_extreme_cashflow": 0.5341676794424404
+        },
+        {
+          "time_ms": 1711728000000,
+          "utc": "2024-03-29T16:00:00.000+00:00",
+          "rate": 0.00037327,
+          "mark": 3489.53121591,
+          "source": "reported settlement mark",
+          "cashflow": 0.6512686584813628,
+          "opposite_extreme_cashflow": 0.6512686584813628
+        },
+        {
+          "time_ms": 1711756800000,
+          "utc": "2024-03-30T00:00:00.000+00:00",
+          "rate": 0.00024188,
+          "mark": 3512.46,
+          "source": "reported settlement mark",
+          "cashflow": 0.4247969124,
+          "opposite_extreme_cashflow": 0.4247969124
+        },
+        {
+          "time_ms": 1711785600000,
+          "utc": "2024-03-30T08:00:00.000+00:00",
+          "rate": 0.00024854,
+          "mark": 3495.00009091,
+          "source": "reported settlement mark",
+          "cashflow": 0.4343236612973857,
+          "opposite_extreme_cashflow": 0.4343236612973857
+        },
+        {
+          "time_ms": 1711814400000,
+          "utc": "2024-03-30T16:00:00.000+00:00",
+          "rate": 0.00045204,
+          "mark": 3539.97,
+          "source": "reported settlement mark",
+          "cashflow": 0.8001040194,
+          "opposite_extreme_cashflow": 0.8001040194
+        },
+        {
+          "time_ms": 1711843200000,
+          "utc": "2024-03-31T00:00:00.000+00:00",
+          "rate": 0.00026461,
+          "mark": 3508.24947348,
+          "source": "reported settlement mark",
+          "cashflow": 0.4641589465887713,
+          "opposite_extreme_cashflow": 0.4641589465887713
+        },
+        {
+          "time_ms": 1711872000000,
+          "utc": "2024-03-31T08:00:00.000+00:00",
+          "rate": 0.00065366,
+          "mark": 3629.17,
+          "source": "reported settlement mark",
+          "cashflow": 1.1861216311,
+          "opposite_extreme_cashflow": 1.1861216311
+        },
+        {
+          "time_ms": 1711900800001,
+          "utc": "2024-03-31T16:00:00.001+00:00",
+          "rate": 0.00058292,
+          "mark": 3620.88062879,
+          "source": "reported settlement mark",
+          "cashflow": 1.0553418680671334,
+          "opposite_extreme_cashflow": 1.0553418680671334
+        },
+        {
+          "time_ms": 1711929600000,
+          "utc": "2024-04-01T00:00:00.000+00:00",
+          "rate": 0.00060909,
+          "mark": 3648.79,
+          "source": "reported settlement mark",
+          "cashflow": 1.1112207505499998,
+          "opposite_extreme_cashflow": 1.1112207505499998
+        },
+        {
+          "time_ms": 1711958400000,
+          "utc": "2024-04-01T08:00:00.000+00:00",
+          "rate": 0.00035798,
+          "mark": 3548.55600379,
+          "source": "reported settlement mark",
+          "cashflow": 0.635156039118372,
+          "opposite_extreme_cashflow": 0.635156039118372
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,546 @@
+{
+  "fixed": {
+    "strategy": "fixed",
+    "start_ns": 1693785600000000000,
+    "stop_ns": 1694044800000000000,
+    "net_pnl": -105.83528715598186,
+    "gross_pnl": -51.41283499999834,
+    "return_pct": -1.0583528715598185,
+    "net_equity": 9894.164712844018,
+    "cash_equivalent": 9840.297987844018,
+    "collateral_wallet": 9894.166878844255,
+    "terminal_inventory": 0.033,
+    "average_entry": 1632.3906363712733,
+    "realized_gross": -51.41066899974631,
+    "unrealized": -0.002166000252025924,
+    "fees": 54.42245215599916,
+    "funding": 0,
+    "reconciliation_error": 1.5631940186722204e-11,
+    "gross_exposure": 53.866724999999995,
+    "fill_count": 16277,
+    "orders_with_fill": 3598,
+    "order_fill_rate": 0.10537722586691659,
+    "quantity_fill_rate": 0.09926612465415632,
+    "partial_orders": 2947,
+    "executed_quantity": 333.883,
+    "traded_notional": 544224.52156,
+    "avg_abs_inventory": 0.27487402582561765,
+    "max_abs_inventory": 0.5,
+    "abs_inventory_seconds": 71247.34749400009,
+    "holding_seconds": 256547.79899999627,
+    "utilization": 0.5497480516512353,
+    "rms_inventory": 0.315850158941783,
+    "pnl_per_rms_inventory": -335.0806835449124,
+    "max_drawdown": 107.87343678598154,
+    "max_drawdown_pct": 1.0787074965227719,
+    "spread_capture": 20.02299000000029,
+    "buy_fill_probability": 0.10516777738805097,
+    "sell_fill_probability": 0.10558751027115859,
+    "counts": {
+      "stale_decisions": 1,
+      "submitted": 34144,
+      "submitted_1": 17106,
+      "submitted_lots": 3363514,
+      "submitted_-1": 17038,
+      "activated": 34105,
+      "cancel_requested": 22134,
+      "canceled": 18974,
+      "expired": 11848,
+      "orders_partially_filled": 2947,
+      "partial_fill": 12996,
+      "fully_filled": 3281,
+      "post_only_or_stale_rejected": 39,
+      "sample_ended": 2
+    },
+    "markouts": {
+      "all": {
+        "1": {
+          "valid": 16277,
+          "missing": 0,
+          "directional": -61.61943499999919,
+          "immediate": 20.02299000000029,
+          "combined": -41.5964449999989,
+          "after_fee": -96.0188971559989,
+          "directional_bps": -1.1322428990036923,
+          "after_fee_bps": -1.7643250782005226
+        },
+        "5": {
+          "valid": 16277,
+          "missing": 0,
+          "directional": -67.30518999999904,
+          "immediate": 20.02299000000029,
+          "combined": -47.28219999999875,
+          "after_fee": -101.70465215599876,
+          "directional_bps": -1.2367173351004312,
+          "after_fee_bps": -1.8687995142972615
+        },
+        "30": {
+          "valid": 16277,
+          "missing": 0,
+          "directional": -67.61039999999858,
+          "immediate": 20.02299000000029,
+          "combined": -47.587409999998286,
+          "after_fee": -102.00986215599829,
+          "directional_bps": -1.2423254984210523,
+          "after_fee_bps": -1.8744076776178826
+        },
+        "60": {
+          "valid": 16277,
+          "missing": 0,
+          "directional": -70.37319000000011,
+          "immediate": 20.02299000000029,
+          "combined": -50.350199999999816,
+          "after_fee": -104.77265215599982,
+          "directional_bps": -1.2930911271377095,
+          "after_fee_bps": -1.9251733063345395
+        }
+      },
+      "buy": {
+        "1": {
+          "valid": 8150,
+          "missing": 0,
+          "directional": -29.498719999999068,
+          "immediate": 10.521799999999704,
+          "combined": -18.976919999999364,
+          "after_fee": -46.193410055999365,
+          "directional_bps": -1.083854675577314,
+          "after_fee_bps": -1.6972581681529437
+        },
+        "5": {
+          "valid": 8150,
+          "missing": 0,
+          "directional": -33.53676999999967,
+          "immediate": 10.521799999999704,
+          "combined": -23.014969999999966,
+          "after_fee": -50.23146005599997,
+          "directional_bps": -1.2322224478981387,
+          "after_fee_bps": -1.8456259404737687
+        },
+        "30": {
+          "valid": 8150,
+          "missing": 0,
+          "directional": -26.402949999999894,
+          "immediate": 10.521799999999704,
+          "combined": -15.88115000000019,
+          "after_fee": -43.09764005600019,
+          "directional_bps": -0.9701085608641605,
+          "after_fee_bps": -1.5835120534397904
+        },
+        "60": {
+          "valid": 8150,
+          "missing": 0,
+          "directional": -27.086520000000075,
+          "immediate": 10.521799999999704,
+          "combined": -16.56472000000037,
+          "after_fee": -43.781210056000376,
+          "directional_bps": -0.9952245842232963,
+          "after_fee_bps": -1.6086280767989263
+        }
+      },
+      "sell": {
+        "1": {
+          "valid": 8127,
+          "missing": 0,
+          "directional": -32.12071500000013,
+          "immediate": 9.501190000000586,
+          "combined": -22.61952499999955,
+          "after_fee": -49.82548709999955,
+          "directional_bps": -1.1806498473362252,
+          "after_fee_bps": -1.8314179412901392
+        },
+        "5": {
+          "valid": 8127,
+          "missing": 0,
+          "directional": -33.768419999999374,
+          "immediate": 9.501190000000586,
+          "combined": -24.26722999999879,
+          "after_fee": -51.47319209999879,
+          "directional_bps": -1.2412139616999383,
+          "after_fee_bps": -1.8919820556538522
+        },
+        "30": {
+          "valid": 8127,
+          "missing": 0,
+          "directional": -41.20744999999869,
+          "immediate": 9.501190000000586,
+          "combined": -31.706259999998103,
+          "after_fee": -58.912222099998104,
+          "directional_bps": -1.5146477764151074,
+          "after_fee_bps": -2.165415870369021
+        },
+        "60": {
+          "valid": 8127,
+          "missing": 0,
+          "directional": -43.286670000000036,
+          "immediate": 9.501190000000586,
+          "combined": -33.78547999999945,
+          "after_fee": -60.99144209999945,
+          "directional_bps": -1.5910729361782077,
+          "after_fee_bps": -2.241841030132121
+        }
+      }
+    }
+  },
+  "adaptive": {
+    "strategy": "adaptive",
+    "start_ns": 1693785600000000000,
+    "stop_ns": 1694044800000000000,
+    "net_pnl": -23.10971117400004,
+    "gross_pnl": -16.80226999999966,
+    "return_pct": -0.2310971117400004,
+    "net_equity": 9976.890288826,
+    "cash_equivalent": 9973.625638826,
+    "collateral_wallet": 9976.892158826,
+    "terminal_inventory": 0.002,
+    "average_entry": 1633.26,
+    "realized_gross": -16.80039999999966,
+    "unrealized": -0.0018700000000003456,
+    "fees": 6.307441174000002,
+    "funding": 0,
+    "reconciliation_error": -3.801403636316536e-13,
+    "gross_exposure": 3.2646499999999996,
+    "fill_count": 1586,
+    "orders_with_fill": 399,
+    "order_fill_rate": 0.011198742597322406,
+    "quantity_fill_rate": 0.010946769410476983,
+    "partial_orders": 319,
+    "executed_quantity": 38.704,
+    "traded_notional": 63074.41174,
+    "avg_abs_inventory": 0.1961830390933642,
+    "max_abs_inventory": 0.5,
+    "abs_inventory_seconds": 50850.643733000004,
+    "holding_seconds": 247153.43599999996,
+    "utilization": 0.3923660781867284,
+    "rms_inventory": 0.244516011847335,
+    "pnl_per_rms_inventory": -94.51205669274829,
+    "max_drawdown": 25.883125310998366,
+    "max_drawdown_pct": 0.25876830628184155,
+    "spread_capture": 6.557789999999384,
+    "buy_fill_probability": 0.01088291103917848,
+    "sell_fill_probability": 0.011518265484727007,
+    "counts": {
+      "stale_decisions": 1,
+      "submitted": 35629,
+      "submitted_1": 17918,
+      "submitted_lots": 3535655,
+      "submitted_-1": 17711,
+      "activated": 35619,
+      "cancel_requested": 27063,
+      "canceled": 23349,
+      "expired": 11885,
+      "orders_partially_filled": 319,
+      "partial_fill": 1201,
+      "fully_filled": 385,
+      "post_only_or_stale_rejected": 10
+    },
+    "markouts": {
+      "all": {
+        "1": {
+          "valid": 1586,
+          "missing": 0,
+          "directional": -8.341199999999706,
+          "immediate": 6.557789999999384,
+          "combined": -1.7834100000003215,
+          "after_fee": -8.09085117400032,
+          "directional_bps": -1.3224380172395573,
+          "after_fee_bps": -1.2827469889615049
+        },
+        "5": {
+          "valid": 1586,
+          "missing": 0,
+          "directional": -9.721019999999617,
+          "immediate": 6.557789999999384,
+          "combined": -3.163230000000233,
+          "after_fee": -9.470671174000234,
+          "directional_bps": -1.5411986781693314,
+          "after_fee_bps": -1.5015076498912796
+        },
+        "30": {
+          "valid": 1586,
+          "missing": 0,
+          "directional": -11.345959999999746,
+          "immediate": 6.557789999999384,
+          "combined": -4.7881700000003615,
+          "after_fee": -11.09561117400036,
+          "directional_bps": -1.7988213741523427,
+          "after_fee_bps": -1.7591303458742904
+        },
+        "60": {
+          "valid": 1586,
+          "missing": 0,
+          "directional": -12.248779999999533,
+          "immediate": 6.557789999999384,
+          "combined": -5.6909900000001485,
+          "after_fee": -11.99843117400015,
+          "directional_bps": -1.9419570729395648,
+          "after_fee_bps": -1.9022660446615127
+        }
+      },
+      "buy": {
+        "1": {
+          "valid": 827,
+          "missing": 0,
+          "directional": -4.29840999999969,
+          "immediate": 3.8221299999995457,
+          "combined": -0.4762800000001439,
+          "after_fee": -3.631003933000144,
+          "directional_bps": -1.3625312678032324,
+          "after_fee_bps": -1.1509735907532241
+        },
+        "5": {
+          "valid": 827,
+          "missing": 0,
+          "directional": -5.056394999999737,
+          "immediate": 3.8221299999995457,
+          "combined": -1.2342650000001916,
+          "after_fee": -4.388988933000192,
+          "directional_bps": -1.602801103167,
+          "after_fee_bps": -1.391243426116992
+        },
+        "30": {
+          "valid": 827,
+          "missing": 0,
+          "directional": -6.315194999999957,
+          "immediate": 3.8221299999995457,
+          "combined": -2.493065000000411,
+          "after_fee": -5.647788933000411,
+          "directional_bps": -2.0018217549687436,
+          "after_fee_bps": -1.7902640779187355
+        },
+        "60": {
+          "valid": 827,
+          "missing": 0,
+          "directional": -6.4219549999995404,
+          "immediate": 3.8221299999995457,
+          "combined": -2.5998249999999947,
+          "after_fee": -5.754548932999995,
+          "directional_bps": -2.0356630679542698,
+          "after_fee_bps": -1.8241053909042617
+        }
+      },
+      "sell": {
+        "1": {
+          "valid": 759,
+          "missing": 0,
+          "directional": -4.042790000000015,
+          "immediate": 2.7356599999998386,
+          "combined": -1.3071300000001767,
+          "after_fee": -4.459847241000176,
+          "directional_bps": -1.282319247481165,
+          "after_fee_bps": -1.4146042604142868
+        },
+        "5": {
+          "valid": 759,
+          "missing": 0,
+          "directional": -4.66462499999988,
+          "immediate": 2.7356599999998386,
+          "combined": -1.9289650000000416,
+          "after_fee": -5.081682241000042,
+          "directional_bps": -1.4795570434728622,
+          "after_fee_bps": -1.6118420564059845
+        },
+        "30": {
+          "valid": 759,
+          "missing": 0,
+          "directional": -5.030764999999789,
+          "immediate": 2.7356599999998386,
+          "combined": -2.2951049999999507,
+          "after_fee": -5.447822240999951,
+          "directional_bps": -1.5956917843999536,
+          "after_fee_bps": -1.7279767973330755
+        },
+        "60": {
+          "valid": 759,
+          "missing": 0,
+          "directional": -5.826824999999993,
+          "immediate": 2.7356599999998386,
+          "combined": -3.0911650000001547,
+          "after_fee": -6.243882241000154,
+          "directional_bps": -1.8481914344312722,
+          "after_fee_bps": -1.9804764473643939
+        }
+      }
+    }
+  },
+  "no_skew": {
+    "strategy": "no_skew",
+    "start_ns": 1693785600000000000,
+    "stop_ns": 1694044800000000000,
+    "net_pnl": -7.1713813330025005,
+    "gross_pnl": -1.8073799999989972,
+    "return_pct": -0.07171381333002501,
+    "net_equity": 9992.828618666997,
+    "cash_equivalent": 9976.505368666998,
+    "collateral_wallet": 9992.837868667,
+    "terminal_inventory": 0.01,
+    "average_entry": 1633.25,
+    "realized_gross": -1.7981299999989955,
+    "unrealized": -0.00925000000000182,
+    "fees": 5.364001332999998,
+    "funding": 0,
+    "reconciliation_error": -3.504752044136694e-12,
+    "gross_exposure": 16.323249999999998,
+    "fill_count": 1281,
+    "orders_with_fill": 341,
+    "order_fill_rate": 0.010086370089919547,
+    "quantity_fill_rate": 0.009771954081972041,
+    "partial_orders": 268,
+    "executed_quantity": 32.906,
+    "traded_notional": 53640.01333,
+    "avg_abs_inventory": 0.24410008719521606,
+    "max_abs_inventory": 0.5,
+    "abs_inventory_seconds": 63270.742601000005,
+    "holding_seconds": 253804.1309999998,
+    "utilization": 0.4882001743904321,
+    "rms_inventory": 0.2866353165229267,
+    "pnl_per_rms_inventory": -25.01918263246844,
+    "max_drawdown": 30.526744239001346,
+    "max_drawdown_pct": 0.3049742876667786,
+    "spread_capture": 6.045979999999696,
+    "buy_fill_probability": 0.010231556273559504,
+    "sell_fill_probability": 0.009944428195378765,
+    "counts": {
+      "stale_decisions": 1,
+      "submitted": 33808,
+      "submitted_1": 16713,
+      "submitted_lots": 3367392,
+      "submitted_-1": 17095,
+      "activated": 33807,
+      "cancel_requested": 25537,
+      "canceled": 21972,
+      "expired": 11509,
+      "orders_partially_filled": 268,
+      "partial_fill": 955,
+      "fully_filled": 326,
+      "post_only_or_stale_rejected": 1
+    },
+    "markouts": {
+      "all": {
+        "1": {
+          "valid": 1281,
+          "missing": 0,
+          "directional": -8.471444999999392,
+          "immediate": 6.045979999999696,
+          "combined": -2.4254649999996953,
+          "after_fee": -7.789466332999695,
+          "directional_bps": -1.5793144844841878,
+          "after_fee_bps": -1.4521745707030187
+        },
+        "5": {
+          "valid": 1281,
+          "missing": 0,
+          "directional": -9.913099999999988,
+          "immediate": 6.045979999999696,
+          "combined": -3.867120000000291,
+          "after_fee": -9.231121333000292,
+          "directional_bps": -1.8480793319370314,
+          "after_fee_bps": -1.7209394181558628
+        },
+        "30": {
+          "valid": 1281,
+          "missing": 0,
+          "directional": -15.359719999999925,
+          "immediate": 6.045979999999696,
+          "combined": -9.313740000000228,
+          "after_fee": -14.677741333000228,
+          "directional_bps": -2.8634817641645665,
+          "after_fee_bps": -2.736341850383397
+        },
+        "60": {
+          "valid": 1281,
+          "missing": 0,
+          "directional": -16.21244000000011,
+          "immediate": 6.045979999999696,
+          "combined": -10.166460000000415,
+          "after_fee": -15.530461333000414,
+          "directional_bps": -3.022452641884925,
+          "after_fee_bps": -2.8953127281037556
+        }
+      },
+      "buy": {
+        "1": {
+          "valid": 651,
+          "missing": 0,
+          "directional": -3.737879999999726,
+          "immediate": 3.6614149999998533,
+          "combined": -0.07646499999987277,
+          "after_fee": -2.759372197999873,
+          "directional_bps": -1.3932200125245353,
+          "after_fee_bps": -1.0285007994525022
+        },
+        "5": {
+          "valid": 651,
+          "missing": 0,
+          "directional": -3.2343650000001194,
+          "immediate": 3.6614149999998533,
+          "combined": 0.4270499999997339,
+          "after_fee": -2.255857198000266,
+          "directional_bps": -1.2055448665578925,
+          "after_fee_bps": -0.8408256534858595
+        },
+        "30": {
+          "valid": 651,
+          "missing": 0,
+          "directional": -5.316475000000148,
+          "immediate": 3.6614149999998533,
+          "combined": -1.6550600000002946,
+          "after_fee": -4.337967198000294,
+          "directional_bps": -1.9816097269273298,
+          "after_fee_bps": -1.6168905138552967
+        },
+        "60": {
+          "valid": 651,
+          "missing": 0,
+          "directional": -5.5628650000000315,
+          "immediate": 3.6614149999998533,
+          "combined": -1.9014500000001782,
+          "after_fee": -4.584357198000179,
+          "directional_bps": -2.073446671635502,
+          "after_fee_bps": -1.7087274585634695
+        }
+      },
+      "sell": {
+        "1": {
+          "valid": 630,
+          "missing": 0,
+          "directional": -4.733564999999665,
+          "immediate": 2.3845649999998426,
+          "combined": -2.348999999999822,
+          "after_fee": -5.030094134999822,
+          "directional_bps": -1.765534800962766,
+          "after_fee_bps": -1.8761348470891424
+        },
+        "5": {
+          "valid": 630,
+          "missing": 0,
+          "directional": -6.678734999999868,
+          "immediate": 2.3845649999998426,
+          "combined": -4.294170000000026,
+          "after_fee": -6.975264135000026,
+          "directional_bps": -2.491048304799588,
+          "after_fee_bps": -2.601648350925965
+        },
+        "30": {
+          "valid": 630,
+          "missing": 0,
+          "directional": -10.043244999999777,
+          "immediate": 2.3845649999998426,
+          "combined": -7.658679999999935,
+          "after_fee": -10.339774134999935,
+          "directional_bps": -3.7459501585160777,
+          "after_fee_bps": -3.856550204642455
+        },
+        "60": {
+          "valid": 630,
+          "missing": 0,
+          "directional": -10.649575000000079,
+          "immediate": 2.3845649999998426,
+          "combined": -8.265010000000236,
+          "after_fee": -10.946104135000237,
+          "directional_bps": -3.9721003678970335,
+          "after_fee_bps": -4.08270041402341
+        }
+      }
+    }
+  }
+}

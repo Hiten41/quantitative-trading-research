@@ -1,0 +1,2213 @@
+{
+  "selection_sha256": "54267d7028ab240f4e460d5a51e861d9f0adad4f32bc420907bd1ef5ae2b62e1",
+  "period": [
+    "2023-09-07",
+    "2023-09-11"
+  ],
+  "results": {
+    "reference": {
+      "run_id": "ethusdt-cdc86c3aa996",
+      "config": {
+        "symbol": "ETHUSDT",
+        "start": "2023-09-02",
+        "evaluation_start": "2023-09-07",
+        "end": "2023-09-11",
+        "capital": 10000.0,
+        "quantity": 0.1,
+        "inventory_limit": 0.5,
+        "spread_bps": 3.0,
+        "maker_fee_bps": 1.0,
+        "rebate_assumption": "",
+        "gamma": 0.8,
+        "horizon_s": 60,
+        "vol_window_s": 180,
+        "vol_width": 0.35,
+        "refresh_ms": 5000,
+        "new_latency_ms": 50,
+        "cancel_latency_ms": 80,
+        "lifetime_ms": 15000,
+        "stale_ms": 2000,
+        "replace_ticks": 2,
+        "participation": 0.1,
+        "fill_model": "through",
+        "tick": 0.01,
+        "step": 0.001,
+        "min_qty": 0.001,
+        "max_qty": 10000,
+        "min_price": 39.86,
+        "signal_half_life_s": 3600,
+        "entry_width_bps": 30.0,
+        "trend_band_bps": 10.0,
+        "max_price": 306177,
+        "min_notional": 20
+      },
+      "policies": {
+        "fixed": {
+          "metrics": {
+            "strategy": "fixed",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -184.20520528900488,
+            "gross_pnl": -84.17898999999957,
+            "return_pct": -1.8420520528900488,
+            "net_equity": 9815.794794710995,
+            "cash_equivalent": 10436.204794710995,
+            "collateral_wallet": 9816.390999481242,
+            "terminal_inventory": -0.4,
+            "average_entry": 1549.5344880743992,
+            "realized_gross": -83.58278522975921,
+            "unrealized": -0.5962047702403652,
+            "fees": 100.02621528899888,
+            "funding": 0,
+            "reconciliation_error": -6.423306331271306e-12,
+            "gross_exposure": 620.4100000000001,
+            "fill_count": 27938,
+            "orders_with_fill": 6605,
+            "order_fill_rate": 0.11721592219915171,
+            "quantity_fill_rate": 0.11185810779856277,
+            "partial_orders": 5302,
+            "executed_quantity": 622.618,
+            "traded_notional": 1000262.15289,
+            "avg_abs_inventory": 0.27918419897222124,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 120607.57395599957,
+            "holding_seconds": 426568.95399999426,
+            "utilization": 0.5583683979444425,
+            "rms_inventory": 0.31867165328280495,
+            "pnl_per_rms_inventory": -578.040761992508,
+            "max_drawdown": 184.65026211900295,
+            "max_drawdown_pct": 1.8464688365528388,
+            "spread_capture": 50.08005500000165,
+            "buy_fill_probability": 0.11894431096926883,
+            "sell_fill_probability": 0.11552245098728128,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 56349,
+              "submitted_1": 27887,
+              "submitted_lots": 5566141,
+              "submitted_-1": 28462,
+              "activated": 56278,
+              "orders_partially_filled": 5302,
+              "partial_fill": 21791,
+              "fully_filled": 6147,
+              "cancel_requested": 33689,
+              "canceled": 29212,
+              "expired": 20917,
+              "post_only_or_stale_rejected": 71,
+              "sample_ended": 2
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 27938,
+                  "missing": 0,
+                  "directional": -126.45067000000167,
+                  "immediate": 50.08005500000165,
+                  "combined": -76.37061500000002,
+                  "after_fee": -176.39683028900004,
+                  "directional_bps": -1.2641752927935443,
+                  "after_fee_bps": -1.7635059946969582
+                },
+                "5": {
+                  "valid": 27936,
+                  "missing": 2,
+                  "directional": -144.74782500000111,
+                  "immediate": 50.071555000001666,
+                  "combined": -94.67626999999945,
+                  "after_fee": -194.68686598899944,
+                  "directional_bps": -1.4473248916137014,
+                  "after_fee_bps": -1.9466623917570967
+                },
+                "30": {
+                  "valid": 27938,
+                  "missing": 0,
+                  "directional": -154.8133400000023,
+                  "immediate": 50.08005500000165,
+                  "combined": -104.73328500000066,
+                  "after_fee": -204.75950028900067,
+                  "directional_bps": -1.5477276587213564,
+                  "after_fee_bps": -2.0470583606247703
+                },
+                "60": {
+                  "valid": 27938,
+                  "missing": 0,
+                  "directional": -139.41736500000033,
+                  "immediate": 50.08005500000165,
+                  "combined": -89.33730999999868,
+                  "after_fee": -189.3635252889987,
+                  "directional_bps": -1.3938082591367649,
+                  "after_fee_bps": -1.8931389610401785
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 14403,
+                  "missing": 0,
+                  "directional": -63.26404500000138,
+                  "immediate": 25.23867000000059,
+                  "combined": -38.02537500000079,
+                  "after_fee": -88.0116710940008,
+                  "directional_bps": -1.2656277808828318,
+                  "after_fee_bps": -1.7607159956099467
+                },
+                "5": {
+                  "valid": 14401,
+                  "missing": 2,
+                  "directional": -70.61686000000014,
+                  "immediate": 25.23017000000061,
+                  "combined": -45.38668999999953,
+                  "after_fee": -95.35736679399953,
+                  "directional_bps": -1.4131659711376803,
+                  "after_fee_bps": -1.908266465693519
+                },
+                "30": {
+                  "valid": 14403,
+                  "missing": 0,
+                  "directional": -78.09596000000036,
+                  "immediate": 25.23867000000059,
+                  "combined": -52.85728999999977,
+                  "after_fee": -102.84358609399978,
+                  "directional_bps": -1.562347405239622,
+                  "after_fee_bps": -2.057435619966737
+                },
+                "60": {
+                  "valid": 14403,
+                  "missing": 0,
+                  "directional": -70.45824000000002,
+                  "immediate": 25.23867000000059,
+                  "combined": -45.21956999999943,
+                  "after_fee": -95.20586609399943,
+                  "directional_bps": -1.409551127122966,
+                  "after_fee_bps": -1.9046393418500809
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 13535,
+                  "missing": 0,
+                  "directional": -63.186625000000284,
+                  "immediate": 24.841385000001058,
+                  "combined": -38.34523999999922,
+                  "after_fee": -88.38515919499923,
+                  "directional_bps": -1.2627243611998857,
+                  "after_fee_bps": -1.7662930040029061
+                },
+                "5": {
+                  "valid": 13535,
+                  "missing": 0,
+                  "directional": -74.13096500000098,
+                  "immediate": 24.841385000001058,
+                  "combined": -49.28957999999993,
+                  "after_fee": -99.32949919499993,
+                  "directional_bps": -1.4814365449136888,
+                  "after_fee_bps": -1.985005187716709
+                },
+                "30": {
+                  "valid": 13535,
+                  "missing": 0,
+                  "directional": -76.71738000000197,
+                  "immediate": 24.841385000001058,
+                  "combined": -51.87599500000091,
+                  "after_fee": -101.91591419500091,
+                  "directional_bps": -1.5331235788180007,
+                  "after_fee_bps": -2.0366922216210206
+                },
+                "60": {
+                  "valid": 13535,
+                  "missing": 0,
+                  "directional": -68.95912500000031,
+                  "immediate": 24.841385000001058,
+                  "combined": -44.11773999999926,
+                  "after_fee": -94.15765919499927,
+                  "directional_bps": -1.378082261309701,
+                  "after_fee_bps": -1.8816509041127214
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9962.276336365998,
+              "pnl": -37.72366363400215,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 9933.123688219994,
+              "pnl": -29.15264814600414,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 9931.373481804994,
+              "pnl": -1.7502064149994112,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 9900.86943887799,
+              "pnl": -30.504042927004775,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9815.794794710995,
+              "pnl": -85.0746441669944,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": -0.06313524233875,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": 0.5,
+              "rate": 7.831e-05,
+              "price": 1635.165,
+              "source": "published midpoint proxy",
+              "cashflow": -0.064024885575
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": 0.124,
+              "rate": 4.354e-05,
+              "price": 1629.8449999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0087994679612
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": 0.099,
+              "rate": 5.596e-05,
+              "price": 1647.295,
+              "source": "published midpoint proxy",
+              "cashflow": -0.009126080191800001
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": -0.01,
+              "rate": 2.685e-05,
+              "price": 1646.0949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0004419765074999999
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.3,
+              "rate": 2.497e-05,
+              "price": 1627.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.012194561445
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.4,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0327678448
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": 0.217,
+              "rate": 2.832e-05,
+              "price": 1633.725,
+              "source": "published midpoint proxy",
+              "cashflow": -0.010039958964
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": -0.252,
+              "rate": 4.629e-05,
+              "price": 1634.475,
+              "source": "published midpoint proxy",
+              "cashflow": 0.019066281633
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": -0.496,
+              "rate": 3.947e-05,
+              "price": 1634.8049999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0320047736616
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": 0.3,
+              "rate": 1.527e-05,
+              "price": 1624.1350000000002,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0074401624350000015
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": -0.3,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": 0.003763930875
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.116,
+              "rate": 4.838e-05,
+              "price": 1616.4650000000001,
+              "source": "published midpoint proxy",
+              "cashflow": -0.009071730897200002
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.356,
+              "rate": 5.747e-05,
+              "price": 1611.5949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.032972137815399996
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": 0.255,
+              "rate": -6.25e-06,
+              "price": 1561.685,
+              "source": "published midpoint proxy",
+              "cashflow": 0.00248893546875
+            }
+          ],
+          "closing_cost": 0.3122059999999527,
+          "after_proxy_funding_and_close": -184.58054653134357
+        },
+        "adaptive": {
+          "metrics": {
+            "strategy": "adaptive",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -7.215086856000198,
+            "gross_pnl": 5.301939999998947,
+            "return_pct": -0.07215086856000198,
+            "net_equity": 9992.784913144,
+            "cash_equivalent": 10768.297413144,
+            "collateral_wallet": 9994.797873312806,
+            "terminal_inventory": -0.5,
+            "average_entry": 1546.9990796623886,
+            "realized_gross": 7.314900168804709,
+            "unrealized": -2.012960168805762,
+            "fees": 12.517026855999955,
+            "funding": 0,
+            "reconciliation_error": 8.100187187665142e-13,
+            "gross_exposure": 775.5125,
+            "fill_count": 3288,
+            "orders_with_fill": 806,
+            "order_fill_rate": 0.013627755985391586,
+            "quantity_fill_rate": 0.013189793353681457,
+            "partial_orders": 661,
+            "executed_quantity": 77.72,
+            "traded_notional": 125170.26856,
+            "avg_abs_inventory": 0.15414190859953691,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 66589.30451499995,
+            "holding_seconds": 418040.6859999992,
+            "utilization": 0.30828381719907383,
+            "rms_inventory": 0.19630607594848914,
+            "pnl_per_rms_inventory": -36.75427172154082,
+            "max_drawdown": 12.043396741002653,
+            "max_drawdown_pct": 0.12040303803535306,
+            "spread_capture": 16.314269999999514,
+            "buy_fill_probability": 0.01328758367813772,
+            "sell_fill_probability": 0.01397151307067342,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 59144,
+              "submitted_1": 29727,
+              "submitted_lots": 5892435,
+              "submitted_-1": 29417,
+              "activated": 59131,
+              "cancel_requested": 42383,
+              "canceled": 36919,
+              "expired": 21442,
+              "orders_partially_filled": 661,
+              "partial_fill": 2519,
+              "fully_filled": 769,
+              "post_only_or_stale_rejected": 13,
+              "sample_ended": 1
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 3288,
+                  "missing": 0,
+                  "directional": -22.51053499999954,
+                  "immediate": 16.314269999999514,
+                  "combined": -6.196265000000025,
+                  "after_fee": -18.713291856000026,
+                  "directional_bps": -1.798393121543011,
+                  "after_fee_bps": -1.4950268998607976
+                },
+                "5": {
+                  "valid": 3288,
+                  "missing": 0,
+                  "directional": -24.044034999999514,
+                  "immediate": 16.314269999999514,
+                  "combined": -7.729765,
+                  "after_fee": -20.246791856,
+                  "directional_bps": -1.920906240484263,
+                  "after_fee_bps": -1.61754001880205
+                },
+                "30": {
+                  "valid": 3288,
+                  "missing": 0,
+                  "directional": -24.812964999999544,
+                  "immediate": 16.314269999999514,
+                  "combined": -8.49869500000003,
+                  "after_fee": -21.01572185600003,
+                  "directional_bps": -1.9823369627193475,
+                  "after_fee_bps": -1.6789707410371342
+                },
+                "60": {
+                  "valid": 3288,
+                  "missing": 0,
+                  "directional": -16.728994999999145,
+                  "immediate": 16.314269999999514,
+                  "combined": -0.4147249999996312,
+                  "after_fee": -12.931751855999632,
+                  "directional_bps": -1.3364990897962443,
+                  "after_fee_bps": -1.033132868114031
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 1623,
+                  "missing": 0,
+                  "directional": -11.314265000000221,
+                  "immediate": 9.300559999999827,
+                  "combined": -2.013705000000394,
+                  "after_fee": -8.233177706000394,
+                  "directional_bps": -1.8191678836511675,
+                  "after_fee_bps": -1.323774232188164
+                },
+                "5": {
+                  "valid": 1623,
+                  "missing": 0,
+                  "directional": -11.719265000000062,
+                  "immediate": 9.300559999999827,
+                  "combined": -2.4187050000002355,
+                  "after_fee": -8.638177706000235,
+                  "directional_bps": -1.8842859441595983,
+                  "after_fee_bps": -1.3888922926965948
+                },
+                "30": {
+                  "valid": 1623,
+                  "missing": 0,
+                  "directional": -10.29549,
+                  "immediate": 9.300559999999827,
+                  "combined": -0.9949300000001724,
+                  "after_fee": -7.214402706000173,
+                  "directional_bps": -1.6553638044054468,
+                  "after_fee_bps": -1.1599701529424433
+                },
+                "60": {
+                  "valid": 1623,
+                  "missing": 0,
+                  "directional": -8.659794999999528,
+                  "immediate": 9.300559999999827,
+                  "combined": 0.6407650000002985,
+                  "after_fee": -5.578707705999702,
+                  "directional_bps": -1.3923680365451752,
+                  "after_fee_bps": -0.8969743850821719
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 1665,
+                  "missing": 0,
+                  "directional": -11.196269999999318,
+                  "immediate": 7.013709999999689,
+                  "combined": -4.182559999999629,
+                  "after_fee": -10.480114149999629,
+                  "directional_bps": -1.77787593934374,
+                  "after_fee_bps": -1.6641562581878917
+                },
+                "5": {
+                  "valid": 1665,
+                  "missing": 0,
+                  "directional": -12.324769999999454,
+                  "immediate": 7.013709999999689,
+                  "combined": -5.311059999999765,
+                  "after_fee": -11.608614149999765,
+                  "directional_bps": -1.9570724929772068,
+                  "after_fee_bps": -1.8433528118213585
+                },
+                "30": {
+                  "valid": 1665,
+                  "missing": 0,
+                  "directional": -14.517474999999544,
+                  "immediate": 7.013709999999689,
+                  "combined": -7.503764999999856,
+                  "after_fee": -13.801319149999856,
+                  "directional_bps": -2.3052560810452967,
+                  "after_fee_bps": -2.1915363998894484
+                },
+                "60": {
+                  "valid": 1665,
+                  "missing": 0,
+                  "directional": -8.069199999999618,
+                  "immediate": 7.013709999999689,
+                  "combined": -1.0554899999999297,
+                  "after_fee": -7.3530441499999295,
+                  "directional_bps": -1.281322844996834,
+                  "after_fee_bps": -1.1676031638409856
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9996.578357272,
+              "pnl": -3.4216427280007338,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 9992.835797519998,
+              "pnl": -3.742559752001398,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 9994.816994697,
+              "pnl": 1.981197177001377,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 10001.876763102,
+              "pnl": 7.059768405000796,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9992.784913144,
+              "pnl": -9.091849958000239,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": 0.004157354226900007,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": -0.10400000000000001,
+              "rate": 7.831e-05,
+              "price": 1635.165,
+              "source": "published midpoint proxy",
+              "cashflow": 0.013317176199600001
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": -0.361,
+              "rate": 4.354e-05,
+              "price": 1629.8449999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.025617805919299998
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": -0.135,
+              "rate": 5.596e-05,
+              "price": 1647.295,
+              "source": "published midpoint proxy",
+              "cashflow": 0.012444654807000001
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": 0.185,
+              "rate": 2.685e-05,
+              "price": 1646.0949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.008176565388749998
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.3,
+              "rate": 2.497e-05,
+              "price": 1627.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.012194561445
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.13,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.01064954956
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": -0.03,
+              "rate": 2.832e-05,
+              "price": 1633.725,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0013880127599999997
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": -0.029,
+              "rate": 4.629e-05,
+              "price": 1634.475,
+              "source": "published midpoint proxy",
+              "cashflow": 0.00219413558475
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": -0.269,
+              "rate": 3.947e-05,
+              "price": 1634.8049999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.01735742765115
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": -0.069,
+              "rate": 1.527e-05,
+              "price": 1624.1350000000002,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0017112373600500004
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": -0.219,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0027476695387500002
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.278,
+              "rate": 4.838e-05,
+              "price": 1616.4650000000001,
+              "source": "published midpoint proxy",
+              "cashflow": -0.021740872322600004
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.429,
+              "rate": 5.747e-05,
+              "price": 1611.5949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.03973327843484999
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": -0.146,
+              "rate": -6.25e-06,
+              "price": 1561.685,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0014250375625
+            }
+          ],
+          "closing_cost": 0.39025749999994086,
+          "after_proxy_funding_and_close": -7.601187001773239
+        },
+        "no_skew": {
+          "metrics": {
+            "strategy": "no_skew",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -7.135939070998575,
+            "gross_pnl": 2.5163500000001866,
+            "return_pct": -0.07135939070998575,
+            "net_equity": 9992.864060929001,
+            "cash_equivalent": 10768.376560929002,
+            "collateral_wallet": 9994.416560929,
+            "terminal_inventory": -0.5,
+            "average_entry": 1547.9199999999998,
+            "realized_gross": 4.068850000000309,
+            "unrealized": -1.5525000000001228,
+            "fees": 9.652289071000046,
+            "funding": 0,
+            "reconciliation_error": 1.2851941733060812e-12,
+            "gross_exposure": 775.5125,
+            "fill_count": 2528,
+            "orders_with_fill": 630,
+            "order_fill_rate": 0.011586206896551723,
+            "quantity_fill_rate": 0.011117265713231347,
+            "partial_orders": 520,
+            "executed_quantity": 59.89,
+            "traded_notional": 96522.89071,
+            "avg_abs_inventory": 0.2687550745138888,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 116102.19218999996,
+            "holding_seconds": 419511.3209999991,
+            "utilization": 0.5375101490277776,
+            "rms_inventory": 0.31300590574021864,
+            "pnl_per_rms_inventory": -22.798097224788773,
+            "max_drawdown": 22.846713792998344,
+            "max_drawdown_pct": 0.22823995614854706,
+            "spread_capture": 13.867104999999556,
+            "buy_fill_probability": 0.010980420027717566,
+            "sell_fill_probability": 0.012236029579934436,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 54375,
+              "submitted_1": 28141,
+              "submitted_lots": 5387116,
+              "submitted_-1": 26234,
+              "activated": 54373,
+              "cancel_requested": 39057,
+              "canceled": 33987,
+              "expired": 19790,
+              "orders_partially_filled": 520,
+              "partial_fill": 1933,
+              "fully_filled": 595,
+              "post_only_or_stale_rejected": 2,
+              "sample_ended": 1
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 2528,
+                  "missing": 0,
+                  "directional": -18.37019499999944,
+                  "immediate": 13.867104999999556,
+                  "combined": -4.503089999999885,
+                  "after_fee": -14.155379070999885,
+                  "directional_bps": -1.9031956942930892,
+                  "after_fee_bps": -1.4665307852755132
+                },
+                "5": {
+                  "valid": 2528,
+                  "missing": 0,
+                  "directional": -18.816124999999637,
+                  "immediate": 13.867104999999556,
+                  "combined": -4.949020000000081,
+                  "after_fee": -14.601309071000081,
+                  "directional_bps": -1.9493950980531751,
+                  "after_fee_bps": -1.5127301890355993
+                },
+                "30": {
+                  "valid": 2528,
+                  "missing": 0,
+                  "directional": -21.371239999999307,
+                  "immediate": 13.867104999999556,
+                  "combined": -7.504134999999751,
+                  "after_fee": -17.15642407099975,
+                  "directional_bps": -2.214111061407032,
+                  "after_fee_bps": -1.7774461523894562
+                },
+                "60": {
+                  "valid": 2528,
+                  "missing": 0,
+                  "directional": -17.94565999999934,
+                  "immediate": 13.867104999999556,
+                  "combined": -4.078554999999783,
+                  "after_fee": -13.730844070999783,
+                  "directional_bps": -1.8592128631866727,
+                  "after_fee_bps": -1.4225479541690969
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 1232,
+                  "missing": 0,
+                  "directional": -8.966294999999858,
+                  "immediate": 7.496364999999725,
+                  "combined": -1.4699300000001339,
+                  "after_fee": -6.257173093000134,
+                  "directional_bps": -1.8729558591061626,
+                  "after_fee_bps": -1.30705146395208
+                },
+                "5": {
+                  "valid": 1232,
+                  "missing": 0,
+                  "directional": -9.135090000000003,
+                  "immediate": 7.496364999999725,
+                  "combined": -1.6387250000002789,
+                  "after_fee": -6.425968093000279,
+                  "directional_bps": -1.9082151924470911,
+                  "after_fee_bps": -1.3423107972930086
+                },
+                "30": {
+                  "valid": 1232,
+                  "missing": 0,
+                  "directional": -8.825094999999989,
+                  "immediate": 7.496364999999725,
+                  "combined": -1.328730000000264,
+                  "after_fee": -6.115973093000264,
+                  "directional_bps": -1.843460803756595,
+                  "after_fee_bps": -1.2775564086025124
+                },
+                "60": {
+                  "valid": 1232,
+                  "missing": 0,
+                  "directional": -6.500114999999567,
+                  "immediate": 7.496364999999725,
+                  "combined": 0.996250000000158,
+                  "after_fee": -3.790993092999842,
+                  "directional_bps": -1.3577992330291646,
+                  "after_fee_bps": -0.7918948378750821
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 1296,
+                  "missing": 0,
+                  "directional": -9.403899999999581,
+                  "immediate": 6.370739999999833,
+                  "combined": -3.0331599999997483,
+                  "after_fee": -7.898205977999749,
+                  "directional_bps": -1.932951927386611,
+                  "after_fee_bps": -1.6234596782262412
+                },
+                "5": {
+                  "valid": 1296,
+                  "missing": 0,
+                  "directional": -9.681034999999634,
+                  "immediate": 6.370739999999833,
+                  "combined": -3.310294999999801,
+                  "after_fee": -8.175340977999802,
+                  "directional_bps": -1.989916445554224,
+                  "after_fee_bps": -1.680424196393854
+                },
+                "30": {
+                  "valid": 1296,
+                  "missing": 0,
+                  "directional": -12.546144999999319,
+                  "immediate": 6.370739999999833,
+                  "combined": -6.175404999999486,
+                  "after_fee": -11.040450977999487,
+                  "directional_bps": -2.578833798639039,
+                  "after_fee_bps": -2.269341549478669
+                },
+                "60": {
+                  "valid": 1296,
+                  "missing": 0,
+                  "directional": -11.445544999999772,
+                  "immediate": 6.370739999999833,
+                  "combined": -5.074804999999939,
+                  "after_fee": -9.939850977999939,
+                  "directional_bps": -2.3526077763205406,
+                  "after_fee_bps": -2.0431155271601704
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9997.239724987998,
+              "pnl": -2.7602750120022392,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 9990.428205232,
+              "pnl": -6.8115197559982334,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 9992.084429812,
+              "pnl": 1.6562245799996163,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 10005.732223895,
+              "pnl": 13.647794083000917,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9992.864060929001,
+              "pnl": -12.868162965998636,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": 0.09844670716680001,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": -0.4,
+              "rate": 7.831e-05,
+              "price": 1635.165,
+              "source": "published midpoint proxy",
+              "cashflow": 0.051219908460000005
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": -0.461,
+              "rate": 4.354e-05,
+              "price": 1629.8449999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0327141510493
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": 0.067,
+              "rate": 5.596e-05,
+              "price": 1647.295,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0061762360894
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": 0.245,
+              "rate": 2.685e-05,
+              "price": 1646.0949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.010828424433749997
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.1,
+              "rate": 2.497e-05,
+              "price": 1627.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.004064853815
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.4,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0327678448
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": -0.3,
+              "rate": 2.832e-05,
+              "price": 1633.725,
+              "source": "published midpoint proxy",
+              "cashflow": 0.013880127599999998
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": -0.2,
+              "rate": 4.629e-05,
+              "price": 1634.475,
+              "source": "published midpoint proxy",
+              "cashflow": 0.015131969549999999
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": -0.44,
+              "rate": 3.947e-05,
+              "price": 1634.8049999999998,
+              "source": "published midpoint proxy",
+              "cashflow": 0.028391331473999998
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": -0.026000000000000002,
+              "rate": 1.527e-05,
+              "price": 1624.1350000000002,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0006448140777000001
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": -0.5,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": 0.0062732181250000005
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.169,
+              "rate": 4.838e-05,
+              "price": 1616.4650000000001,
+              "source": "published midpoint proxy",
+              "cashflow": -0.013216573462300001
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.5,
+              "rate": 5.747e-05,
+              "price": 1611.5949999999998,
+              "source": "published midpoint proxy",
+              "cashflow": -0.04630918232499999
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": -0.203,
+              "rate": -6.25e-06,
+              "price": 1561.685,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0019813878437500002
+            }
+          ],
+          "closing_cost": 0.39025749999994086,
+          "after_proxy_funding_and_close": -7.427749863831716
+        },
+        "anchored_maker": {
+          "metrics": {
+            "strategy": "anchored_maker",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -2.1108005849982874,
+            "gross_pnl": 2.2538900000006903,
+            "return_pct": -0.021108005849982875,
+            "net_equity": 9997.889199415002,
+            "cash_equivalent": 9997.889199415002,
+            "collateral_wallet": 9997.889199415,
+            "terminal_inventory": 0.0,
+            "average_entry": 0,
+            "realized_gross": 2.2538900000006903,
+            "unrealized": 0.0,
+            "fees": 4.364690584999985,
+            "funding": 0,
+            "reconciliation_error": 1.007194327939942e-12,
+            "gross_exposure": 0.0,
+            "fill_count": 1410,
+            "orders_with_fill": 280,
+            "order_fill_rate": 0.007992007992007992,
+            "quantity_fill_rate": 0.007708733223869321,
+            "partial_orders": 239,
+            "executed_quantity": 27.0,
+            "traded_notional": 43646.90585,
+            "avg_abs_inventory": 0.1184646488379629,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 51176.72829799997,
+            "holding_seconds": 126987.65100000004,
+            "utilization": 0.2369292976759258,
+            "rms_inventory": 0.23521523089076385,
+            "pnl_per_rms_inventory": -8.973911157898456,
+            "max_drawdown": 20.141564853998716,
+            "max_drawdown_pct": 0.20119992545727028,
+            "spread_capture": 2.5538100000000674,
+            "buy_fill_probability": 0.008454897290860375,
+            "sell_fill_probability": 0.007565789473684211,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 35035,
+              "submitted_1": 16795,
+              "submitted_lots": 3502521,
+              "submitted_-1": 18240,
+              "activated": 35005,
+              "expired": 32604,
+              "orders_partially_filled": 239,
+              "partial_fill": 1141,
+              "fully_filled": 269,
+              "cancel_requested": 3460,
+              "canceled": 2131,
+              "post_only_or_stale_rejected": 30,
+              "sample_ended": 1
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -5.24706499999987,
+                  "immediate": 2.5538100000000674,
+                  "combined": -2.693254999999803,
+                  "after_fee": -7.057945584999803,
+                  "directional_bps": -1.2021619626445685,
+                  "after_fee_bps": -1.617055194990369
+                },
+                "5": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -5.970440000000325,
+                  "immediate": 2.5538100000000674,
+                  "combined": -3.4166300000002576,
+                  "after_fee": -7.781320585000257,
+                  "directional_bps": -1.367895360216084,
+                  "after_fee_bps": -1.7827885925618843
+                },
+                "30": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -8.02960000000008,
+                  "immediate": 2.5538100000000674,
+                  "combined": -5.475790000000012,
+                  "after_fee": -9.840480585000012,
+                  "directional_bps": -1.83967221584851,
+                  "after_fee_bps": -2.2545654481943105
+                },
+                "60": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -10.936019999999756,
+                  "immediate": 2.5538100000000674,
+                  "combined": -8.382209999999688,
+                  "after_fee": -12.746900584999688,
+                  "directional_bps": -2.5055659243253676,
+                  "after_fee_bps": -2.9204591566711677
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -2.868320000000004,
+                  "immediate": 1.3758600000001004,
+                  "combined": -1.4924599999999038,
+                  "after_fee": -3.674692597999904,
+                  "directional_bps": -1.3143970091129598,
+                  "after_fee_bps": -1.6839142634784818
+                },
+                "5": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -3.45869000000024,
+                  "immediate": 1.3758600000001004,
+                  "combined": -2.08283000000014,
+                  "after_fee": -4.26506259800014,
+                  "directional_bps": -1.5849318735180218,
+                  "after_fee_bps": -1.9544491278835436
+                },
+                "30": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -7.061950000000143,
+                  "immediate": 1.3758600000001004,
+                  "combined": -5.686090000000043,
+                  "after_fee": -7.868322598000043,
+                  "directional_bps": -3.236112413714454,
+                  "after_fee_bps": -3.6056296680799758
+                },
+                "60": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -8.000370000000078,
+                  "immediate": 1.3758600000001004,
+                  "combined": -6.624509999999978,
+                  "after_fee": -8.806742597999978,
+                  "directional_bps": -3.666139900637704,
+                  "after_fee_bps": -4.035657155003226
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.378744999999866,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.200794999999899,
+                  "after_fee": -3.3832529869998993,
+                  "directional_bps": -1.0899385070269698,
+                  "after_fee_bps": -1.550203031239336
+                },
+                "5": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.5117500000000854,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.3338000000001182,
+                  "after_fee": -3.5162579870001185,
+                  "directional_bps": -1.1508812609276062,
+                  "after_fee_bps": -1.6111457851399724
+                },
+                "30": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -0.9676499999999358,
+                  "immediate": 1.1779499999999672,
+                  "combined": 0.21030000000003135,
+                  "after_fee": -1.972157986999969,
+                  "directional_bps": -0.44337623256155523,
+                  "after_fee_bps": -0.9036407567739212
+                },
+                "60": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.9356499999996775,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.7576999999997103,
+                  "after_fee": -3.9401579869997105,
+                  "directional_bps": -1.34511180397796,
+                  "after_fee_bps": -1.8053763281903261
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9998.141220365998,
+              "pnl": -1.8587796340016212,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 10002.780569422,
+              "pnl": 4.639349056002175,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 10003.052156006,
+              "pnl": 0.2715865840000333,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 10007.377324569003,
+              "pnl": 4.32516856300208,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9997.889199415002,
+              "pnl": -9.488125154000954,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": 0.034686587875,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": 0.0,
+              "rate": 7.831e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": 0.0,
+              "rate": 4.354e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": 0.0,
+              "rate": 5.596e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": 0.0,
+              "rate": 2.685e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.0,
+              "rate": 2.497e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.5,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.040959806
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": 0.0,
+              "rate": 2.832e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": 0.0,
+              "rate": 4.629e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": 0.0,
+              "rate": 3.947e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": 0.0,
+              "rate": 1.527e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": 0.5,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0062732181250000005
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.0,
+              "rate": 4.838e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.0,
+              "rate": 5.747e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": 0.0,
+              "rate": -6.25e-06,
+              "price": null,
+              "source": "flat",
+              "cashflow": 0.0
+            }
+          ],
+          "closing_cost": 0.0,
+          "after_proxy_funding_and_close": -2.0761139971232874
+        }
+      },
+      "audit": {
+        "fixed": {
+          "distinct_prints_matched": 27938,
+          "valid_markouts_checked": 111750,
+          "missing_markouts_checked": 2,
+          "terminal_equity_error_usdt": 5.4569682106375694e-12
+        },
+        "adaptive": {
+          "distinct_prints_matched": 3288,
+          "valid_markouts_checked": 13152,
+          "missing_markouts_checked": 0,
+          "terminal_equity_error_usdt": 0.0
+        },
+        "no_skew": {
+          "distinct_prints_matched": 2528,
+          "valid_markouts_checked": 10112,
+          "missing_markouts_checked": 0,
+          "terminal_equity_error_usdt": -1.8189894035458565e-12
+        },
+        "anchored_maker": {
+          "distinct_prints_matched": 1410,
+          "valid_markouts_checked": 5640,
+          "missing_markouts_checked": 0,
+          "terminal_equity_error_usdt": -1.8189894035458565e-12
+        }
+      }
+    },
+    "higher_fee": {
+      "run_id": "ethusdt-ae1330edc1f2",
+      "config": {
+        "symbol": "ETHUSDT",
+        "start": "2023-09-02",
+        "evaluation_start": "2023-09-07",
+        "end": "2023-09-11",
+        "capital": 10000.0,
+        "quantity": 0.1,
+        "inventory_limit": 0.5,
+        "spread_bps": 3.0,
+        "maker_fee_bps": 2,
+        "rebate_assumption": "",
+        "gamma": 0.8,
+        "horizon_s": 60,
+        "vol_window_s": 180,
+        "vol_width": 0.35,
+        "refresh_ms": 5000,
+        "new_latency_ms": 50,
+        "cancel_latency_ms": 80,
+        "lifetime_ms": 15000,
+        "stale_ms": 2000,
+        "replace_ticks": 2,
+        "participation": 0.1,
+        "fill_model": "through",
+        "tick": 0.01,
+        "step": 0.001,
+        "min_qty": 0.001,
+        "max_qty": 10000,
+        "min_price": 39.86,
+        "signal_half_life_s": 3600,
+        "entry_width_bps": 30.0,
+        "trend_band_bps": 10.0,
+        "max_price": 306177,
+        "min_notional": 20
+      },
+      "policies": {
+        "anchored_maker": {
+          "metrics": {
+            "strategy": "anchored_maker",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -6.4754911699983495,
+            "gross_pnl": 2.2538900000006903,
+            "return_pct": -0.0647549116999835,
+            "net_equity": 9993.524508830002,
+            "cash_equivalent": 9993.524508830002,
+            "collateral_wallet": 9993.52450883,
+            "terminal_inventory": 0.0,
+            "average_entry": 0,
+            "realized_gross": 2.2538900000006903,
+            "unrealized": 0.0,
+            "fees": 8.72938116999997,
+            "funding": 0,
+            "reconciliation_error": 9.299228054260311e-13,
+            "gross_exposure": 0.0,
+            "fill_count": 1410,
+            "orders_with_fill": 280,
+            "order_fill_rate": 0.007992007992007992,
+            "quantity_fill_rate": 0.007708733223869321,
+            "partial_orders": 239,
+            "executed_quantity": 27.0,
+            "traded_notional": 43646.90585,
+            "avg_abs_inventory": 0.1184646488379629,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 51176.72829799997,
+            "holding_seconds": 126987.65100000004,
+            "utilization": 0.2369292976759258,
+            "rms_inventory": 0.23521523089076385,
+            "pnl_per_rms_inventory": -27.53006744280785,
+            "max_drawdown": 21.319589707998603,
+            "max_drawdown_pct": 0.21303044220796283,
+            "spread_capture": 2.5538100000000674,
+            "buy_fill_probability": 0.008454897290860375,
+            "sell_fill_probability": 0.007565789473684211,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 35035,
+              "submitted_1": 16795,
+              "submitted_lots": 3502521,
+              "submitted_-1": 18240,
+              "activated": 35005,
+              "expired": 32604,
+              "orders_partially_filled": 239,
+              "partial_fill": 1141,
+              "fully_filled": 269,
+              "cancel_requested": 3460,
+              "canceled": 2131,
+              "post_only_or_stale_rejected": 30,
+              "sample_ended": 1
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -5.24706499999987,
+                  "immediate": 2.5538100000000674,
+                  "combined": -2.693254999999803,
+                  "after_fee": -11.422636169999803,
+                  "directional_bps": -1.2021619626445685,
+                  "after_fee_bps": -2.617055194990369
+                },
+                "5": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -5.970440000000325,
+                  "immediate": 2.5538100000000674,
+                  "combined": -3.4166300000002576,
+                  "after_fee": -12.146011170000257,
+                  "directional_bps": -1.367895360216084,
+                  "after_fee_bps": -2.782788592561884
+                },
+                "30": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -8.02960000000008,
+                  "immediate": 2.5538100000000674,
+                  "combined": -5.475790000000012,
+                  "after_fee": -14.205171170000012,
+                  "directional_bps": -1.83967221584851,
+                  "after_fee_bps": -3.2545654481943105
+                },
+                "60": {
+                  "valid": 1410,
+                  "missing": 0,
+                  "directional": -10.936019999999756,
+                  "immediate": 2.5538100000000674,
+                  "combined": -8.382209999999688,
+                  "after_fee": -17.111591169999688,
+                  "directional_bps": -2.5055659243253676,
+                  "after_fee_bps": -3.920459156671168
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -2.868320000000004,
+                  "immediate": 1.3758600000001004,
+                  "combined": -1.4924599999999038,
+                  "after_fee": -5.856925195999904,
+                  "directional_bps": -1.3143970091129598,
+                  "after_fee_bps": -2.683914263478482
+                },
+                "5": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -3.45869000000024,
+                  "immediate": 1.3758600000001004,
+                  "combined": -2.08283000000014,
+                  "after_fee": -6.44729519600014,
+                  "directional_bps": -1.5849318735180218,
+                  "after_fee_bps": -2.9544491278835436
+                },
+                "30": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -7.061950000000143,
+                  "immediate": 1.3758600000001004,
+                  "combined": -5.686090000000043,
+                  "after_fee": -10.050555196000044,
+                  "directional_bps": -3.236112413714454,
+                  "after_fee_bps": -4.605629668079976
+                },
+                "60": {
+                  "valid": 752,
+                  "missing": 0,
+                  "directional": -8.000370000000078,
+                  "immediate": 1.3758600000001004,
+                  "combined": -6.624509999999978,
+                  "after_fee": -10.988975195999977,
+                  "directional_bps": -3.666139900637704,
+                  "after_fee_bps": -5.035657155003225
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.378744999999866,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.200794999999899,
+                  "after_fee": -5.5657109739999,
+                  "directional_bps": -1.0899385070269698,
+                  "after_fee_bps": -2.550203031239336
+                },
+                "5": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.5117500000000854,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.3338000000001182,
+                  "after_fee": -5.698715974000119,
+                  "directional_bps": -1.1508812609276062,
+                  "after_fee_bps": -2.611145785139972
+                },
+                "30": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -0.9676499999999358,
+                  "immediate": 1.1779499999999672,
+                  "combined": 0.21030000000003135,
+                  "after_fee": -4.154615973999969,
+                  "directional_bps": -0.44337623256155523,
+                  "after_fee_bps": -1.9036407567739213
+                },
+                "60": {
+                  "valid": 658,
+                  "missing": 0,
+                  "directional": -2.9356499999996775,
+                  "immediate": 1.1779499999999672,
+                  "combined": -1.7576999999997103,
+                  "after_fee": -6.122615973999711,
+                  "directional_bps": -1.34511180397796,
+                  "after_fee_bps": -2.805376328190326
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9997.355780732,
+              "pnl": -2.6442192680005974,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 10000.797418844,
+              "pnl": 3.4416381120008737,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 10000.987252012,
+              "pnl": 0.18983316800040484,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 10004.341219138003,
+              "pnl": 3.353967126002317,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9993.524508830002,
+              "pnl": -10.816710308001348,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": 0.034686587875,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": 0.0,
+              "rate": 7.831e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": 0.0,
+              "rate": 4.354e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": 0.0,
+              "rate": 5.596e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": 0.0,
+              "rate": 2.685e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.0,
+              "rate": 2.497e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.5,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.040959806
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": 0.0,
+              "rate": 2.832e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": 0.0,
+              "rate": 4.629e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": 0.0,
+              "rate": 3.947e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": 0.0,
+              "rate": 1.527e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": 0.5,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0062732181250000005
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.0,
+              "rate": 4.838e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.0,
+              "rate": 5.747e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": 0.0,
+              "rate": -6.25e-06,
+              "price": null,
+              "source": "flat",
+              "cashflow": 0.0
+            }
+          ],
+          "closing_cost": 0.0,
+          "after_proxy_funding_and_close": -6.4408045821233495
+        }
+      },
+      "audit": {
+        "anchored_maker": {
+          "distinct_prints_matched": 1410,
+          "valid_markouts_checked": 5640,
+          "missing_markouts_checked": 0,
+          "terminal_equity_error_usdt": -1.8189894035458565e-12
+        }
+      }
+    },
+    "lower_participation": {
+      "run_id": "ethusdt-cf01a464d08c",
+      "config": {
+        "symbol": "ETHUSDT",
+        "start": "2023-09-02",
+        "evaluation_start": "2023-09-07",
+        "end": "2023-09-11",
+        "capital": 10000.0,
+        "quantity": 0.1,
+        "inventory_limit": 0.5,
+        "spread_bps": 3.0,
+        "maker_fee_bps": 1.0,
+        "rebate_assumption": "",
+        "gamma": 0.8,
+        "horizon_s": 60,
+        "vol_window_s": 180,
+        "vol_width": 0.35,
+        "refresh_ms": 5000,
+        "new_latency_ms": 50,
+        "cancel_latency_ms": 80,
+        "lifetime_ms": 15000,
+        "stale_ms": 2000,
+        "replace_ticks": 2,
+        "participation": 0.02,
+        "fill_model": "through",
+        "tick": 0.01,
+        "step": 0.001,
+        "min_qty": 0.001,
+        "max_qty": 10000,
+        "min_price": 39.86,
+        "signal_half_life_s": 3600,
+        "entry_width_bps": 30.0,
+        "trend_band_bps": 10.0,
+        "max_price": 306177,
+        "min_notional": 20
+      },
+      "policies": {
+        "anchored_maker": {
+          "metrics": {
+            "strategy": "anchored_maker",
+            "start_ns": 1694044800000000000,
+            "stop_ns": 1694476800000000000,
+            "net_pnl": -4.0594052220003505,
+            "gross_pnl": 0.20826499999940795,
+            "return_pct": -0.04059405222000351,
+            "net_equity": 9995.940594778,
+            "cash_equivalent": 9988.185469778,
+            "collateral_wallet": 9995.891349778,
+            "terminal_inventory": 0.005,
+            "average_entry": 1541.1759999999997,
+            "realized_gross": 0.15901999999940603,
+            "unrealized": 0.04924500000000194,
+            "fees": 4.267670221999998,
+            "funding": 0,
+            "reconciliation_error": 2.398081733190338e-13,
+            "gross_exposure": 7.7551250000000005,
+            "fill_count": 1355,
+            "orders_with_fill": 283,
+            "order_fill_rate": 0.008152330471855736,
+            "quantity_fill_rate": 0.0076166529815523505,
+            "partial_orders": 255,
+            "executed_quantity": 26.409000000000002,
+            "traded_notional": 42676.70222,
+            "avg_abs_inventory": 0.12140215316898151,
+            "max_abs_inventory": 0.5,
+            "abs_inventory_seconds": 52445.73016900001,
+            "holding_seconds": 136209.415,
+            "utilization": 0.24280430633796302,
+            "rms_inventory": 0.23650821767522096,
+            "pnl_per_rms_inventory": -17.16390771493119,
+            "max_drawdown": 20.11238250799761,
+            "max_drawdown_pct": 0.20094871650780696,
+            "spread_capture": 2.554820000000193,
+            "buy_fill_probability": 0.008336310587114445,
+            "sell_fill_probability": 0.007979910714285714,
+            "counts": {
+              "stale_decisions": 7,
+              "submitted": 34714,
+              "submitted_1": 16794,
+              "submitted_lots": 3467271,
+              "submitted_-1": 17920,
+              "activated": 34680,
+              "expired": 32273,
+              "orders_partially_filled": 255,
+              "partial_fill": 1095,
+              "fully_filled": 260,
+              "cancel_requested": 3461,
+              "canceled": 2147,
+              "post_only_or_stale_rejected": 34
+            },
+            "markouts": {
+              "all": {
+                "1": {
+                  "valid": 1355,
+                  "missing": 0,
+                  "directional": -5.2090849999999085,
+                  "immediate": 2.554820000000193,
+                  "combined": -2.6542649999997154,
+                  "after_fee": -6.921935221999716,
+                  "directional_bps": -1.2205922034806906,
+                  "after_fee_bps": -1.6219470722730358
+                },
+                "5": {
+                  "valid": 1355,
+                  "missing": 0,
+                  "directional": -5.723670000000574,
+                  "immediate": 2.554820000000193,
+                  "combined": -3.168850000000381,
+                  "after_fee": -7.436520222000381,
+                  "directional_bps": -1.3411697020296556,
+                  "after_fee_bps": -1.7425245708220005
+                },
+                "30": {
+                  "valid": 1355,
+                  "missing": 0,
+                  "directional": -8.580525000000321,
+                  "immediate": 2.554820000000193,
+                  "combined": -6.025705000000128,
+                  "after_fee": -10.29337522200013,
+                  "directional_bps": -2.0105876400119658,
+                  "after_fee_bps": -2.4119425088043105
+                },
+                "60": {
+                  "valid": 1355,
+                  "missing": 0,
+                  "directional": -11.991674999999951,
+                  "immediate": 2.554820000000193,
+                  "combined": -9.436854999999758,
+                  "after_fee": -13.70452522199976,
+                  "directional_bps": -2.809887919217004,
+                  "after_fee_bps": -3.2112427880093493
+                }
+              },
+              "buy": {
+                "1": {
+                  "valid": 702,
+                  "missing": 0,
+                  "directional": -2.953905000000044,
+                  "immediate": 1.5115800000002333,
+                  "combined": -1.442324999999811,
+                  "after_fee": -3.576537453999811,
+                  "directional_bps": -1.3840726092961146,
+                  "after_fee_bps": -1.6758113501289742
+                },
+                "5": {
+                  "valid": 702,
+                  "missing": 0,
+                  "directional": -3.605365000000442,
+                  "immediate": 1.5115800000002333,
+                  "combined": -2.0937850000002083,
+                  "after_fee": -4.227997454000208,
+                  "directional_bps": -1.6893186961041142,
+                  "after_fee_bps": -1.9810574369369733
+                },
+                "30": {
+                  "valid": 702,
+                  "missing": 0,
+                  "directional": -7.314610000000313,
+                  "immediate": 1.5115800000002333,
+                  "combined": -5.80303000000008,
+                  "after_fee": -7.93724245400008,
+                  "directional_bps": -3.42731108437263,
+                  "after_fee_bps": -3.7190498252054898
+                },
+                "60": {
+                  "valid": 702,
+                  "missing": 0,
+                  "directional": -8.371000000000231,
+                  "immediate": 1.5115800000002333,
+                  "combined": -6.859419999999998,
+                  "after_fee": -8.993632453999998,
+                  "directional_bps": -3.9222899221261085,
+                  "after_fee_bps": -4.2140286629589685
+                }
+              },
+              "sell": {
+                "1": {
+                  "valid": 653,
+                  "missing": 0,
+                  "directional": -2.2551799999998643,
+                  "immediate": 1.0432399999999598,
+                  "combined": -1.2119399999999045,
+                  "after_fee": -3.3453977679999047,
+                  "directional_bps": -1.0570539683632791,
+                  "after_fee_bps": -1.5680637405520486
+                },
+                "5": {
+                  "valid": 653,
+                  "missing": 0,
+                  "directional": -2.118305000000132,
+                  "immediate": 1.0432399999999598,
+                  "combined": -1.0750650000001725,
+                  "after_fee": -3.208522768000172,
+                  "directional_bps": -0.9928975542768429,
+                  "after_fee_bps": -1.503907326465612
+                },
+                "30": {
+                  "valid": 653,
+                  "missing": 0,
+                  "directional": -1.265915000000008,
+                  "immediate": 1.0432399999999598,
+                  "combined": -0.22267500000004814,
+                  "after_fee": -2.356132768000048,
+                  "directional_bps": -0.593363046125227,
+                  "after_fee_bps": -1.1043728183139963
+                },
+                "60": {
+                  "valid": 653,
+                  "missing": 0,
+                  "directional": -3.62067499999972,
+                  "immediate": 1.0432399999999598,
+                  "combined": -2.5774349999997606,
+                  "after_fee": -4.710892767999761,
+                  "directional_bps": -1.6970924169705521,
+                  "after_fee_bps": -2.2081021891593218
+                }
+              }
+            }
+          },
+          "daily": [
+            {
+              "ts": 1694044800000000000,
+              "equity": 9997.084020176,
+              "pnl": -2.9159798239998054,
+              "closing_mid": 1647.295
+            },
+            {
+              "ts": 1694131200000000000,
+              "equity": 10000.87332373,
+              "pnl": 3.789303554000071,
+              "closing_mid": 1635.775
+            },
+            {
+              "ts": 1694217600000000000,
+              "equity": 10001.150230846002,
+              "pnl": 0.2769071160018939,
+              "closing_mid": 1634.8049999999998
+            },
+            {
+              "ts": 1694304000000000000,
+              "equity": 10005.369589991,
+              "pnl": 4.219359144997725,
+              "closing_mid": 1616.4650000000001
+            },
+            {
+              "ts": 1694390400000000000,
+              "equity": 9995.940594778,
+              "pnl": -9.428995213000235,
+              "closing_mid": 1551.025
+            }
+          ],
+          "estimated_funding": 0.034686587875,
+          "funding_records": [
+            {
+              "ts": 1694044800000000000,
+              "position": 0.0,
+              "rate": 4.502e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694073600000000000,
+              "position": 0.0,
+              "rate": 7.831e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694102400000000000,
+              "position": 0.0,
+              "rate": 4.354e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694131200000000000,
+              "position": 0.0,
+              "rate": 5.596e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694160000000000000,
+              "position": 0.0,
+              "rate": 2.685e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694188800000000000,
+              "position": 0.0,
+              "rate": 2.497e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694217600000000000,
+              "position": -0.5,
+              "rate": 5.008e-05,
+              "price": 1635.775,
+              "source": "published midpoint proxy",
+              "cashflow": 0.040959806
+            },
+            {
+              "ts": 1694246400000000000,
+              "position": 0.0,
+              "rate": 2.832e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694275200000000000,
+              "position": 0.0,
+              "rate": 4.629e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694304000000000000,
+              "position": 0.0,
+              "rate": 3.947e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694332800000000000,
+              "position": 0.0,
+              "rate": 1.527e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694361600000000000,
+              "position": 0.5,
+              "rate": 7.75e-06,
+              "price": 1618.895,
+              "source": "published midpoint proxy",
+              "cashflow": -0.0062732181250000005
+            },
+            {
+              "ts": 1694390400000000000,
+              "position": 0.0,
+              "rate": 4.838e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694419200000000000,
+              "position": 0.0,
+              "rate": 5.747e-05,
+              "price": null,
+              "source": "flat",
+              "cashflow": -0.0
+            },
+            {
+              "ts": 1694448000001000000,
+              "position": 0.0,
+              "rate": -6.25e-06,
+              "price": null,
+              "source": "flat",
+              "cashflow": 0.0
+            }
+          ],
+          "closing_cost": 0.003902550000000546,
+          "after_proxy_funding_and_close": -4.028621184125351
+        }
+      },
+      "audit": {
+        "anchored_maker": {
+          "distinct_prints_matched": 1355,
+          "valid_markouts_checked": 5420,
+          "missing_markouts_checked": 0,
+          "terminal_equity_error_usdt": 0.0
+        }
+      }
+    }
+  }
+}

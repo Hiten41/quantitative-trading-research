@@ -1,0 +1,43 @@
+{
+  "run_id": "ethusdt-daaad866538c",
+  "calibration": {
+    "fixed": {
+      "distinct_prints_matched": 6308,
+      "valid_markouts_checked": 25232,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": 0.0
+    },
+    "adaptive": {
+      "distinct_prints_matched": 683,
+      "valid_markouts_checked": 2732,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": 1.8189894035458565e-12
+    },
+    "no_skew": {
+      "distinct_prints_matched": 528,
+      "valid_markouts_checked": 2112,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": -1.8189894035458565e-12
+    }
+  },
+  "evaluation": {
+    "fixed": {
+      "distinct_prints_matched": 16277,
+      "valid_markouts_checked": 65108,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": -1.8189894035458565e-11
+    },
+    "adaptive": {
+      "distinct_prints_matched": 1586,
+      "valid_markouts_checked": 6344,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": 0.0
+    },
+    "no_skew": {
+      "distinct_prints_matched": 1281,
+      "valid_markouts_checked": 5124,
+      "missing_markouts_checked": 0,
+      "terminal_equity_error_usdt": 1.8189894035458565e-12
+    }
+  }
+}

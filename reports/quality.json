@@ -1,0 +1,1123 @@
+{
+  "symbol": "ETHUSDT",
+  "market": "Binance USD-M linear perpetual",
+  "start": "2023-09-02",
+  "end": "2023-09-06",
+  "files": [
+    {
+      "day": "2023-09-02",
+      "kind": "bookTicker",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/ETHUSDT/ETHUSDT-bookTicker-2023-09-02.zip",
+      "size": 55051332,
+      "checksum": true,
+      "file": "ETHUSDT-bookTicker-2023-09-02.zip",
+      "sha256": "ffdd3f3f1b533bcb6cb5bf5c0150ce25e81defac244f7ce55e98e2aee5e1f9c0",
+      "verified_utc": "2026-11-23T20:15:18.732083+00:00",
+      "trade_id_gaps": [],
+      "corroboration": null,
+      "schema_version": 2,
+      "parquet_sha256": "c41697d3a0ba115ea4fb3d2c8b9cb30baa0f8566fd37f9187cb96acfa34bfbd5",
+      "first_ns": 1693612800893000000,
+      "last_ns": 1693699199999000000,
+      "first_id": 3225155332173,
+      "last_id": 3228121725945,
+      "events": 4191912,
+      "repeated_timestamps": 1217869,
+      "max_gap_seconds": 3.637,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 155.0,
+      "mean_events_per_second": 48.5175,
+      "minute_count_percentiles": {
+        "p0": 931.0,
+        "p50": 2558.0,
+        "p95": 5429.449999999998,
+        "p100": 17691.0
+      }
+    },
+    {
+      "day": "2023-09-02",
+      "kind": "trades",
+      "url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-09-02.zip",
+      "size": 7538677,
+      "checksum": true,
+      "file": "ETHUSDT-trades-2023-09-02.zip",
+      "sha256": "cd019b8f82b53145852726aa5464797c8076c57a5e297955c141104bcbd1ceaa",
+      "verified_utc": "2026-11-23T20:15:18.442741+00:00",
+      "trade_id_gaps": [
+        [
+          3211010946,
+          3211010946
+        ],
+        [
+          3211218161,
+          3211218161
+        ]
+      ],
+      "corroboration": {
+        "day": "2023-09-02",
+        "kind": "aggTrades",
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2023-09-02.zip",
+        "size": 3595933,
+        "checksum": true,
+        "file": "ETHUSDT-aggTrades-2023-09-02.zip",
+        "sha256": "fb90264e61315848c0b84beeab9d2c2f0c2e4c6c635e53010e1871e5b62df469",
+        "verified_utc": "2026-11-23T20:15:24.431752+00:00"
+      },
+      "schema_version": 2,
+      "parquet_sha256": "6471c85e34282a14b67b863aea531a824a2f433162194e6749816bfb6e988591",
+      "first_ns": 1693612804050000000,
+      "last_ns": 1693699196867000000,
+      "first_id": 3210965875,
+      "last_id": 3211745184,
+      "events": 779308,
+      "repeated_timestamps": 544153,
+      "max_gap_seconds": 12.647,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 0.0,
+      "mean_events_per_second": 9.019768518518518,
+      "minute_count_percentiles": {
+        "p0": 33.0,
+        "p50": 422.0,
+        "p95": 1256.1499999999999,
+        "p100": 6311.0
+      }
+    },
+    {
+      "day": "2023-09-03",
+      "kind": "bookTicker",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/ETHUSDT/ETHUSDT-bookTicker-2023-09-03.zip",
+      "size": 53101369,
+      "checksum": true,
+      "file": "ETHUSDT-bookTicker-2023-09-03.zip",
+      "sha256": "b46d3cb7afc2fe3234d1fe57b78a45ea7dc6f395763b3055a73b99c2c575aef7",
+      "verified_utc": "2026-11-23T20:15:18.483288+00:00",
+      "trade_id_gaps": [],
+      "corroboration": null,
+      "schema_version": 2,
+      "parquet_sha256": "336e162d281543e3942f8242e1eebc6a927b299beba3baeb232795f7e3b89864",
+      "first_ns": 1693699200000000000,
+      "last_ns": 1693785599870000000,
+      "first_id": 3228121725965,
+      "last_id": 3230886902046,
+      "events": 4061042,
+      "repeated_timestamps": 1223416,
+      "max_gap_seconds": 4.205,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 142.0,
+      "mean_events_per_second": 47.002800925925925,
+      "minute_count_percentiles": {
+        "p0": 915.0,
+        "p50": 2328.0,
+        "p95": 5852.05,
+        "p100": 17521.0
+      }
+    },
+    {
+      "day": "2023-09-03",
+      "kind": "trades",
+      "url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-09-03.zip",
+      "size": 7702553,
+      "checksum": true,
+      "file": "ETHUSDT-trades-2023-09-03.zip",
+      "sha256": "ddb05c8d00aea91e20fb9837a6c6cf2802a4454d07f2cef9ba01d4fdc49875dc",
+      "verified_utc": "2026-11-23T20:15:19.333448+00:00",
+      "trade_id_gaps": [
+        [
+          3211851400,
+          3211851400
+        ],
+        [
+          3211851574,
+          3211851574
+        ],
+        [
+          3211851577,
+          3211851577
+        ],
+        [
+          3211990414,
+          3211990414
+        ],
+        [
+          3212500840,
+          3212500840
+        ],
+        [
+          3212501746,
+          3212501746
+        ],
+        [
+          3212501981,
+          3212501981
+        ]
+      ],
+      "corroboration": {
+        "day": "2023-09-03",
+        "kind": "aggTrades",
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2023-09-03.zip",
+        "size": 3431036,
+        "checksum": true,
+        "file": "ETHUSDT-aggTrades-2023-09-03.zip",
+        "sha256": "d103324887a5629bc05c975e14757304e483f3bb4483a3cc50077a2e6f96bfc0",
+        "verified_utc": "2026-11-23T20:15:30.021940+00:00"
+      },
+      "schema_version": 2,
+      "parquet_sha256": "91c2799965157a830841291855c8baec78f1cc47158d26557ae461834ef2d466",
+      "first_ns": 1693699200048000000,
+      "last_ns": 1693785599608000000,
+      "first_id": 3211745185,
+      "last_id": 3212539448,
+      "events": 794257,
+      "repeated_timestamps": 586491,
+      "max_gap_seconds": 22.241,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 0.0,
+      "mean_events_per_second": 9.192789351851852,
+      "minute_count_percentiles": {
+        "p0": 25.0,
+        "p50": 339.5,
+        "p95": 1670.1,
+        "p100": 16331.0
+      }
+    },
+    {
+      "day": "2023-09-04",
+      "kind": "bookTicker",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/ETHUSDT/ETHUSDT-bookTicker-2023-09-04.zip",
+      "size": 61284157,
+      "checksum": true,
+      "file": "ETHUSDT-bookTicker-2023-09-04.zip",
+      "sha256": "a0e60925be3c30ae21171fa9a2c3b2034cbea7d0519ff60146f3c1e51f531a60",
+      "verified_utc": "2026-11-23T20:15:19.428229+00:00",
+      "trade_id_gaps": [],
+      "corroboration": null,
+      "schema_version": 2,
+      "parquet_sha256": "24eff8782b6b0542401d72599fcc155b2bcf515e67c589e9f89971b4b0c18c55",
+      "first_ns": 1693785600030000000,
+      "last_ns": 1693871999891000000,
+      "first_id": 3230886906828,
+      "last_id": 3233953433492,
+      "events": 4757278,
+      "repeated_timestamps": 1593105,
+      "max_gap_seconds": 2.77,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 369.0,
+      "mean_events_per_second": 55.061087962962965,
+      "minute_count_percentiles": {
+        "p0": 999.0,
+        "p50": 2849.0,
+        "p95": 6710.15,
+        "p100": 22484.0
+      }
+    },
+    {
+      "day": "2023-09-04",
+      "kind": "trades",
+      "url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-09-04.zip",
+      "size": 10170886,
+      "checksum": true,
+      "file": "ETHUSDT-trades-2023-09-04.zip",
+      "sha256": "79f7b8b18faba674c9803c027eb58aac3d6afc2dc38338fa6c39234a6d79ea0b",
+      "verified_utc": "2026-11-23T20:15:19.594728+00:00",
+      "trade_id_gaps": [
+        [
+          3212650583,
+          3212650583
+        ],
+        [
+          3212700345,
+          3212700345
+        ],
+        [
+          3213029606,
+          3213029606
+        ],
+        [
+          3213115642,
+          3213115642
+        ],
+        [
+          3213459171,
+          3213459171
+        ]
+      ],
+      "corroboration": {
+        "day": "2023-09-04",
+        "kind": "aggTrades",
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2023-09-04.zip",
+        "size": 4389739,
+        "checksum": true,
+        "file": "ETHUSDT-aggTrades-2023-09-04.zip",
+        "sha256": "854f412c57e8db46ffc18f4912215506b4f2a213a0c46cb83d663977a21a9964",
+        "verified_utc": "2026-11-23T20:15:34.301279+00:00"
+      },
+      "schema_version": 2,
+      "parquet_sha256": "a7f11ca40502e963efc4c1b253434cdfee25b2134519471facb32250a0b21bb8",
+      "first_ns": 1693785604157000000,
+      "last_ns": 1693871999330000000,
+      "first_id": 3212539449,
+      "last_id": 3213589157,
+      "events": 1049704,
+      "repeated_timestamps": 788955,
+      "max_gap_seconds": 12.557,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 0.0,
+      "mean_events_per_second": 12.149351851851852,
+      "minute_count_percentiles": {
+        "p0": 34.0,
+        "p50": 461.5,
+        "p95": 1889.1,
+        "p100": 15497.0
+      }
+    },
+    {
+      "day": "2023-09-05",
+      "kind": "bookTicker",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/ETHUSDT/ETHUSDT-bookTicker-2023-09-05.zip",
+      "size": 72011577,
+      "checksum": true,
+      "file": "ETHUSDT-bookTicker-2023-09-05.zip",
+      "sha256": "0da46fd8ce71bfff18e0da9e5b85a01c76492097dc99652b8465663137ce3d9e",
+      "verified_utc": "2026-11-23T20:15:20.472835+00:00",
+      "trade_id_gaps": [],
+      "corroboration": null,
+      "schema_version": 2,
+      "parquet_sha256": "639abcf1799c32d4203336b61281c5bcb601211c5771e68451e4e209a9cf25df",
+      "first_ns": 1693872000015000000,
+      "last_ns": 1693958399965000000,
+      "first_id": 3233953437495,
+      "last_id": 3237139748916,
+      "events": 5645418,
+      "repeated_timestamps": 2028677,
+      "max_gap_seconds": 2.481,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 1925.0,
+      "mean_events_per_second": 65.3404861111111,
+      "minute_count_percentiles": {
+        "p0": 1119.0,
+        "p50": 3245.0,
+        "p95": 8294.499999999996,
+        "p100": 25294.0
+      }
+    },
+    {
+      "day": "2023-09-05",
+      "kind": "trades",
+      "url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-09-05.zip",
+      "size": 12802228,
+      "checksum": true,
+      "file": "ETHUSDT-trades-2023-09-05.zip",
+      "sha256": "9d8e7a6a4ec9fa21e565f58e41a7025553da6b74959a5e1887c51f94006f816b",
+      "verified_utc": "2026-11-23T20:15:20.539099+00:00",
+      "trade_id_gaps": [
+        [
+          3214341278,
+          3214341278
+        ],
+        [
+          3214465725,
+          3214465725
+        ],
+        [
+          3214580908,
+          3214580908
+        ],
+        [
+          3214610512,
+          3214610512
+        ],
+        [
+          3214623321,
+          3214623321
+        ],
+        [
+          3214746066,
+          3214746066
+        ],
+        [
+          3214815728,
+          3214815728
+        ],
+        [
+          3214821696,
+          3214821696
+        ]
+      ],
+      "corroboration": {
+        "day": "2023-09-05",
+        "kind": "aggTrades",
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2023-09-05.zip",
+        "size": 5394262,
+        "checksum": true,
+        "file": "ETHUSDT-aggTrades-2023-09-05.zip",
+        "sha256": "346b91b69fdafc75f523917f9681fd98e7d7d535cd41e6dcb4f28f006030a69a",
+        "verified_utc": "2026-11-23T20:15:42.623505+00:00"
+      },
+      "schema_version": 2,
+      "parquet_sha256": "e528029bd89ebc3f949945f030e5a8c6c6209d6d006c6fa25e091428e4f39ec2",
+      "first_ns": 1693872000033000000,
+      "last_ns": 1693958399931000000,
+      "first_id": 3213589158,
+      "last_id": 3214909395,
+      "events": 1320230,
+      "repeated_timestamps": 994935,
+      "max_gap_seconds": 13.908,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 0.0,
+      "mean_events_per_second": 15.280439814814814,
+      "minute_count_percentiles": {
+        "p0": 37.0,
+        "p50": 603.0,
+        "p95": 2538.199999999999,
+        "p100": 13918.0
+      }
+    },
+    {
+      "day": "2023-09-06",
+      "kind": "bookTicker",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/ETHUSDT/ETHUSDT-bookTicker-2023-09-06.zip",
+      "size": 73015490,
+      "checksum": true,
+      "file": "ETHUSDT-bookTicker-2023-09-06.zip",
+      "sha256": "fee54f6fbb7b4efc7e251be5cbd6b0ecd72ebb59f0acf1e01784b086f051d706",
+      "verified_utc": "2026-11-23T20:15:20.669601+00:00",
+      "trade_id_gaps": [],
+      "corroboration": null,
+      "schema_version": 2,
+      "parquet_sha256": "7f4df9d854faf7d3dd979b3d76ee92d9a51ae01a2e3fbb7c621348e13006392d",
+      "first_ns": 1693958400060000000,
+      "last_ns": 1694044799997000000,
+      "first_id": 3237139753334,
+      "last_id": 3240359820825,
+      "events": 5669429,
+      "repeated_timestamps": 1973273,
+      "max_gap_seconds": 2.218,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 341.0,
+      "mean_events_per_second": 65.61839120370371,
+      "minute_count_percentiles": {
+        "p0": 951.0,
+        "p50": 3043.5,
+        "p95": 9435.05,
+        "p100": 31979.0
+      }
+    },
+    {
+      "day": "2023-09-06",
+      "kind": "trades",
+      "url": "https://data.binance.vision/data/futures/um/daily/trades/ETHUSDT/ETHUSDT-trades-2023-09-06.zip",
+      "size": 14874176,
+      "checksum": true,
+      "file": "ETHUSDT-trades-2023-09-06.zip",
+      "sha256": "55b2765a5514d4019b9bc3fffe109b8cfa977093e28e8ccea210016dc81887f0",
+      "verified_utc": "2026-11-23T20:15:21.240641+00:00",
+      "trade_id_gaps": [
+        [
+          3214958068,
+          3214958068
+        ],
+        [
+          3215112585,
+          3215112585
+        ],
+        [
+          3215121433,
+          3215121433
+        ],
+        [
+          3215239893,
+          3215239893
+        ],
+        [
+          3215554544,
+          3215554544
+        ],
+        [
+          3215603777,
+          3215603777
+        ],
+        [
+          3215605838,
+          3215605838
+        ],
+        [
+          3215614841,
+          3215614841
+        ],
+        [
+          3215614896,
+          3215614896
+        ],
+        [
+          3215615221,
+          3215615221
+        ],
+        [
+          3215624248,
+          3215624248
+        ],
+        [
+          3215629780,
+          3215629780
+        ],
+        [
+          3215865348,
+          3215865348
+        ],
+        [
+          3215865354,
+          3215865355
+        ],
+        [
+          3215865366,
+          3215865366
+        ],
+        [
+          3215865376,
+          3215865377
+        ],
+        [
+          3215865381,
+          3215865381
+        ],
+        [
+          3215865388,
+          3215865388
+        ],
+        [
+          3215865409,
+          3215865409
+        ],
+        [
+          3215865423,
+          3215865423
+        ],
+        [
+          3215865465,
+          3215865465
+        ],
+        [
+          3215865477,
+          3215865477
+        ],
+        [
+          3215865497,
+          3215865497
+        ],
+        [
+          3215865505,
+          3215865505
+        ],
+        [
+          3215865509,
+          3215865509
+        ],
+        [
+          3215865514,
+          3215865514
+        ],
+        [
+          3215865563,
+          3215865563
+        ],
+        [
+          3215867160,
+          3215867160
+        ],
+        [
+          3215871673,
+          3215871674
+        ],
+        [
+          3215871685,
+          3215871685
+        ],
+        [
+          3215871698,
+          3215871698
+        ],
+        [
+          3215871709,
+          3215871709
+        ],
+        [
+          3215871717,
+          3215871717
+        ],
+        [
+          3215871719,
+          3215871719
+        ],
+        [
+          3215871746,
+          3215871746
+        ],
+        [
+          3215871753,
+          3215871753
+        ],
+        [
+          3215871760,
+          3215871760
+        ],
+        [
+          3215871762,
+          3215871763
+        ],
+        [
+          3215871766,
+          3215871766
+        ],
+        [
+          3215871783,
+          3215871783
+        ],
+        [
+          3215871816,
+          3215871816
+        ],
+        [
+          3215871825,
+          3215871825
+        ],
+        [
+          3215871833,
+          3215871833
+        ],
+        [
+          3215871838,
+          3215871838
+        ],
+        [
+          3215871850,
+          3215871850
+        ],
+        [
+          3215871879,
+          3215871879
+        ],
+        [
+          3215871882,
+          3215871882
+        ],
+        [
+          3215871900,
+          3215871900
+        ],
+        [
+          3215871905,
+          3215871906
+        ],
+        [
+          3215871908,
+          3215871908
+        ],
+        [
+          3215871910,
+          3215871910
+        ],
+        [
+          3215871924,
+          3215871924
+        ],
+        [
+          3215871938,
+          3215871938
+        ],
+        [
+          3215871943,
+          3215871943
+        ],
+        [
+          3215871948,
+          3215871949
+        ],
+        [
+          3215871958,
+          3215871958
+        ],
+        [
+          3215871981,
+          3215871981
+        ],
+        [
+          3215871985,
+          3215871985
+        ],
+        [
+          3215872024,
+          3215872025
+        ],
+        [
+          3215872100,
+          3215872100
+        ],
+        [
+          3215872221,
+          3215872221
+        ],
+        [
+          3215872254,
+          3215872254
+        ],
+        [
+          3215872295,
+          3215872295
+        ],
+        [
+          3215872384,
+          3215872384
+        ],
+        [
+          3215872413,
+          3215872413
+        ],
+        [
+          3215872485,
+          3215872485
+        ],
+        [
+          3215874949,
+          3215874949
+        ],
+        [
+          3215874982,
+          3215874982
+        ],
+        [
+          3215875059,
+          3215875059
+        ],
+        [
+          3215875116,
+          3215875116
+        ],
+        [
+          3215875119,
+          3215875119
+        ],
+        [
+          3215875196,
+          3215875197
+        ],
+        [
+          3215875270,
+          3215875270
+        ],
+        [
+          3215875381,
+          3215875381
+        ],
+        [
+          3215875814,
+          3215875814
+        ],
+        [
+          3215876247,
+          3215876247
+        ],
+        [
+          3215878070,
+          3215878071
+        ],
+        [
+          3215878074,
+          3215878074
+        ],
+        [
+          3215878077,
+          3215878077
+        ],
+        [
+          3215878118,
+          3215878119
+        ],
+        [
+          3215878141,
+          3215878143
+        ],
+        [
+          3215878146,
+          3215878146
+        ],
+        [
+          3215878155,
+          3215878155
+        ],
+        [
+          3215878210,
+          3215878210
+        ],
+        [
+          3215878221,
+          3215878221
+        ],
+        [
+          3215878226,
+          3215878226
+        ],
+        [
+          3215878242,
+          3215878242
+        ],
+        [
+          3215878389,
+          3215878389
+        ],
+        [
+          3215878428,
+          3215878428
+        ],
+        [
+          3215878453,
+          3215878453
+        ],
+        [
+          3215878455,
+          3215878455
+        ],
+        [
+          3215881334,
+          3215881334
+        ],
+        [
+          3215881457,
+          3215881457
+        ],
+        [
+          3215881479,
+          3215881479
+        ],
+        [
+          3215881483,
+          3215881483
+        ],
+        [
+          3215881499,
+          3215881499
+        ],
+        [
+          3215881509,
+          3215881509
+        ],
+        [
+          3215881523,
+          3215881523
+        ],
+        [
+          3215881528,
+          3215881528
+        ]
+      ],
+      "corroboration": {
+        "day": "2023-09-06",
+        "kind": "aggTrades",
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2023-09-06.zip",
+        "size": 6606767,
+        "checksum": true,
+        "file": "ETHUSDT-aggTrades-2023-09-06.zip",
+        "sha256": "537a60c0fd354c048edef2e99e82d76c018d4ca250b2462ee2a98e08fd84bbf3",
+        "verified_utc": "2026-11-23T20:15:49.453715+00:00"
+      },
+      "schema_version": 2,
+      "parquet_sha256": "65f51778901ec13c0eb61c1b14ca18a422df5a8a84386dc2986abbba0ce8ab66",
+      "first_ns": 1693958400073000000,
+      "last_ns": 1694044799747000000,
+      "first_id": 3214909396,
+      "last_id": 3216414916,
+      "events": 1505410,
+      "repeated_timestamps": 1148204,
+      "max_gap_seconds": 15.209,
+      "missing_timestamps": 0,
+      "invalid_or_crossed": 0,
+      "max_publication_lag_ms": 0.0,
+      "mean_events_per_second": 17.423726851851853,
+      "minute_count_percentiles": {
+        "p0": 36.0,
+        "p50": 477.0,
+        "p95": 2954.2999999999997,
+        "p100": 71364.0
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "day": "2023-09-02",
+      "tied_trade_publication_events": 87016,
+      "no_earlier_same_day_book": 0,
+      "prior_book_older_than_2s": 0,
+      "overlap_ns": [
+        1693612804050000000,
+        1693699196867000000
+      ],
+      "unmatched_edges_seconds": [
+        4.05,
+        3.133
+      ]
+    },
+    {
+      "day": "2023-09-03",
+      "tied_trade_publication_events": 108038,
+      "no_earlier_same_day_book": 0,
+      "prior_book_older_than_2s": 2,
+      "overlap_ns": [
+        1693699200048000000,
+        1693785599608000000
+      ],
+      "unmatched_edges_seconds": [
+        0.048,
+        0.392
+      ]
+    },
+    {
+      "day": "2023-09-04",
+      "tied_trade_publication_events": 159233,
+      "no_earlier_same_day_book": 0,
+      "prior_book_older_than_2s": 2,
+      "overlap_ns": [
+        1693785604157000000,
+        1693871999330000000
+      ],
+      "unmatched_edges_seconds": [
+        4.157,
+        0.67
+      ]
+    },
+    {
+      "day": "2023-09-05",
+      "tied_trade_publication_events": 202251,
+      "no_earlier_same_day_book": 0,
+      "prior_book_older_than_2s": 473,
+      "overlap_ns": [
+        1693872000033000000,
+        1693958399931000000
+      ],
+      "unmatched_edges_seconds": [
+        0.033,
+        0.069
+      ]
+    },
+    {
+      "day": "2023-09-06",
+      "tied_trade_publication_events": 256948,
+      "no_earlier_same_day_book": 0,
+      "prior_book_older_than_2s": 0,
+      "overlap_ns": [
+        1693958400073000000,
+        1694044799747000000
+      ],
+      "unmatched_edges_seconds": [
+        0.073,
+        0.253
+      ]
+    }
+  ],
+  "exchange_info_url": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+  "contract": {
+    "symbol": "ETHUSDT",
+    "pair": "ETHUSDT",
+    "contractType": "PERPETUAL",
+    "deliveryDate": 4133404800000,
+    "onboardDate": 1574840700000,
+    "status": "TRADING",
+    "maintMarginPercent": "2.5000",
+    "requiredMarginPercent": "5.0000",
+    "baseAsset": "ETH",
+    "quoteAsset": "USDT",
+    "marginAsset": "USDT",
+    "pricePrecision": 2,
+    "quantityPrecision": 3,
+    "baseAssetPrecision": 8,
+    "quotePrecision": 8,
+    "underlyingType": "COIN",
+    "underlyingSubType": [
+      "Layer-1",
+      "Crypto"
+    ],
+    "triggerProtect": "0.0300",
+    "liquidationFee": "0.012500",
+    "marketTakeBound": "0.03",
+    "maxMoveOrderLimit": 10000,
+    "filters": [
+      {
+        "filterType": "PRICE_FILTER",
+        "minPrice": "39.86",
+        "maxPrice": "306177",
+        "tickSize": "0.01"
+      },
+      {
+        "minQty": "0.001",
+        "maxQty": "10000",
+        "filterType": "LOT_SIZE",
+        "stepSize": "0.001"
+      },
+      {
+        "stepSize": "0.001",
+        "maxQty": "2000",
+        "filterType": "MARKET_LOT_SIZE",
+        "minQty": "0.001"
+      },
+      {
+        "filterType": "MAX_NUM_ORDERS",
+        "limit": 200
+      },
+      {
+        "filterType": "MIN_NOTIONAL",
+        "notional": "20"
+      },
+      {
+        "multiplierDecimal": "4",
+        "multiplierUp": "1.0300",
+        "filterType": "PERCENT_PRICE",
+        "multiplierDown": "0.9700"
+      },
+      {
+        "filterType": "POSITION_RISK_CONTROL",
+        "positionControlSide": "NONE"
+      }
+    ],
+    "orderTypes": [
+      "LIMIT",
+      "MARKET",
+      "STOP",
+      "STOP_MARKET",
+      "TAKE_PROFIT",
+      "TAKE_PROFIT_MARKET",
+      "TRAILING_STOP_MARKET"
+    ],
+    "timeInForce": [
+      "GTC",
+      "IOC",
+      "FOK",
+      "GTX",
+      "GTD"
+    ],
+    "permissionSets": [
+      "GRID",
+      "COPY",
+      "DCA",
+      "PSB"
+    ]
+  },
+  "funding_url": "https://fapi.binance.com/fapi/v1/fundingRate",
+  "funding_records": [
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693612800000,
+      "fundingRate": "0.00000805",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693641600000,
+      "fundingRate": "-0.00001621",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693670400000,
+      "fundingRate": "0.00000605",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693699200000,
+      "fundingRate": "0.00001390",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693728000000,
+      "fundingRate": "-0.00002475",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693756800000,
+      "fundingRate": "-0.00000621",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693785600000,
+      "fundingRate": "-0.00000075",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693814400000,
+      "fundingRate": "-0.00007752",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693843200000,
+      "fundingRate": "0.00000980",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693872000000,
+      "fundingRate": "0.00003126",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693900800000,
+      "fundingRate": "0.00000290",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693929600000,
+      "fundingRate": "0.00000977",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693958400000,
+      "fundingRate": "0.00002880",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1693987200000,
+      "fundingRate": "-0.00003144",
+      "markPrice": "",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1694016000001,
+      "fundingRate": "0.00005701",
+      "markPrice": "",
+      "rateType": "Regular"
+    }
+  ],
+  "funding_included": false,
+  "funding_reason": "incomplete settlement marks or unsupported funding calendar; funding excluded throughout",
+  "metadata_asof": "2026-11-23T20:16:03.816211+00:00",
+  "generated_utc": "2026-11-23T20:21:01.377975+00:00"
+}

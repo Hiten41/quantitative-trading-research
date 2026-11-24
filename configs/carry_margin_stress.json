@@ -1,0 +1,18 @@
+{
+  "exact_initial_1x": {
+    "leverage": 1,
+    "collateral_reserve": 0
+  },
+  "exact_initial_2x": {
+    "leverage": 2,
+    "collateral_reserve": 0
+  },
+  "exact_initial_3x": {
+    "leverage": 3,
+    "collateral_reserve": 0
+  },
+  "exact_initial_5x": {
+    "leverage": 5,
+    "collateral_reserve": 0
+  }
+}
