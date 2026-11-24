@@ -28,12 +28,14 @@ table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:5px 8px;t
 footer{margin:24px 0;max-width:100ch}
 @media(max-width:850px){main{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){body{padding:14px}#summary{grid-template-columns:1fr;gap:5px}.result{display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 12px}.result small{grid-column:1/-1}.controls{gap:6px}.controls label{width:100%}.plot{height:260px}main section{padding:10px}.trace-key{min-height:32px}#plot9{height:720px}}
+<!--site-style-->
 </style>
 <script><!--library--></script></head><body>
+<!--navigation-->
 <header><h1>ETH funding carry</h1><p id="holdout"></p>
-<nav aria-label="Research resources"><a href="research.html">Research paper</a><a href="../audit.html">Benchmark audit</a><a href="metrics.csv" download>Download metrics</a></nav></header>
+</header>
 <div class="controls"><label for="win">Historical window</label><select id="win"></select><span id="dates"></span></div>
 <div id="summary" aria-live="polite" aria-label="Selected window net results"></div>
 <main><!--charts--></main>
-<footer>All amounts are simulated USDT. Expanded fills use one-minute spot and perpetual trades. Executable quotes and depth at arrival are unknown. Liquidation events use assumed margin rules and minute-high prices. Curves include hourly observations and each policy’s minute of maximum drawdown. All times UTC. <a href="sources.json">Source manifest</a></footer>
+<footer>All amounts are simulated USDT. Expanded fills use one-minute spot and perpetual trades. Executable quotes and depth at arrival are unknown. Liquidation events use assumed margin rules and minute-high prices. Curves include hourly observations and each policy’s minute of maximum drawdown. All times UTC. <a href="data.html#sources">Explore source records</a></footer>
 <script id="study" type="application/json"><!--data--></script><script><!--app--></script></body></html>

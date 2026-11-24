@@ -136,10 +136,12 @@ def main():
         },
     }
     from fundingcarry.study_report import publish
+    from fundingcarry.study_site import evidence
 
     publish(dest, result, exports, cfg)
     result["runtime_seconds"] = round(time.monotonic() - started, 2)
     save_json(dest / "study.json", result)
+    evidence(dest)
     print(f"Completed in {result['runtime_seconds']} seconds; {dest}")
 
 

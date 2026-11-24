@@ -94,15 +94,53 @@ def verify(url, channel):
                 "plot9._fullLayout._size.w>innerWidth*0.48 && plot9.clientWidth<innerWidth"
             )
             assert page.locator("#plot9 .heatmaplayer image").evaluate("im=>im.getBBox().width>150")
-        for link in ["Research paper", "Benchmark audit"]:
+        for link, sections in [("Research paper", 19), ("Benchmark audit", 4)]:
             target = page.get_by_role("link", name=link, exact=True).get_attribute("href")
             doc = browser.new_page()
+            doc.on("pageerror", lambda err: errors.append(str(err)))
             doc.goto(urljoin(canonical, target))
+            assert doc.locator(".sitebar [aria-current=page]").inner_text() == link
             assert doc.locator("main h1").count() == 1 and doc.locator("main table").count() > 0
+            assert doc.locator(".contents a").count() == sections
+            doc.locator(".contents a").last.click()
+            assert "#" in doc.url
             assert doc.locator("main img").evaluate_all(
                 "imgs=>imgs.every(im=>im.complete && im.naturalWidth>0)"
             )
+            doc.set_viewport_size({"width": 320, "height": 800})
+            assert doc.locator("#chapter").is_visible()
+            doc.locator("#chapter").select_option(index=1)
+            assert doc.evaluate("document.documentElement.scrollWidth<=innerWidth+1")
+            evidence = doc.locator('article a[href*="data.html#"]').first
+            evidence.click()
+            expect_key = doc.url.split("#")[-1]
+            doc.wait_for_function("key=>document.body.dataset.view===key", arg=expect_key)
             doc.close()
+        explorer = browser.new_page(viewport={"width": 390, "height": 844})
+        explorer.on("pageerror", lambda err: errors.append(str(err)))
+        explorer.goto(urljoin(canonical, "data.html#metrics"))
+        explorer.wait_for_selector('body[data-view="metrics"]')
+        explorer.locator("#next").click()
+        assert "Page 2" in explorer.locator("#page-label").inner_text()
+        explorer.select_option("#window-filter", "holdout_2")
+        explorer.select_option("#policy-filter", "A")
+        explorer.select_option("#scenario-filter", "base")
+        assert explorer.locator("tbody tr").count() == 1
+        assert "3.58" in explorer.locator("tbody tr").inner_text()
+        explorer.get_by_role("button", name="Inspect").click()
+        assert explorer.locator("dialog[open] dd").count() == len(next(iter(base.values())))
+        explorer.keyboard.press("Escape")
+        explorer.locator("#query").fill("no matching research record")
+        assert explorer.locator("tbody").inner_text().startswith("No matching records")
+        explorer.locator("#query").fill("")
+        views = explorer.locator("#dataset option").evaluate_all("o=>o.map(x=>x.value)")
+        for view in views:
+            explorer.select_option("#dataset", view)
+            explorer.wait_for_function("key=>document.body.dataset.view===key", arg=view)
+            assert explorer.locator("tbody .record-button").count() > 0, view
+            assert explorer.locator("#download").get_attribute("download") is not None
+            assert explorer.evaluate("document.documentElement.scrollWidth<=innerWidth+1")
+        explorer.close()
         assert not errors, errors
         print(
             f"Passed all {len(keys)} windows and 12 panels, navigation, zoom reset, keyboard, risks, peaks, reports and mobile layout. {shared}"

@@ -1,31 +1,71 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Profitability and Risk of Delta-Neutral Funding Carry in Cryptocurrency Perpetual Futures: An Out-of-Sample Historical Study</title><style>
-    :root{color-scheme:light;font:17px/1.6 system-ui;color:#182636;background:#fbfcfc}
-    body{max-width:82ch;margin:auto;padding:2rem clamp(1rem,5vw,4rem)}
-    h1,h2{line-height:1.2;text-wrap:balance}h2{margin-top:2em}a{color:#12675e}
-    img{max-width:100%}.table-scroll{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem}
-    th,td{padding:.35rem .65rem;border-bottom:1px solid #ccd5da;text-align:left}
-    thead{background:#ecf3f2}code{overflow-wrap:anywhere}nav{margin-bottom:2rem}
-    </style><body><nav><a href="index.html">Research dashboard</a></nav><main><h1 id="profitability-and-risk-of-delta-neutral-funding-carry-in-cryptocurrency-perpetual-futures-an-out-of-sample-historical-study">Profitability and Risk of Delta-Neutral Funding Carry in Cryptocurrency Perpetual Futures: An Out-of-Sample Historical Study</h1>
-<h2 id="1-abstract">1. Abstract</h2>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Profitability and Risk of Delta-Neutral Funding Carry in Cryptocurrency Perpetual Futures: An Out-of-Sample Historical Study · ETH research</title><style>/* Shared study navigation. Publication pages use the dashboard's palette and typography. */
+.sitebar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px;margin-bottom:28px;border-bottom:1px solid #304156;font:500 14px/1.35 Inter,"Segoe UI",sans-serif}
+.site-brand{display:flex;align-items:center;gap:10px;color:#f2f6f9;letter-spacing:-.02em;font-size:16px;font-weight:650}
+.site-brand i{display:block;width:23px;height:20px;background:linear-gradient(to top,#65d9c5 0 100%) left bottom/5px 40% no-repeat,linear-gradient(to top,#65d9c5 0 100%) center bottom/5px 76% no-repeat,linear-gradient(to top,#65d9c5 0 100%) right bottom/5px 100% no-repeat}
+.sitebar nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.sitebar a{color:#c3d2e1;text-decoration:none;padding:8px 11px;border-radius:5px}.sitebar a:hover,.sitebar a:focus-visible{background:#1a2b40;color:white}.sitebar a[aria-current=page]{background:#183b3d;color:#96f0dc}
+.publication{box-sizing:border-box;color-scheme:dark;background:#0c1320;color:#e4edf5;font:16px/1.55 Inter,"Segoe UI",sans-serif;max-width:1540px;margin:auto;padding:32px clamp(14px,4vw,64px)}
+.publication *{box-sizing:border-box}.publication a{color:#83dfd1;text-underline-offset:3px}.publication :focus-visible{outline:2px solid #ffc179;outline-offset:3px}
+.publication h1,.publication h2,.publication h3,.publication p{margin:0}.publication main{min-width:0}
+.mast{padding:10px 0 27px;border-bottom:1px solid #304156}.context{font:600 13px/1.4 "Segoe UI",sans-serif;letter-spacing:.035em;color:#8cded4}.context span{color:#688198;margin:0 6px}
+.publication h1{font-size:clamp(32px,3.7vw,52px);line-height:1.1;letter-spacing:-.043em;font-weight:620;max-width:37ch;margin:13px 0 24px;text-wrap:balance}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1100px}
+.stats>div,.data-controls,.data-card,.reader article>section{background:#131f30;border:1px solid #304056;border-radius:8px}
+.stats>div{padding:14px 18px}.stats small,.stats strong{display:block}.stats small{color:#b9cbdc;font-size:13px}.stats strong{font-variant-numeric:tabular-nums;font-weight:600;font-size:clamp(20px,2vw,28px);margin-top:3px}.gain{color:#79dfc9}.loss{color:#ffabb1}
+.reader-grid{display:grid;grid-template-columns:minmax(190px,265px) minmax(0,1fr);gap:clamp(20px,3vw,42px);margin-top:26px;align-items:start}
+.contents{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding-right:8px}.contents h2{font-size:16px;margin:0 0 11px}.contents nav{display:grid;gap:2px}.contents a{color:#b9cbdc;text-decoration:none;font-size:14px;line-height:1.4;padding:6px 9px;border-left:2px solid #35455b}.contents a:hover,.contents a[aria-current=location]{color:#9af0dd;background:#153035;border-color:#72d7c2}
+.reader,.reader article{min-width:0}.reader article>section{padding:clamp(16px,2.6vw,32px);margin-bottom:15px;scroll-margin:16px}
+.reader h2{font-size:clamp(21px,2vw,29px);letter-spacing:-.03em;line-height:1.2;margin-bottom:12px;scroll-margin:18px}
+.reader p{max-width:84ch;color:#d3dfeb;line-height:1.65}.reader p+p,.reader .table-scroll+p,.reader p+.table-scroll{margin-top:15px}
+.reader img{width:min(800px,100%);height:auto;display:block;border-radius:5px}.reader code{font-size:.9em;overflow-wrap:anywhere;color:#b5e6df}
+.table-scroll{overflow:auto;max-width:100%;border:1px solid #34455b;border-radius:5px;scrollbar-color:#476079 #142134}
+.publication table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+.publication th,.publication td{padding:8px 12px;text-align:left;border-bottom:1px solid #2b3c51}
+.publication th{font-size:12px;font-weight:650;background:#1b2c41;color:#c3d1df}
+.publication tbody tr:last-child td{border-bottom:0}.publication tbody tr:nth-child(even){background:#162334}
+.reader th{white-space:nowrap}.reader td:not(:first-child){white-space:nowrap}.chapter-picker{display:none}
+.publication button,.publication select,.publication input,.download-link{font:inherit;font-size:14px;color:#e4edf5;border:1px solid #4c627b;background:#18283b;border-radius:5px;padding:8px 11px}
+.publication button,.publication select{cursor:pointer}.publication button:disabled{opacity:.42;cursor:default}.publication button:hover:enabled,.download-link:hover{background:#22394c}
+.data-mast{display:flex;gap:20px;align-items:end;justify-content:space-between}.data-mast h1{margin-bottom:8px}.data-mast p:last-child{color:#b8cada}
+.download-link{display:inline-block;text-decoration:none;white-space:nowrap}.data-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;padding:16px;margin:20px 0 14px}
+.data-controls label,.chapter-picker{font-size:13px;color:#c4d3e2}.data-controls label{display:grid;gap:4px}.data-controls label[hidden]{display:none}
+.data-controls .search{flex:1;min-width:160px}.data-controls select,.data-controls input,.chapter-picker select{max-width:100%;min-height:38px}
+.data-card{padding:clamp(12px,2vw,22px);min-width:0}.data-title,.page-controls,.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.data-title{margin-bottom:14px}.data-title h2{font-size:23px;letter-spacing:-.02em}.data-title span,#page-label{font-size:14px;color:#b8cada}
+.data-card td{white-space:nowrap;max-width:42ch;overflow:hidden;text-overflow:ellipsis}.data-card th{white-space:nowrap}
+.page-controls{margin-top:14px}.page-controls div{display:flex;gap:8px}.record-button{font-size:13px!important;padding:4px 9px!important}
+dialog{color-scheme:dark;color:#e4edf5;background:#142135;border:1px solid #526984;border-radius:10px;padding:20px;width:min(620px,94vw);max-height:85vh}dialog::backdrop{background:#030914b8}
+dialog dl{margin:14px 0 0}dialog dl div{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:14px;padding:8px 0;border-top:1px solid #31435a}dialog dt{color:#a9bfd1}dialog dd{margin:0;overflow-wrap:anywhere}
+@media(max-width:800px){.reader-grid{display:block}.contents{display:none}.chapter-picker{display:grid;gap:5px;margin:0 0 12px}.sitebar{align-items:flex-start;flex-direction:column;padding:8px 0 14px;gap:8px}.sitebar nav{gap:2px}.sitebar a{padding:6px 8px}.data-mast{align-items:start;flex-direction:column}}
+@media(max-width:600px){.publication{padding:14px}.sitebar{margin-bottom:17px}.sitebar nav{font-size:13px}.sitebar a{padding:6px}.stats{grid-template-columns:1fr;gap:5px}.stats>div{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:7px 12px}.stats strong{font-size:18px;margin:0}.mast{padding:2px 0 18px}.reader-grid{margin-top:15px}.data-controls{gap:9px}.data-controls label{flex:1 1 110px;min-width:0}.data-controls label:first-child,.data-controls .search{flex-basis:100%}.reader article>section{padding:15px}.data-title{align-items:start}.publication .table-scroll{font-size:13px}}
+@media print{.publication{background:white;color:black;padding:0}.sitebar,.contents,.chapter-picker,.data-controls,.download-link{display:none}.reader-grid{display:block}.reader p,.stats small,.publication h1,.publication h2{color:black}.reader article>section,.stats>div{background:white;border:0}.publication th,.publication tbody tr:nth-child(even){background:#eee;color:black}}
+
+.bridge{margin:18px 0 20px;padding:14px 16px;background:#101b2a;border:1px solid #304358;border-radius:6px}
+.bridge figcaption{font-size:17px;font-weight:600;margin-bottom:14px}.bridge small{font-size:12px;color:#b8cada;margin-left:6px}
+.quarter+.quarter{margin-top:12px}.quarter>strong{font-size:13px;color:#d4e1eb}.bar-row{display:grid;grid-template-columns:86px minmax(40px,1fr) 52px;gap:8px;align-items:center;font-size:13px;color:#b8cada;margin:4px 0}.bar-row b{text-align:right;font-variant-numeric:tabular-nums;color:#e1edf5}
+.track{height:7px;background:#26394e;border-radius:2px;overflow:hidden}.track i{display:block;height:100%;background:#9bb7e8}.bar-row:last-child .track i{background:#74d6bf}
+</style></head><body class="publication"><div class="sitebar"><span class="site-brand"><i aria-hidden="true"></i>Quantitative Trading Research</span><nav aria-label="Study navigation"><a href="index.html">Dashboard</a><a href="research.html" aria-current="page">Research paper</a><a href="../audit.html">Benchmark audit</a><a href="data.html">Data explorer</a></nav></div><main><header class="mast"><p class="context">ETHUSDT <span>/</span> Research paper</p>
+<h1>Profitability and Risk of Delta-Neutral Funding Carry in Cryptocurrency Perpetual Futures: An Out-of-Sample Historical Study</h1><div class="stats"><div><small>Original quarters</small><strong class="gain">+119.87 USDT</strong></div><div><small>Fixed hedge · 2025 holdouts</small><strong class="loss">-5.53 USDT</strong></div><div><small>Historical windows</small><strong class="">8</strong></div></div></header>
+<div class="reader-grid"><aside class="contents"><h2>Contents</h2><nav aria-label="On this page"><a href="#1-abstract">1. Abstract</a><a href="#2-introduction">2. Introduction</a><a href="#3-research-questions">3. Research Questions</a><a href="#4-data-sources-and-provenance">4. Data Sources and Provenance</a><a href="#5-historical-funding-regimes">5. Historical Funding Regimes</a><a href="#6-strategy-formulation">6. Strategy Formulation</a><a href="#7-execution-and-transaction-costs">7. Execution and Transaction Costs</a><a href="#8-portfolio-accounting">8. Portfolio Accounting</a><a href="#9-margin-and-liquidation-modeling">9. Margin and Liquidation Modeling</a><a href="#10-experimental-design">10. Experimental Design</a><a href="#11-baseline-results">11. Baseline Results</a><a href="#12-negative-funding-regime-results">12. Negative-Funding Regime Results</a><a href="#13-funding-aware-strategy-results">13. Funding-Aware Strategy Results</a><a href="#14-risk-controlled-strategy-results">14. Risk-Controlled Strategy Results</a><a href="#15-pnl-attribution">15. PnL Attribution</a><a href="#16-robustness-and-sensitivity">16. Robustness and Sensitivity</a><a href="#17-limitations">17. Limitations</a><a href="#18-conclusion">18. Conclusion</a><a href="#19-reproducibility">19. Reproducibility</a></nav></aside>
+<div class="reader"><label class="chapter-picker">Jump to section <select id="chapter"><option value="1-abstract">1. Abstract</option><option value="2-introduction">2. Introduction</option><option value="3-research-questions">3. Research Questions</option><option value="4-data-sources-and-provenance">4. Data Sources and Provenance</option><option value="5-historical-funding-regimes">5. Historical Funding Regimes</option><option value="6-strategy-formulation">6. Strategy Formulation</option><option value="7-execution-and-transaction-costs">7. Execution and Transaction Costs</option><option value="8-portfolio-accounting">8. Portfolio Accounting</option><option value="9-margin-and-liquidation-modeling">9. Margin and Liquidation Modeling</option><option value="10-experimental-design">10. Experimental Design</option><option value="11-baseline-results">11. Baseline Results</option><option value="12-negative-funding-regime-results">12. Negative-Funding Regime Results</option><option value="13-funding-aware-strategy-results">13. Funding-Aware Strategy Results</option><option value="14-risk-controlled-strategy-results">14. Risk-Controlled Strategy Results</option><option value="15-pnl-attribution">15. PnL Attribution</option><option value="16-robustness-and-sensitivity">16. Robustness and Sensitivity</option><option value="17-limitations">17. Limitations</option><option value="18-conclusion">18. Conclusion</option><option value="19-reproducibility">19. Reproducibility</option></select></label><article><section><h2 id="1-abstract">1. Abstract</h2>
 <p>The original two depth-priced regressions earned 119.87 USDT on separate 10,000 USDT allocations. On two frozen 2025 monthly holdouts the fixed 0.5 ETH hedge lost 5.53 USDT in aggregate. Both adaptive rules stayed in cash in these holdouts. The experiment finds funding income in favorable markets and no evidence of a consistently positive out-of-sample risk-adjusted return.</p>
-<h2 id="2-introduction">2. Introduction</h2>
+</section><section><h2 id="2-introduction">2. Introduction</h2>
 <p>A long spot holding offsets the directional exposure of a linear perpetual short of equal size. The short still faces the funding calendar, changes in the futures premium, separate collateral requirements and execution risk. These cash flows can exceed the small income earned from holding the hedge. <a href="index.html">Interactive figures</a></p>
-<h2 id="3-research-questions">3. Research Questions</h2>
+</section><section><h2 id="3-research-questions">3. Research Questions</h2>
 <p>H1 is supported in the original quarters and some additional windows. H2 is supported by the selected adverse month. H3 has a qualified result. Abstention avoided losses in both holdouts and missed the positive development and validation months. H4 is supported by the zero-funding and break-even accounting below. H5 is supported by simulated liquidations under thinner collateral. H6 fails as a general proposition. Net outcomes change with the funding and execution assumptions. No probability of future profit is estimated.</p>
-<h2 id="4-data-sources-and-provenance">4. Data Sources and Provenance</h2>
-<p>The discovery file covers 2020-01 through 2025-12 (72 available monthly ETHUSDT funding archives). Each ZIP was listed in the official bucket and verified against its exchange SHA-256 checksum. Market inputs are separate Binance Spot and USD-M trade klines, USD-M mark-price klines at one minute and actual archive/REST funding rates. Spot timestamps in newer archives use microseconds. Both time units are normalized to UTC. ZIP time grids, OHLC, calendar uniqueness and agreement of REST and archive rates are checked. The legacy regressions additionally use hourly spot closes and Tardis public historical Binance book snapshots. REST snapshots and depth files have separate content hashes. <a href="sources.json">Source manifest</a> · <a href="https://github.com/binance/binance-public-data">Binance Public Data</a> · <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History">Binance funding-history specification</a> · <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets">USD-M leverage brackets</a></p>
-<p>Where REST supplies markPrice we use it. Otherwise the point is the preceding completed minute mark close. The event export includes source, timestamp, gap in milliseconds, point and range. The conditional envelope spans the causal estimate and the published settlement minute low/high. Negative rates reverse the cash-flow ordering of the price endpoints. Estimates are especially important in 2022, when all selected settlement notionals required proxies. <a href="settlements.csv.gz">Settlement ledger</a></p>
-<h2 id="5-historical-funding-regimes">5. Historical Funding Regimes</h2>
-<p>Scan every available monthly funding archive through 2025-12. Among complete months ending before 2023-10 choose one negative-sum month with &gt;=3 consecutive negative events, ranked by longest run, lowest sum, then date. Also choose one distinct mixed-sign month closest to 50% negative, then earliest. Limit each diagnostic class to one month, to avoid multiple counting and retrospective portfolio selection. Diagnostics are not holdouts. The fixed development, validation and holdout dates are excluded from diagnostic ranking. The full-month calendar includes its opening midnight settlement, while the monthly strategy starts at 01:00. September 2022 had 67.8% negative settlements, a 25-event negative run, and cumulative rate -1.557%. June 2022 had 46.7% negative and a 9-event run. Cumulative rates sum decimal rates without compounding or notional weighting. The monthly export shows every candidate and its summary statistics. <a href="regimes.csv">Regime scan</a></p>
-<h2 id="6-strategy-formulation">6. Strategy Formulation</h2>
-<p>A opens 0.5 ETH on each leg and holds until scheduled exit unless liquidated. B reviews hourly, uses the last nine settled rates with a one-minute publication delay, and extrapolates their mean for 42 settlements. Entry requires at least 0.5 bp per settlement and expected funding above 115% of modeled round-trip fees, half-spreads and slippage. Exit at a nonpositive mean after 24 hours, 4 USDT cumulative funding expense, or 720 hours. Cooldown is 48 hours. C also requires peak planned initial allocation below 50% of capital and absolute basis within 30 bp. It exits on a 22% maintenance-to-equity ratio, three recent negative rates, an excessive basis or a 15 USDT holding loss. There is no prediction feed or optimizer. Optional policies.B.signals, policies.C.signals and policies.C.risk overrides configure the adaptive rules independently. This study uses the common signal settings. <a href="../../../configs/carry_study.json">Frozen configuration</a></p>
-<h2 id="7-execution-and-transaction-costs">7. Execution and Transaction Costs</h2>
+</section><section><h2 id="4-data-sources-and-provenance">4. Data Sources and Provenance</h2>
+<p>The discovery file covers 2020-01 through 2025-12 (72 available monthly ETHUSDT funding archives). Each ZIP was listed in the official bucket and verified against its exchange SHA-256 checksum. Market inputs are separate Binance Spot and USD-M trade klines, USD-M mark-price klines at one minute and actual archive/REST funding rates. Spot timestamps in newer archives use microseconds. Both time units are normalized to UTC. ZIP time grids, OHLC, calendar uniqueness and agreement of REST and archive rates are checked. The legacy regressions additionally use hourly spot closes and Tardis public historical Binance book snapshots. REST snapshots and depth files have separate content hashes. <a href="data.html#sources">Source manifest</a> · <a href="https://github.com/binance/binance-public-data">Binance Public Data</a> · <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History">Binance funding-history specification</a> · <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets">USD-M leverage brackets</a></p>
+<p>Where REST supplies markPrice we use it. Otherwise the point is the preceding completed minute mark close. The event export includes source, timestamp, gap in milliseconds, point and range. The conditional envelope spans the causal estimate and the published settlement minute low/high. Negative rates reverse the cash-flow ordering of the price endpoints. Estimates are especially important in 2022, when all selected settlement notionals required proxies. <a href="data.html#settlements">Settlement ledger</a></p>
+</section><section><h2 id="5-historical-funding-regimes">5. Historical Funding Regimes</h2>
+<p>Scan every available monthly funding archive through 2025-12. Among complete months ending before 2023-10 choose one negative-sum month with &gt;=3 consecutive negative events, ranked by longest run, lowest sum, then date. Also choose one distinct mixed-sign month closest to 50% negative, then earliest. Limit each diagnostic class to one month, to avoid multiple counting and retrospective portfolio selection. Diagnostics are not holdouts. The fixed development, validation and holdout dates are excluded from diagnostic ranking. The full-month calendar includes its opening midnight settlement, while the monthly strategy starts at 01:00. September 2022 had 67.8% negative settlements, a 25-event negative run, and cumulative rate -1.557%. June 2022 had 46.7% negative and a 9-event run. Cumulative rates sum decimal rates without compounding or notional weighting. The monthly export shows every candidate and its summary statistics. <a href="data.html#regimes">Regime scan</a></p>
+</section><section><h2 id="6-strategy-formulation">6. Strategy Formulation</h2>
+<p>A opens 0.5 ETH on each leg and holds until scheduled exit unless liquidated. B reviews hourly, uses the last nine settled rates with a one-minute publication delay, and extrapolates their mean for 42 settlements. Entry requires at least 0.5 bp per settlement and expected funding above 115% of modeled round-trip fees, half-spreads and slippage. Exit at a nonpositive mean after 24 hours, 4 USDT cumulative funding expense, or 720 hours. Cooldown is 48 hours. C also requires peak planned initial allocation below 50% of capital and absolute basis within 30 bp. It exits on a 22% maintenance-to-equity ratio, three recent negative rates, an excessive basis or a 15 USDT holding loss. There is no prediction feed or optimizer. Optional policies.B.signals, policies.C.signals and policies.C.risk overrides configure the adaptive rules independently. This study uses the common signal settings. <a href="data.html#rules">Frozen configuration</a></p>
+</section><section><h2 id="7-execution-and-transaction-costs">7. Execution and Transaction Costs</h2>
 <p>Expanded runs use separate venue trade bars for every policy, including on the regression calendars. The first order works over the decision minute and books at its close. The hedge works over a later minute. Aggressor-side volume and quote turnover form a side VWAP, floored adversely at the all-trade VWAP. We add 0.5 bp half-spread, 2 bp slippage per leg, outward 0.01 USDT tick rounding and 10/5 bp spot/perpetual fees in quote equivalent. Each 0.5 ETH order must satisfy a 0.001 ETH lot, 5 USDT notional and 2% of side volume. An unfilled order waits for another minute. These are modeled filters and fee assumptions. Minute averages cannot identify the actual order book or the queue. A forced cover uses at least the worse of the minute trade and mark highs plus slippage, bypasses participation and pays the liquidation penalty. Exact depth is used in the unchanged benchmark reproduction.</p>
-<h2 id="8-portfolio-accounting">8. Portfolio Accounting</h2>
+</section><section><h2 id="8-portfolio-accounting">8. Portfolio Accounting</h2>
 <p>Spot cash pays the spot principal and fee. The futures wallet pays fees and includes realized short price PnL and signed funding. Total equity equals spot cash plus ETH at the spot close plus the futures wallet plus open short PnL at the USD-M mark plus any in-transit funds. Open and closed wallets are checked against reference-price attribution at every state transition. Within each unchanged-position interval, the two inventories are marked at each minute close. Transfers debit spendable cash at request and credit the futures wallet only on arrival. With no trade, returns on committed capital and profit factor are undefined. Committed capital is peak earmarked initial futures collateral plus requested transfers and open spot acquisition principal during a traded path. Allocated returns always use the scenario's full initial cash. Daily profit factor divides summed gains by absolute summed losses in successive 24-hour equity observations including the terminal stub.</p>
-<h2 id="9-margin-and-liquidation-modeling">9. Margin and Liquidation Modeling</h2>
+</section><section><h2 id="9-margin-and-liquidation-modeling">9. Margin and Liquidation Modeling</h2>
 <p>Base futures collateral is 106% of initial target notional. Leverage scenarios divide that amount by 2, 3 or 5. Other capital starts in spot cash. The model uses 10% initial margin, 1% maintenance and a 0.5% liquidation penalty. Historical account-specific tiers and liquidation prints could not be verified. These configurable approximations apply to the small simulated position only. At every minute high the engine compares futures equity with maintenance plus the penalty reserve. A breach forces a short cover and an emergency spot sale if needed. It can happen before an hourly strategy review. Warnings start at a 50% maintenance/equity ratio, counted once per short. At 25% the strategy can request one 100 USDT transfer with an hour's delay. When a trigger coincides with a breach, liquidation takes priority. Within a settlement minute the model posts funding before testing the adverse high and books normal fills at close. Intraminute ordering remains uncertain.</p>
-<div class="table-scroll" tabindex="0"><table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Window</th>
@@ -150,9 +190,9 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="10-experimental-design">10. Experimental Design</h2>
+</section><section><h2 id="10-experimental-design">10. Experimental Design</h2>
 <p>Development was June 2023, validation July 2024, and the two chronological holdouts March and October 2025. The same configuration ran once across these dates with no return-based parameter selection. The two prior quarters are regression benchmarks. The 2022 months were selected retrospectively on funding and characterize risk, so they cannot estimate unconditional returns. The date range is exclusive at the end. Each monthly sample starts at 01:00 UTC and closes out near month end. For the expanded quarter simulations the scheduled exit decision is 15 minutes before the last modeled minute to accommodate the stressed leg delay. Each run starts with fresh capital.</p>
-<div class="table-scroll" tabindex="0"><table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Window</th>
@@ -248,26 +288,26 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="11-baseline-results">11. Baseline Results</h2>
+</section><section><h2 id="11-baseline-results">11. Baseline Results</h2>
 <p>The separate depth-based reproduction yielded 32.1580 and 87.7125 USDT. The A column above shows the same calendar evaluated under the common minute execution model and collateral assumptions. The depth replay scheduled its exit at 11:55 UTC. The common minute model scheduled its exit at 11:40 UTC, used side-volume trade prices on successive minutes and charged the opening spot fee in quote currency. Using the prior completed mark for missing settlement prices changed the first quarter's funding by about 0.0014 USDT. Neither fixed-policy base case required a transfer or liquidation. All 549 original payments benefited the short. 460 marks were observed and 89 estimated. Removing all funding gives -11.45 USDT. <a href="../audit.html">Independent audit and complete reconciliation</a></p>
-<h2 id="12-negative-funding-regime-results">12. Negative-Funding Regime Results</h2>
+</section><section><h2 id="12-negative-funding-regime-results">12. Negative-Funding Regime Results</h2>
 <p>Across the eight nonoverlapping replay windows there were 157 distinct negative settlements. The adverse window included 60 negative settlements and A earned -12.59 USDT net funding. Its total net was -13.19. B and C took no position in that window. In the mixed month the fixed hedge collected slightly positive net funding but incurred an overall loss. The time-varying ETH notional and the skipped opening settlement can change the sign relative to a full-month unweighted rate sum.</p>
-<h2 id="13-funding-aware-strategy-results">13. Funding-Aware Strategy Results</h2>
+</section><section><h2 id="13-funding-aware-strategy-results">13. Funding-Aware Strategy Results</h2>
 <p>B's entry hurdle often kept the strategy in cash. It missed two positive fixed-policy months and avoided two losing holdouts. Its activity in the two favorable legacy quarters provides an in-sample comparison only. Repeated round trips raised expenses there.</p>
-<h2 id="14-risk-controlled-strategy-results">14. Risk-Controlled Strategy Results</h2>
-<p>C matched B's base-case results across these windows. Its incremental controls showed no independent improvement on the frozen evaluation. The worst base-case minute-close portfolio drawdown was 63.80 USDT. PnL divided by maximum drawdown describes each realized path. Flat paths have no defined ratio. Charts include hourly observations and the minute of each policy’s largest drawdown. The minute-high margin ratio uses maintenance divided by adverse futures equity, and minimum margin buffer is futures equity above maintenance at that high. <a href="metrics.csv">Full risk and performance metrics</a></p>
-<div class="table-scroll" tabindex="0"><table>
+</section><section><h2 id="14-risk-controlled-strategy-results">14. Risk-Controlled Strategy Results</h2>
+<p>C matched B's base-case results across these windows. Its incremental controls showed no independent improvement on the frozen evaluation. The worst base-case minute-close portfolio drawdown was 63.80 USDT. PnL divided by maximum drawdown describes each realized path. Flat paths have no defined ratio. Charts include hourly observations and the minute of each policy’s largest drawdown. The minute-high margin ratio uses maintenance divided by adverse futures equity, and minimum margin buffer is futures equity above maintenance at that high. <a href="data.html#metrics">Full risk and performance metrics</a></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Window</th>
 <th>Policy</th>
-<th>drawdown</th>
-<th>pnl_to_drawdown</th>
-<th>max_margin_ratio</th>
-<th>min_margin_buffer</th>
-<th>warnings</th>
-<th>liquidations</th>
-<th>holding_hours</th>
+<th>Drawdown</th>
+<th>Pnl to drawdown</th>
+<th>Max margin ratio</th>
+<th>Min margin buffer</th>
+<th>Warnings</th>
+<th>Liquidations</th>
+<th>Holding hours</th>
 </tr>
 </thead>
 <tbody>
@@ -537,23 +577,23 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="15-pnl-attribution">15. PnL Attribution</h2>
+</section><section><h2 id="15-pnl-attribution">15. PnL Attribution</h2>
 <p>Each row below reconciles as spot reference PnL + futures reference PnL + net funding − total cost. Basis and legging split the sum of the two price terms. Basis uses the futures VWAP synchronized to the spot fill minute, while legging captures the change to the later futures reference, including the reverse sequence in liquidation. These are explanatory subdivisions. Funding paid and costs are shown as positive expenses. Zero-funding removes cash flows on the identical realized trading path. With forced liquidations, that counterfactual does not re-simulate margin decisions.</p>
-<div class="table-scroll" tabindex="0"><table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Window</th>
 <th>Policy</th>
-<th>spot_pnl</th>
-<th>futures_pnl</th>
-<th>basis_pnl</th>
-<th>legging</th>
-<th>funding_received</th>
-<th>funding_paid</th>
-<th>estimated_funding</th>
-<th>total_cost</th>
-<th>zero_funding</th>
-<th>net</th>
+<th>Spot pnl</th>
+<th>Futures pnl</th>
+<th>Basis pnl</th>
+<th>Legging</th>
+<th>Funding received</th>
+<th>Funding paid</th>
+<th>Estimated funding</th>
+<th>Total cost</th>
+<th>Zero funding</th>
+<th>Net PnL</th>
 </tr>
 </thead>
 <tbody>
@@ -898,7 +938,7 @@
 <p><img alt="Fixed hedge net funding, fees and execution, and net PnL for the two 2025 holdouts" src="holdout-pnl.svg" /></p>
 <p>In the two holdouts A received 10.00, paid 1.62 in funding and incurred 12.60 USDT in execution and fees. The break-even gross receipt is total costs minus the two price PnLs plus funding paid. Gross funding exceeding commissions alone is insufficient.</p>
 <p>On fixed-policy paths with missing marks, the following figures separate the effect of eliminating estimated payments from the smaller effect of repricing each payment within its conditional envelope. The remaining windows have observed settlement marks for every payment.</p>
-<div class="table-scroll" tabindex="0"><table>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Window (fixed policy)</th>
@@ -944,9 +984,9 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="16-robustness-and-sensitivity">16. Robustness and Sensitivity</h2>
-<p>All scenarios rerun both decisions and wallets. Cost-sensitive hurdles can change positions. Receipt haircuts are hypothetical and preserve the actual signed funding signals and all debits. Margin rises to 5% in the higher-maintenance case. Reduced capital uses 3,000 USDT, reduced collateral uses 55% of the base reserve, slow hedging uses five minutes, and the closing stress quadruples additional closing slippage. Delayed transfers take 24 hours. Each row below shows the non-compounded sum of the two holdouts; the losing count covers all eight windows and three policies. The delayed 5x transfer scenario combines two stresses explicitly. The four additional exact-initial-exposure rows remove the 6% collateral reserve to test the literal 1x, 2x, 3x and 5x requested starting ratios. They are supplemental diagnostics and did not change any trading rule. <a href="../../../configs/carry_margin_stress.json">Supplemental margin settings</a> <a href="metrics.csv">Every scenario and break-even point</a> · <a href="index.html#plot9">Sensitivity heatmap</a></p>
-<div class="table-scroll" tabindex="0"><table>
+</section><section><h2 id="16-robustness-and-sensitivity">16. Robustness and Sensitivity</h2>
+<p>All scenarios rerun both decisions and wallets. Cost-sensitive hurdles can change positions. Receipt haircuts are hypothetical and preserve the actual signed funding signals and all debits. Margin rises to 5% in the higher-maintenance case. Reduced capital uses 3,000 USDT, reduced collateral uses 55% of the base reserve, slow hedging uses five minutes, and the closing stress quadruples additional closing slippage. Delayed transfers take 24 hours. Each row below shows the non-compounded sum of the two holdouts; the losing count covers all eight windows and three policies. The delayed 5x transfer scenario combines two stresses explicitly. The four additional exact-initial-exposure rows remove the 6% collateral reserve to test the literal 1x, 2x, 3x and 5x requested starting ratios. They are supplemental diagnostics and did not change any trading rule. <a href="data.html#margin-rules">Supplemental margin settings</a> <a href="data.html#metrics">Every scenario and break-even point</a> · <a href="index.html#plot9">Sensitivity heatmap</a></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Scenario</th>
@@ -1144,9 +1184,17 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="17-limitations">17. Limitations</h2>
+</section><section><h2 id="17-limitations">17. Limitations</h2>
 <p>Two holdout months on one instrument offer little statistical power. The diagnostic months deliberately overrepresent adverse regimes. Fees, trade-bar executions, side-volume limits, collateral timing and liquidation are simulations. There is no yield on free cash, spot financing, clawback, liquidation queue, ADL, tax, venue default, market impact beyond the specified model or counterparty model. Using every minute close still misses intraminute portfolio drawdown. Public settlement marks are missing for early periods. Envelope endpoints use later observations for valuation sensitivity only. A stressed wallet rerun can change subsequent risk decisions; these envelope scenarios are retrospective sensitivities. The conditional bounds do not certify an unpublished exchange mark. No annualized Sharpe or statistical claim of alpha is warranted.</p>
-<h2 id="18-conclusion">18. Conclusion</h2>
+</section><section><h2 id="18-conclusion">18. Conclusion</h2>
 <p>Positive funding supported the original two quarters. The frozen fixed policy lost money in both new holdouts. Avoiding exposure improved those outcomes but produced no positive holdout return. The holdout PnLs depend on fill prices estimated from one-minute trades. Those bars cannot establish the price or size available when each leg would have traded. Thinner futures collateral triggered simulated liquidations despite the matching spot position. The counts depend on assumed margin tiers and penalties and on testing each minute's high. Historical account-specific rules, intraminute ordering and liquidation fills could not be verified.</p>
-<h2 id="19-reproducibility">19. Reproducibility</h2>
-<p>From the repository root, install the pinned research environment and the editable package, then run <code>python scripts/reproduce_funding_carry.py</code>. Historical inputs are cached in <code>data/funding-carry</code>. The command verifies exchange checksums or saved content hashes, reproduces both original windows, runs the 552 policy/window/scenario combinations, audits the wallets and settlements, and writes the offline figures and tables. The run used 168.0 MiB of unique source files. Machine-specific runtime and library versions are in <a href="study.json">study.json</a>. <a href="input_hashes.json">Input hashes</a> · <a href="settlements.csv.gz">Funding</a> · <a href="fills.csv.gz">Fills</a> · <a href="balances.csv.gz">Wallets</a> · <a href="decisions.csv.gz">Decisions</a> · <a href="curves.csv.gz">Hourly curves</a> · <a href="risk_events.csv.gz">Stress events</a></p></main></body></html>
+</section><section><h2 id="19-reproducibility">19. Reproducibility</h2>
+<p>From the repository root, install the pinned research environment and the editable package, then run <code>python scripts/reproduce_funding_carry.py</code>. Historical inputs are cached in <code>data/funding-carry</code>. The command verifies exchange checksums or saved content hashes, reproduces both original windows, runs the 552 policy/window/scenario combinations, audits the wallets and settlements, and writes the offline figures and tables. The run used 168.0 MiB of unique source files. Machine-specific runtime and library versions are in <a href="data.html#run">study.json</a>. <a href="data.html#hashes">Input hashes</a> · <a href="data.html#settlements">Funding</a> · <a href="data.html#fills">Fills</a> · <a href="data.html#balances">Wallets</a> · <a href="data.html#decisions">Decisions</a> · <a href="data.html#curves">Hourly curves</a> · <a href="data.html#risk">Stress events</a></p></section></article></div></div></main><script>
+const links=[...document.querySelectorAll('.contents a')],picker=document.querySelector('#chapter');
+picker.onchange=()=>{location.hash=picker.value};
+let waiting=false;
+function active(){waiting=false;let current=links[0];for(const a of links){if(document.getElementById(a.hash.slice(1)).getBoundingClientRect().top<135)current=a;}
+if(current){for(const a of links){if(a===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}
+picker.value=current.hash.slice(1);}}
+addEventListener('scroll',()=>{if(!waiting){waiting=true;requestAnimationFrame(active);}}, {passive:true});active();
+</script></body></html>

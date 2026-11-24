@@ -20,7 +20,7 @@ mmbacktest = "mmbacktest.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-fundingcarry = ["study_dashboard.html", "study_dashboard.js"]
+fundingcarry = ["study_dashboard.html", "study_dashboard.js", "study_site.css", "study_evidence.html", "study_evidence.js"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

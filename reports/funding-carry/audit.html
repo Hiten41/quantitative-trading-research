@@ -1,13 +1,54 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Independent benchmark audit</title><style>
-    :root{color-scheme:light;font:17px/1.6 system-ui;color:#182636;background:#fbfcfc}
-    body{max-width:82ch;margin:auto;padding:2rem clamp(1rem,5vw,4rem)}
-    h1,h2{line-height:1.2;text-wrap:balance}h2{margin-top:2em}a{color:#12675e}
-    img{max-width:100%}.table-scroll{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem}
-    th,td{padding:.35rem .65rem;border-bottom:1px solid #ccd5da;text-align:left}
-    thead{background:#ecf3f2}code{overflow-wrap:anywhere}nav{margin-bottom:2rem}
-    </style><body><nav><a href="final/index.html">Research dashboard</a></nav><main><h1 id="independent-audit-of-the-original-eth-carry-replay">Independent audit of the original ETH carry replay</h1>
-<p>Two fresh replays of the published configuration recovered the original results. The reproduction command checks the original input hashes and the complete numerical JSON, then rebuilds the cash journals and every intermediate hourly equity observation from the fills, archived rates, REST records and separate valuation bars.</p>
-<div class="table-scroll" tabindex="0"><table>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Independent audit of the original ETH carry replay · ETH research</title><style>/* Shared study navigation. Publication pages use the dashboard's palette and typography. */
+.sitebar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 20px;margin-bottom:28px;border-bottom:1px solid #304156;font:500 14px/1.35 Inter,"Segoe UI",sans-serif}
+.site-brand{display:flex;align-items:center;gap:10px;color:#f2f6f9;letter-spacing:-.02em;font-size:16px;font-weight:650}
+.site-brand i{display:block;width:23px;height:20px;background:linear-gradient(to top,#65d9c5 0 100%) left bottom/5px 40% no-repeat,linear-gradient(to top,#65d9c5 0 100%) center bottom/5px 76% no-repeat,linear-gradient(to top,#65d9c5 0 100%) right bottom/5px 100% no-repeat}
+.sitebar nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.sitebar a{color:#c3d2e1;text-decoration:none;padding:8px 11px;border-radius:5px}.sitebar a:hover,.sitebar a:focus-visible{background:#1a2b40;color:white}.sitebar a[aria-current=page]{background:#183b3d;color:#96f0dc}
+.publication{box-sizing:border-box;color-scheme:dark;background:#0c1320;color:#e4edf5;font:16px/1.55 Inter,"Segoe UI",sans-serif;max-width:1540px;margin:auto;padding:32px clamp(14px,4vw,64px)}
+.publication *{box-sizing:border-box}.publication a{color:#83dfd1;text-underline-offset:3px}.publication :focus-visible{outline:2px solid #ffc179;outline-offset:3px}
+.publication h1,.publication h2,.publication h3,.publication p{margin:0}.publication main{min-width:0}
+.mast{padding:10px 0 27px;border-bottom:1px solid #304156}.context{font:600 13px/1.4 "Segoe UI",sans-serif;letter-spacing:.035em;color:#8cded4}.context span{color:#688198;margin:0 6px}
+.publication h1{font-size:clamp(32px,3.7vw,52px);line-height:1.1;letter-spacing:-.043em;font-weight:620;max-width:37ch;margin:13px 0 24px;text-wrap:balance}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1100px}
+.stats>div,.data-controls,.data-card,.reader article>section{background:#131f30;border:1px solid #304056;border-radius:8px}
+.stats>div{padding:14px 18px}.stats small,.stats strong{display:block}.stats small{color:#b9cbdc;font-size:13px}.stats strong{font-variant-numeric:tabular-nums;font-weight:600;font-size:clamp(20px,2vw,28px);margin-top:3px}.gain{color:#79dfc9}.loss{color:#ffabb1}
+.reader-grid{display:grid;grid-template-columns:minmax(190px,265px) minmax(0,1fr);gap:clamp(20px,3vw,42px);margin-top:26px;align-items:start}
+.contents{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding-right:8px}.contents h2{font-size:16px;margin:0 0 11px}.contents nav{display:grid;gap:2px}.contents a{color:#b9cbdc;text-decoration:none;font-size:14px;line-height:1.4;padding:6px 9px;border-left:2px solid #35455b}.contents a:hover,.contents a[aria-current=location]{color:#9af0dd;background:#153035;border-color:#72d7c2}
+.reader,.reader article{min-width:0}.reader article>section{padding:clamp(16px,2.6vw,32px);margin-bottom:15px;scroll-margin:16px}
+.reader h2{font-size:clamp(21px,2vw,29px);letter-spacing:-.03em;line-height:1.2;margin-bottom:12px;scroll-margin:18px}
+.reader p{max-width:84ch;color:#d3dfeb;line-height:1.65}.reader p+p,.reader .table-scroll+p,.reader p+.table-scroll{margin-top:15px}
+.reader img{width:min(800px,100%);height:auto;display:block;border-radius:5px}.reader code{font-size:.9em;overflow-wrap:anywhere;color:#b5e6df}
+.table-scroll{overflow:auto;max-width:100%;border:1px solid #34455b;border-radius:5px;scrollbar-color:#476079 #142134}
+.publication table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+.publication th,.publication td{padding:8px 12px;text-align:left;border-bottom:1px solid #2b3c51}
+.publication th{font-size:12px;font-weight:650;background:#1b2c41;color:#c3d1df}
+.publication tbody tr:last-child td{border-bottom:0}.publication tbody tr:nth-child(even){background:#162334}
+.reader th{white-space:nowrap}.reader td:not(:first-child){white-space:nowrap}.chapter-picker{display:none}
+.publication button,.publication select,.publication input,.download-link{font:inherit;font-size:14px;color:#e4edf5;border:1px solid #4c627b;background:#18283b;border-radius:5px;padding:8px 11px}
+.publication button,.publication select{cursor:pointer}.publication button:disabled{opacity:.42;cursor:default}.publication button:hover:enabled,.download-link:hover{background:#22394c}
+.data-mast{display:flex;gap:20px;align-items:end;justify-content:space-between}.data-mast h1{margin-bottom:8px}.data-mast p:last-child{color:#b8cada}
+.download-link{display:inline-block;text-decoration:none;white-space:nowrap}.data-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;padding:16px;margin:20px 0 14px}
+.data-controls label,.chapter-picker{font-size:13px;color:#c4d3e2}.data-controls label{display:grid;gap:4px}.data-controls label[hidden]{display:none}
+.data-controls .search{flex:1;min-width:160px}.data-controls select,.data-controls input,.chapter-picker select{max-width:100%;min-height:38px}
+.data-card{padding:clamp(12px,2vw,22px);min-width:0}.data-title,.page-controls,.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.data-title{margin-bottom:14px}.data-title h2{font-size:23px;letter-spacing:-.02em}.data-title span,#page-label{font-size:14px;color:#b8cada}
+.data-card td{white-space:nowrap;max-width:42ch;overflow:hidden;text-overflow:ellipsis}.data-card th{white-space:nowrap}
+.page-controls{margin-top:14px}.page-controls div{display:flex;gap:8px}.record-button{font-size:13px!important;padding:4px 9px!important}
+dialog{color-scheme:dark;color:#e4edf5;background:#142135;border:1px solid #526984;border-radius:10px;padding:20px;width:min(620px,94vw);max-height:85vh}dialog::backdrop{background:#030914b8}
+dialog dl{margin:14px 0 0}dialog dl div{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:14px;padding:8px 0;border-top:1px solid #31435a}dialog dt{color:#a9bfd1}dialog dd{margin:0;overflow-wrap:anywhere}
+@media(max-width:800px){.reader-grid{display:block}.contents{display:none}.chapter-picker{display:grid;gap:5px;margin:0 0 12px}.sitebar{align-items:flex-start;flex-direction:column;padding:8px 0 14px;gap:8px}.sitebar nav{gap:2px}.sitebar a{padding:6px 8px}.data-mast{align-items:start;flex-direction:column}}
+@media(max-width:600px){.publication{padding:14px}.sitebar{margin-bottom:17px}.sitebar nav{font-size:13px}.sitebar a{padding:6px}.stats{grid-template-columns:1fr;gap:5px}.stats>div{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:7px 12px}.stats strong{font-size:18px;margin:0}.mast{padding:2px 0 18px}.reader-grid{margin-top:15px}.data-controls{gap:9px}.data-controls label{flex:1 1 110px;min-width:0}.data-controls label:first-child,.data-controls .search{flex-basis:100%}.reader article>section{padding:15px}.data-title{align-items:start}.publication .table-scroll{font-size:13px}}
+@media print{.publication{background:white;color:black;padding:0}.sitebar,.contents,.chapter-picker,.data-controls,.download-link{display:none}.reader-grid{display:block}.reader p,.stats small,.publication h1,.publication h2{color:black}.reader article>section,.stats>div{background:white;border:0}.publication th,.publication tbody tr:nth-child(even){background:#eee;color:black}}
+
+.bridge{margin:18px 0 20px;padding:14px 16px;background:#101b2a;border:1px solid #304358;border-radius:6px}
+.bridge figcaption{font-size:17px;font-weight:600;margin-bottom:14px}.bridge small{font-size:12px;color:#b8cada;margin-left:6px}
+.quarter+.quarter{margin-top:12px}.quarter>strong{font-size:13px;color:#d4e1eb}.bar-row{display:grid;grid-template-columns:86px minmax(40px,1fr) 52px;gap:8px;align-items:center;font-size:13px;color:#b8cada;margin:4px 0}.bar-row b{text-align:right;font-variant-numeric:tabular-nums;color:#e1edf5}
+.track{height:7px;background:#26394e;border-radius:2px;overflow:hidden}.track i{display:block;height:100%;background:#9bb7e8}.bar-row:last-child .track i{background:#74d6bf}
+</style></head><body class="publication"><div class="sitebar"><span class="site-brand"><i aria-hidden="true"></i>Quantitative Trading Research</span><nav aria-label="Study navigation"><a href="final/index.html">Dashboard</a><a href="final/research.html">Research paper</a><a href="final/../audit.html" aria-current="page">Benchmark audit</a><a href="final/data.html">Data explorer</a></nav></div><main><header class="mast"><p class="context">ETHUSDT <span>/</span> Benchmark audit</p>
+<h1>Independent audit of the original ETH carry replay</h1><div class="stats"><div><small>Original quarters</small><strong class="gain">+119.87 USDT</strong></div><div><small>Funding settlements</small><strong class="">549</strong></div><div><small>Estimated marks</small><strong class="">89</strong></div></div></header>
+<div class="reader-grid"><aside class="contents"><h2>Contents</h2><nav aria-label="On this page"><a href="#cash-reconciliation">Cash reconciliation</a><a href="#fees-and-closing-balances">Fees and closing balances</a><a href="#funding-verification">Funding verification</a><a href="#sensitivity-to-estimated-marks">Sensitivity to estimated marks</a></nav></aside>
+<div class="reader"><label class="chapter-picker">Jump to section <select id="chapter"><option value="cash-reconciliation">Cash reconciliation</option><option value="fees-and-closing-balances">Fees and closing balances</option><option value="funding-verification">Funding verification</option><option value="sensitivity-to-estimated-marks">Sensitivity to estimated marks</option></select></label><article><section><p>Two fresh replays of the published configuration recovered the original results. The reproduction command checks the original input hashes and the complete numerical JSON, then rebuilds the cash journals and every intermediate hourly equity observation from the fills, archived rates, REST records and separate valuation bars.</p>
+</section><section><h2 id="cash-reconciliation">Cash reconciliation</h2>
+<figure class="bridge"><figcaption>Funding and final PnL <small>USDT</small></figcaption><div class="quarter"><strong>Primary</strong><div class="bar-row"><span>Net funding</span><span class="track"><i style="width:40.453%"></i></span><b>37.82</b></div><div class="bar-row"><span>Net PnL</span><span class="track"><i style="width:34.394%"></i></span><b>32.16</b></div></div><div class="quarter"><strong>Confirmation</strong><div class="bar-row"><span>Net funding</span><span class="track"><i style="width:100.000%"></i></span><b>93.50</b></div><div class="bar-row"><span>Net PnL</span><span class="track"><i style="width:93.810%"></i></span><b>87.71</b></div></div></figure><div class="table-scroll" tabindex="0" role="region" aria-label="Research table"><table>
 <thead>
 <tr>
 <th>Value</th>
@@ -17,134 +58,145 @@
 </thead>
 <tbody>
 <tr>
-<td>net</td>
+<td>Net PnL</td>
 <td>32.158</td>
 <td>87.712</td>
 </tr>
 <tr>
-<td>spot_raw</td>
+<td>Gross spot PnL</td>
 <td>306.810</td>
 <td>616.770</td>
 </tr>
 <tr>
-<td>perp_raw</td>
+<td>Gross futures PnL</td>
 <td>-308.515</td>
 <td>-616.775</td>
 </tr>
 <tr>
-<td>funding</td>
+<td>Funding</td>
 <td>37.824</td>
 <td>93.500</td>
 </tr>
 <tr>
-<td>spot_fee</td>
+<td>Spot fee</td>
 <td>1.997</td>
 <td>2.922</td>
 </tr>
 <tr>
-<td>perp_fee</td>
+<td>Perp fee</td>
 <td>0.998</td>
 <td>1.462</td>
 </tr>
 <tr>
-<td>slip</td>
+<td>Slippage</td>
 <td>0.798</td>
 <td>1.169</td>
 </tr>
 <tr>
-<td>dust</td>
+<td>Dust</td>
 <td>0.168</td>
 <td>0.229</td>
 </tr>
 <tr>
-<td>end_spot</td>
+<td>Closing spot wallet</td>
 <td>5,304.246</td>
 <td>5,613.034</td>
 </tr>
 <tr>
-<td>end_perp</td>
+<td>Closing futures wallet</td>
 <td>4,727.912</td>
 <td>4,474.678</td>
 </tr>
 <tr>
-<td>post_buy_cash</td>
+<td>Post buy cash</td>
 <td>4,154.398</td>
 <td>3,846.152</td>
 </tr>
 <tr>
-<td>post_short_wallet</td>
+<td>Post short wallet</td>
 <td>4,999.578</td>
 <td>4,999.423</td>
 </tr>
 <tr>
-<td>positive</td>
+<td>Positive settlements</td>
 <td>276</td>
 <td>273</td>
 </tr>
 <tr>
-<td>negative</td>
+<td>Negative settlements</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr>
-<td>exact</td>
+<td>Observed marks</td>
 <td>187</td>
 <td>273</td>
 </tr>
 <tr>
-<td>estimated</td>
+<td>Estimated marks</td>
 <td>89</td>
 <td>0</td>
 </tr>
 <tr>
-<td>estimated_income</td>
+<td>Income from estimated marks</td>
 <td>4.604</td>
 <td>0</td>
 </tr>
 <tr>
-<td>causal_net</td>
+<td>Causal net</td>
 <td>32.159</td>
 <td>87.712</td>
 </tr>
 <tr>
-<td>upper_net</td>
+<td>Upper net</td>
 <td>32.161</td>
 <td>87.712</td>
 </tr>
 <tr>
-<td>no_funding</td>
+<td>PnL without funding</td>
 <td>-5.666</td>
 <td>-5.788</td>
 </tr>
 <tr>
-<td>combined_stress</td>
+<td>Combined stress</td>
 <td>7.059</td>
 <td>31.904</td>
 </tr>
 <tr>
-<td>hours_verified</td>
+<td>Hours verified</td>
 <td>2207</td>
 <td>2183</td>
 </tr>
 <tr>
-<td>buy_gross</td>
+<td>Buy gross</td>
 <td>0.5006000</td>
 <td>0.5006000</td>
 </tr>
 <tr>
-<td>buy_fee_eth</td>
+<td>Buy fee eth</td>
 <td>0.0005006</td>
 <td>0.0005006</td>
 </tr>
 <tr>
-<td>dust_eth</td>
+<td>Dust eth</td>
 <td>0.0000994</td>
 <td>0.0000994</td>
 </tr>
 </tbody>
 </table></div>
+</section><section><h2 id="fees-and-closing-balances">Fees and closing balances</h2>
 <p>All money amounts are USDT except the ETH quantities. Both wallets started at 5,000. The gross spot buy paid commission in ETH, retained 0.5 ETH for the hedge, and left sub-lot dust valued at zero. The short sold 0.5 linear ETHUSDT contracts measured in ETH equivalent. Spot sale fees and both futures fees were paid from the respective quote wallets. Every leg crosses recorded five-level depth at its own arrival time and pays an additional two basis points. The independent journal valued all 89 estimated payments at 4.604 USDT in total. Omitting these receipts left about 115.27 USDT combined. Switching from the adverse minute mark to the prior close changed combined PnL by about 0.0014 USDT. The two raw price PnLs already include the quoted spread. Subtracting another spread would duplicate a cost.</p>
 <p>For each window the sum of spot and futures reference-price PnL plus signed funding, less both fees, slippage and dust, equals the sum of the terminal cash wallets minus 10,000. Both tradable positions close. The spot dust remains physically possible and is written off. Hourly spot close and previous completed minute futures mark produce the reported intermediate equity. The original 25% collateral-to-notional floor rejects unsupported paths and does not simulate liquidation.</p>
+</section><section><h2 id="funding-verification">Funding verification</h2>
 <p>Archive rates are decimal fractions per settlement. A short receives quantity × rate × settlement mark. UTC archive and REST timestamps align to the same eight-hour slots, including millisecond variations. All settlements fall strictly after the short fill and before its cover. The predetermined schedule consumes no funding signal. Both quarters happened to have exclusively positive rates. The dated REST records omit the mark for 89 events. The legacy calculation uses the adverse extremum of the settlement minute. That extremum becomes available after settlement. It affects valuation only. The independent causal alternative uses the last completed mark close. The lower/upper sensitivity uses the published minute range, conditional on that range representing the exchange's settlement mark. It cannot establish a guaranteed bound on an unpublished internal price. The new engine includes the causal estimate in its envelope.</p>
+</section><section><h2 id="sensitivity-to-estimated-marks">Sensitivity to estimated marks</h2>
 <p>The estimated-income row measures all income attributed to those payments. Subtract it from net for the same-path result excluding them. The causal-net and upper-net rows distinguish the uncertainty in their price from the much larger effect of removing those payments entirely. The combined-stress row doubles fees, raises additional slippage to 10 bp per leg and halves positive receipts. Without funding the two cash journals lose money in aggregate.</p>
-<p><a href="results.json">Original execution, funding events and balances</a> · <a href="sources.json">Data provenance</a> · <a href="final/research.html">Expanded experiment</a></p></main></body></html>
+<p><a href="final/data.html#benchmarks">Original execution, funding events and balances</a> · <a href="final/data.html#benchmark-sources">Data provenance</a> · <a href="final/research.html">Expanded experiment</a></p></section></article></div></div></main><script>
+const links=[...document.querySelectorAll('.contents a')],picker=document.querySelector('#chapter');
+picker.onchange=()=>{location.hash=picker.value};
+let waiting=false;
+function active(){waiting=false;let current=links[0];for(const a of links){if(document.getElementById(a.hash.slice(1)).getBoundingClientRect().top<135)current=a;}
+if(current){for(const a of links){if(a===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}
+picker.value=current.hash.slice(1);}}
+addEventListener('scroll',()=>{if(!waiting){waiting=true;requestAnimationFrame(active);}}, {passive:true});active();
+</script></body></html>

@@ -1,0 +1,18 @@
+<header class="mast data-mast">
+  <div><p class="context">ETHUSDT <span>/</span> Research data</p><h1>Data explorer</h1>
+  <p>Inspect the results, trading records and source files behind the study.</p></div>
+  <a class="download-link" id="download" download>Download original file</a>
+</header>
+<div class="data-controls">
+  <label>Dataset<select id="dataset"></select></label>
+  <label hidden>Window<select id="window-filter"></select></label>
+  <label hidden>Policy<select id="policy-filter"></select></label>
+  <label hidden>Scenario<select id="scenario-filter"></select></label>
+  <label class="search">Search records<input type="search" id="query" placeholder="Search any field"></label>
+</div>
+<section class="data-card" aria-labelledby="dataset-title">
+  <div class="data-title"><h2 id="dataset-title">Policy performance</h2><span id="count" role="status"></span></div>
+  <div class="table-scroll" tabindex="0" aria-label="Dataset results"><table><thead></thead><tbody></tbody></table></div>
+  <div class="page-controls"><span id="page-label" aria-live="polite"></span><div><button id="prev" type="button">Previous</button><button id="next" type="button">Next</button></div></div>
+</section>
+<dialog id="record"><div class="dialog-head"><h2>Record details</h2><form method="dialog"><button>Close</button></form></div><dl></dl></dialog>

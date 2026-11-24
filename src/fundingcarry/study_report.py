@@ -7,6 +7,8 @@ from pathlib import Path
 
 from plotly.offline import get_plotlyjs
 
+from .study_site import asset, navigation, reader
+
 TITLE = "Profitability and Risk of Delta-Neutral Funding Carry in Cryptocurrency Perpetual Futures: An Out-of-Sample Historical Study"
 
 
@@ -83,6 +85,8 @@ def dashboard(dest, res, streams):
     )
     html = (
         tpl.replace("<!--library-->", get_plotlyjs())
+        .replace("<!--site-style-->", asset("study_site.css"))
+        .replace("<!--navigation-->", navigation("dashboard"))
         .replace("<!--charts-->", sections)
         .replace(
             "<!--app-->", Path(__file__).with_name("study_dashboard.js").read_text(encoding="utf8")
@@ -363,36 +367,5 @@ Positive funding supported the original two quarters. The frozen fixed policy lo
 From the repository root, install the pinned research environment and the editable package, then run `python scripts/reproduce_funding_carry.py`. Historical inputs are cached in `data/funding-carry`. The command verifies exchange checksums or saved content hashes, reproduces both original windows, runs the {len(grid)} policy/window/scenario combinations, audits the wallets and settlements, and writes the offline figures and tables. The run used {result["cached_input_bytes"] / 2**20:.1f} MiB of unique source files. Machine-specific runtime and library versions are in [study.json](study.json). [Input hashes](input_hashes.json) · [Funding](settlements.csv.gz) · [Fills](fills.csv.gz) · [Wallets](balances.csv.gz) · [Decisions](decisions.csv.gz) · [Hourly curves](curves.csv.gz) · [Stress events](risk_events.csv.gz)
 """
     (dest / "research.md").write_text(text, encoding="utf8")
-    render_paper(dest / "research.html", TITLE, text, "index.html")
-    render_paper(
-        dest.parent / "audit.html", "Independent benchmark audit", audit_text, "final/index.html"
-    )
-
-
-def render_paper(path, title, source, dashboard_url):
-    from html import escape
-
-    import markdown
-
-    source = source.replace("(../audit.md)", "(../audit.html)").replace(
-        "(final/research.md)", "(final/research.html)"
-    )
-    body = markdown.markdown(source, extensions=["tables", "toc"])
-    body = body.replace("<table>", '<div class="table-scroll" tabindex="0"><table>').replace(
-        "</table>", "</table></div>"
-    )
-    style = """
-    :root{color-scheme:light;font:17px/1.6 system-ui;color:#182636;background:#fbfcfc}
-    body{max-width:82ch;margin:auto;padding:2rem clamp(1rem,5vw,4rem)}
-    h1,h2{line-height:1.2;text-wrap:balance}h2{margin-top:2em}a{color:#12675e}
-    img{max-width:100%}.table-scroll{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem}
-    th,td{padding:.35rem .65rem;border-bottom:1px solid #ccd5da;text-align:left}
-    thead{background:#ecf3f2}code{overflow-wrap:anywhere}nav{margin-bottom:2rem}
-    """
-    path.write_text(
-        '<!doctype html><html lang="en"><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        f"<title>{escape(title)}</title><style>{style}</style><body>"
-        f'<nav><a href="{dashboard_url}">Research dashboard</a></nav><main>{body}</main></body></html>',
-        encoding="utf8",
-    )
+    reader(dest / "research.html", text, result)
+    reader(dest.parent / "audit.html", audit_text, result, audit=True)
