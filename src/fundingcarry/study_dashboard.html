@@ -1,33 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ETH funding carry research</title><style>
-:root{color-scheme:dark;font-family:Inter,"Segoe UI",sans-serif;color:#e0e8f3;background:#0c1320}body{max-width:1500px;margin:auto;padding:32px clamp(14px,4vw,62px)}h1{font-size:clamp(32px,5vw,58px);letter-spacing:-.04em;font-weight:600;margin:0}p{line-height:1.55;color:#b2c0d2;max-width:86ch}a{color:#71ded0}header{border-bottom:1px solid #314057;padding-bottom:18px}.controls{display:flex;gap:12px;align-items:center;margin:20px 0;flex-wrap:wrap}select{background:#1a293c;color:#e8eef6;border:1px solid #455970;border-radius:5px;padding:8px;font:inherit}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}section{background:#131f30;border:1px solid #26384c;border-radius:8px;padding:12px;min-width:0}h2{font-size:17px;margin:6px 10px 0}.plot{height:310px}section:nth-child(10){grid-column:1/-1}section:nth-child(10) .plot{height:480px}footer{margin:22px 0;color:#adbdce}@media(max-width:850px){main{grid-template-columns:minmax(0,1fr)}body{padding:16px}}
-</style><script><!--library--></script></head><body><header><h1>ETH funding carry</h1><p>Historical ETHUSDT spot and perpetual hedges. Explore a fixed position (A), a lagged-funding rule (B) and its risk-controlled variant (C). PnL and costs are in USDT.</p><a href="research.md">Research paper</a> · <a href="../audit.md">Benchmark audit</a> · <a href="metrics.csv">Download metrics</a></header>
-<div class="controls"><label for="win">Historical window</label><select id="win"></select><span id="dates"></span></div><main><!--charts--></main>
-<footer>Expanded PnL uses simulated fills from one-minute spot and futures trades. Executable quotes and depth at order arrival are unknown. Liquidation markers show stress outcomes under assumed margin rules and minute-high prices. Historical liquidation fills and intraminute ordering are unknown. Equity curves sample hourly. All times UTC. <a href="sources.json">Source manifest</a></footer><script id="study" type="application/json"><!--data--></script><script>
-const data=JSON.parse(document.getElementById('study').textContent),windows=Object.keys(data.windows),policy=['A','B','C'],colors=['#63d3bf','#f4ba72','#9eb8ff'],sel=document.getElementById('win');
-for(const w of windows){sel.add(new Option(w,w));}sel.value='holdout_1';
-const layout={paper_bgcolor:'#131f30',plot_bgcolor:'#131f30',font:{color:'#d8e3ef',family:'Segoe UI, sans-serif'},margin:{l:63,r:19,t:12,b:55},colorway:colors,legend:{orientation:'h',y:1.14},hovermode:'closest',xaxis:{gridcolor:'#26384c'},yaxis:{gridcolor:'#26384c',zerolinecolor:'#435469'},autosize:true};
-const opts={responsive:true,displaylogo:false,modeBarButtonsToRemove:['lasso2d','select2d']};
-function line(x,y,name){return {x,y,name,mode:'lines',type:'scatter'};}
-function bar(x,y,name){return {x,y,name,type:'bar'};}
-function date(t){return new Date(t).toISOString();}
-async function render(){
-const w=sel.value,ser=data.series[w],all=data.metrics.filter(r=>r.scenario==='base'),base=policy.map(p=>all.find(r=>r.window===w&&r.policy===p)),local=data.metrics.filter(r=>r.window===w),range=data.windows[w];
-document.getElementById('dates').textContent=range.start.slice(0,16).replace('T',' ')+' to '+range.end.slice(0,16).replace('T',' ')+' UTC';
-let jobs=[];function draw(i,traces,unit,extra={}){jobs.push(Plotly.react('plot'+i,traces,{...layout,yaxis:{...layout.yaxis,title:{text:unit}},...extra},opts));}
-function curves(key,transform=v=>v){return policy.map(p=>{const s=ser[p].curves;return line(s.time.map(date),s[key].map(transform),p);});}
-draw(0,curves('equity'),'Equity · USDT');
-draw(1,policy.map(p=>{const f=ser[p].settlements;return {...bar(f.time.map(date),f.cashflow,p),text:f.source.map((v,i)=>v+" · mark "+f.mark[i]+" · gap "+f.gap_ms[i]+" ms · short "+f.short[i]+" ETH"),hovertemplate:"%{x}<br>%{y:.5f} USDT<br>%{text}<extra>%{fullData.name}</extra>"};} ),'Payment · USDT',{barmode:'group'});
-draw(2,[curves('basis_bps')[0]].map(t=>({...t,name:'Perp premium'})),'Basis points');
-draw(3,curves('funding'),'Funding · USDT');
-draw(4,policy.map(p=>bar(windows,windows.map(w=>all.find(r=>r.policy===p&&r.window===w).net),p)),'Net PnL · USDT',{barmode:'group'});
-draw(5,['funding_received','funding_paid','total_cost'].map((key,i)=>bar(policy,base.map(r=>r[key]),['Received','Paid','Costs'][i])),'USDT',{barmode:'group'});
-draw(6,curves('drawdown'),'Peak to close · USDT');
-draw(7,curves('margin',v=>100*v),'Maintenance / equity · %');
-let run=0;const fund=ser.A.settlements;draw(8,[bar(fund.time.map(date),fund.rate.map(v=>run=v<0?run+1:0),'Negative run')],'Consecutive events');
-const scenarios=[...new Set(local.map(r=>r.scenario))];draw(9,[{type:'heatmap',x:policy,y:scenarios,z:scenarios.map(s=>policy.map(p=>local.find(r=>r.scenario===s&&r.policy===p).net)),zmid:0,colorscale:[[0,'#ae5559'],[0.5,'#263448'],[1,'#5cc5ab']],colorbar:{title:{text:'USDT'}}}],'',{margin:{l:155,r:30,t:15,b:35}});
-draw(10,[bar(policy,base.map(r=>r.funding_received),'Actual receipts'),bar(policy,base.map(r=>r.breakeven_gross_receipts),'Break-even receipts')],'USDT',{barmode:'group'});
-const risk=data.risks.filter(r=>r.window===w),marks=policy.map(p=>({type:'scatter',mode:'markers',x:ser[p].fills.time.map(date),y:ser[p].fills.time.map(()=>p),text:ser[p].fills.venue.map((v,i)=>v+' '+ser[p].fills.side[i]),name:p+' fills'}));
-if(risk.length){marks.push({type:'scatter',mode:'markers',x:risk.map(r=>date(r.time)),y:risk.map(r=>r.policy),text:risk.map(r=>r.scenario+' · '+r.event),marker:{symbol:'x',size:10,color:'#ed9797'},name:'Stress events'});}
-draw(11,marks,'Policy');await Promise.all(jobs);document.body.dataset.loaded=w;}
-sel.addEventListener('change',render);render();
-</script></body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ETH funding carry research</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 Inter,"Segoe UI",sans-serif;background:#0c1320;color:#e4edf5}
+*{box-sizing:border-box}body{max-width:1540px;margin:auto;padding:32px clamp(14px,4vw,64px)}
+h1,h2,p{margin:0}h1{font-size:clamp(34px,4vw,58px);letter-spacing:-.045em;font-weight:600}h2{font-size:18px}
+header{padding-bottom:24px;border-bottom:1px solid #334358}header p{color:#c9d5e1;max-width:80ch;margin:4px 0 14px}
+a{color:#80e0d3}nav{display:flex;gap:16px;flex-wrap:wrap}button,select{font:inherit;color:inherit}
+select{max-width:100%;border:1px solid #54677f;border-radius:5px;background:#182739;padding:7px}
+:focus-visible{outline:3px solid #f5c681;outline-offset:2px}
+.controls{margin:20px 0 12px;display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+#dates,.chart-note,footer{font-size:14px;color:#b8c9db}
+#summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.result,main section{border:1px solid #304056;border-radius:8px;background:#131f30;padding:14px;min-width:0}
+.result span,.result small{display:block}.result strong{font:600 clamp(18px,2.4vw,28px)/1.5 Inter,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}
+.result small{color:#c1d0dc}.loss{color:#ffabb1}.gain{color:#79dfc9}
+main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}main section:nth-child(10){grid-column:1/-1}
+.plot{height:290px}.chart-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:6px}
+.chart-controls:empty{display:none}.chart-note{margin-top:6px}
+.trace-key{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid #465b74;background:#182738;border-radius:4px;cursor:pointer;font-size:14px}
+.trace-key::before{content:"";width:12px;height:3px;background:var(--trace)}
+.trace-key[aria-pressed="false"]{text-decoration:line-through;color:#a4b2c4;background:#101a29}
+#plot9{height:650px}#risk-filter{margin-left:8px}.event-list{overflow:auto;max-height:18rem;margin-top:8px}
+details,summary{margin-top:6px}summary{cursor:pointer;color:#98e2d7}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:5px 8px;text-align:left;border-bottom:1px solid #344459}
+footer{margin:24px 0;max-width:100ch}
+@media(max-width:850px){main{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){body{padding:14px}#summary{grid-template-columns:1fr;gap:5px}.result{display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 12px}.result small{grid-column:1/-1}.controls{gap:6px}.controls label{width:100%}.plot{height:260px}main section{padding:10px}.trace-key{min-height:32px}#plot9{height:720px}}
+</style>
+<script><!--library--></script></head><body>
+<header><h1>ETH funding carry</h1><p id="holdout"></p>
+<nav aria-label="Research resources"><a href="research.html">Research paper</a><a href="../audit.html">Benchmark audit</a><a href="metrics.csv" download>Download metrics</a></nav></header>
+<div class="controls"><label for="win">Historical window</label><select id="win"></select><span id="dates"></span></div>
+<div id="summary" aria-live="polite" aria-label="Selected window net results"></div>
+<main><!--charts--></main>
+<footer>All amounts are simulated USDT. Expanded fills use one-minute spot and perpetual trades. Executable quotes and depth at arrival are unknown. Liquidation events use assumed margin rules and minute-high prices. Curves include hourly observations and each policy’s minute of maximum drawdown. All times UTC. <a href="sources.json">Source manifest</a></footer>
+<script id="study" type="application/json"><!--data--></script><script><!--app--></script></body></html>

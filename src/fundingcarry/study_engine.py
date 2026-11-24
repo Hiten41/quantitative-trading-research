@@ -568,7 +568,7 @@ def simulate(config, kinds, events, prior, start, policy, details=False):
     }
     curves = []
     if details:
-        for k in np.unique(np.r_[0, np.arange(60, n, 60), n]):
+        for k in np.unique(np.r_[0, np.arange(60, n, 60), np.argmax(dd), n]):
             curves.append(
                 {
                     "time": time(int(k)) + MINUTE,

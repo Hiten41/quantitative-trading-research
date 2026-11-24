@@ -86,7 +86,7 @@ B's entry hurdle often kept the strategy in cash. It missed two positive fixed-p
 
 ## 14. Risk-Controlled Strategy Results
 
-C matched B's base-case results across these windows. Its incremental controls showed no independent improvement on the frozen evaluation. The worst base-case minute-close portfolio drawdown was 63.80 USDT. PnL divided by maximum drawdown describes each realized path. Flat paths have no defined ratio. Hourly charts sample the minute path, which can omit the worst minute. The minute-high margin ratio uses maintenance divided by adverse futures equity, and minimum margin buffer is futures equity above maintenance at that high. [Full risk and performance metrics](metrics.csv)
+C matched B's base-case results across these windows. Its incremental controls showed no independent improvement on the frozen evaluation. The worst base-case minute-close portfolio drawdown was 63.80 USDT. PnL divided by maximum drawdown describes each realized path. Flat paths have no defined ratio. Charts include hourly observations and the minute of each policy’s largest drawdown. The minute-high margin ratio uses maintenance divided by adverse futures equity, and minimum margin buffer is futures equity above maintenance at that high. [Full risk and performance metrics](metrics.csv)
 
 | Window | Policy | drawdown | pnl_to_drawdown | max_margin_ratio | min_margin_buffer | warnings | liquidations | holding_hours |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

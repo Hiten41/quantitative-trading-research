@@ -1,0 +1,150 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Independent benchmark audit</title><style>
+    :root{color-scheme:light;font:17px/1.6 system-ui;color:#182636;background:#fbfcfc}
+    body{max-width:82ch;margin:auto;padding:2rem clamp(1rem,5vw,4rem)}
+    h1,h2{line-height:1.2;text-wrap:balance}h2{margin-top:2em}a{color:#12675e}
+    img{max-width:100%}.table-scroll{overflow-x:auto}table{border-collapse:collapse;font-size:.9rem}
+    th,td{padding:.35rem .65rem;border-bottom:1px solid #ccd5da;text-align:left}
+    thead{background:#ecf3f2}code{overflow-wrap:anywhere}nav{margin-bottom:2rem}
+    </style><body><nav><a href="final/index.html">Research dashboard</a></nav><main><h1 id="independent-audit-of-the-original-eth-carry-replay">Independent audit of the original ETH carry replay</h1>
+<p>Two fresh replays of the published configuration recovered the original results. The reproduction command checks the original input hashes and the complete numerical JSON, then rebuilds the cash journals and every intermediate hourly equity observation from the fills, archived rates, REST records and separate valuation bars.</p>
+<div class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Primary</th>
+<th>Confirmation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>net</td>
+<td>32.158</td>
+<td>87.712</td>
+</tr>
+<tr>
+<td>spot_raw</td>
+<td>306.810</td>
+<td>616.770</td>
+</tr>
+<tr>
+<td>perp_raw</td>
+<td>-308.515</td>
+<td>-616.775</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>37.824</td>
+<td>93.500</td>
+</tr>
+<tr>
+<td>spot_fee</td>
+<td>1.997</td>
+<td>2.922</td>
+</tr>
+<tr>
+<td>perp_fee</td>
+<td>0.998</td>
+<td>1.462</td>
+</tr>
+<tr>
+<td>slip</td>
+<td>0.798</td>
+<td>1.169</td>
+</tr>
+<tr>
+<td>dust</td>
+<td>0.168</td>
+<td>0.229</td>
+</tr>
+<tr>
+<td>end_spot</td>
+<td>5,304.246</td>
+<td>5,613.034</td>
+</tr>
+<tr>
+<td>end_perp</td>
+<td>4,727.912</td>
+<td>4,474.678</td>
+</tr>
+<tr>
+<td>post_buy_cash</td>
+<td>4,154.398</td>
+<td>3,846.152</td>
+</tr>
+<tr>
+<td>post_short_wallet</td>
+<td>4,999.578</td>
+<td>4,999.423</td>
+</tr>
+<tr>
+<td>positive</td>
+<td>276</td>
+<td>273</td>
+</tr>
+<tr>
+<td>negative</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>exact</td>
+<td>187</td>
+<td>273</td>
+</tr>
+<tr>
+<td>estimated</td>
+<td>89</td>
+<td>0</td>
+</tr>
+<tr>
+<td>estimated_income</td>
+<td>4.604</td>
+<td>0</td>
+</tr>
+<tr>
+<td>causal_net</td>
+<td>32.159</td>
+<td>87.712</td>
+</tr>
+<tr>
+<td>upper_net</td>
+<td>32.161</td>
+<td>87.712</td>
+</tr>
+<tr>
+<td>no_funding</td>
+<td>-5.666</td>
+<td>-5.788</td>
+</tr>
+<tr>
+<td>combined_stress</td>
+<td>7.059</td>
+<td>31.904</td>
+</tr>
+<tr>
+<td>hours_verified</td>
+<td>2207</td>
+<td>2183</td>
+</tr>
+<tr>
+<td>buy_gross</td>
+<td>0.5006000</td>
+<td>0.5006000</td>
+</tr>
+<tr>
+<td>buy_fee_eth</td>
+<td>0.0005006</td>
+<td>0.0005006</td>
+</tr>
+<tr>
+<td>dust_eth</td>
+<td>0.0000994</td>
+<td>0.0000994</td>
+</tr>
+</tbody>
+</table></div>
+<p>All money amounts are USDT except the ETH quantities. Both wallets started at 5,000. The gross spot buy paid commission in ETH, retained 0.5 ETH for the hedge, and left sub-lot dust valued at zero. The short sold 0.5 linear ETHUSDT contracts measured in ETH equivalent. Spot sale fees and both futures fees were paid from the respective quote wallets. Every leg crosses recorded five-level depth at its own arrival time and pays an additional two basis points. The independent journal valued all 89 estimated payments at 4.604 USDT in total. Omitting these receipts left about 115.27 USDT combined. Switching from the adverse minute mark to the prior close changed combined PnL by about 0.0014 USDT. The two raw price PnLs already include the quoted spread. Subtracting another spread would duplicate a cost.</p>
+<p>For each window the sum of spot and futures reference-price PnL plus signed funding, less both fees, slippage and dust, equals the sum of the terminal cash wallets minus 10,000. Both tradable positions close. The spot dust remains physically possible and is written off. Hourly spot close and previous completed minute futures mark produce the reported intermediate equity. The original 25% collateral-to-notional floor rejects unsupported paths and does not simulate liquidation.</p>
+<p>Archive rates are decimal fractions per settlement. A short receives quantity × rate × settlement mark. UTC archive and REST timestamps align to the same eight-hour slots, including millisecond variations. All settlements fall strictly after the short fill and before its cover. The predetermined schedule consumes no funding signal. Both quarters happened to have exclusively positive rates. The dated REST records omit the mark for 89 events. The legacy calculation uses the adverse extremum of the settlement minute. That extremum becomes available after settlement. It affects valuation only. The independent causal alternative uses the last completed mark close. The lower/upper sensitivity uses the published minute range, conditional on that range representing the exchange's settlement mark. It cannot establish a guaranteed bound on an unpublished internal price. The new engine includes the causal estimate in its envelope.</p>
+<p>The estimated-income row measures all income attributed to those payments. Subtract it from net for the same-path result excluding them. The causal-net and upper-net rows distinguish the uncertainty in their price from the much larger effect of removing those payments entirely. The combined-stress row doubles fees, raises additional slippage to 10 bp per leg and halves positive receipts. Without funding the two cash journals lose money in aggregate.</p>
+<p><a href="results.json">Original execution, funding events and balances</a> · <a href="sources.json">Data provenance</a> · <a href="final/research.html">Expanded experiment</a></p></main></body></html>

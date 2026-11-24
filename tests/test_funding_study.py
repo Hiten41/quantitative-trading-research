@@ -237,3 +237,12 @@ def test_funding_snapshot_preserves_locked_bytes(tmp_path):
     with pytest.raises(ValueError):
         save_funding_snapshot(snapshot, [{"rate": float("nan")}])
     assert json.loads(snapshot.read_bytes()) == [{"rate": "0.0001"}]
+
+
+def test_export_includes_intrahour_maximum_drawdown(cfg):
+    data = market()
+    data["spot1m"][22, 2:4] = 80
+    metric, streams = run(cfg, data=data)
+    peak = max(streams["curves"], key=lambda point: point["drawdown"])
+    assert peak["drawdown"] == pytest.approx(metric["drawdown"])
+    assert peak["time"] == 22 * MINUTE

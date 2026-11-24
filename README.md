@@ -42,7 +42,7 @@ python -m pip install -e .
 python scripts/reproduce_funding_carry.py
 ```
 
-A measured cached run took about 45 seconds on the research machine. The hashed inputs occupied 168.0 MiB. Initial downloads need additional time and temporary storage. A complete verified cache supports a disconnected rerun. The dashboard embeds Plotly and its data. The reproduction command checks the original results, the input lock, signed settlements, decision cutoffs and wallet identities before publishing. [Machine-readable run details](reports/funding-carry/final/study.json)
+A measured cached run took about 45 seconds on the research machine. The hashed inputs occupied 168.0 MiB. Initial downloads need additional time and temporary storage. A complete verified cache supports a disconnected rerun. The dashboard embeds Plotly and its data. Each window has a shareable URL, and the drawdown chart includes the exact minute of each policy’s maximum drawdown. The [formatted paper](https://hiten41.github.io/quantitative-trading-research/reports/funding-carry/final/research.html) and [benchmark audit](https://hiten41.github.io/quantitative-trading-research/reports/funding-carry/audit.html) open offline alongside the dashboard. The reproduction command checks the original results, the input lock, signed settlements, decision cutoffs and wallet identities before publishing. [Machine-readable run details](reports/funding-carry/final/study.json)
 
 ## Market-making methodology and reproduction
 
@@ -167,3 +167,7 @@ Five days on one contract cannot establish a tradable edge. Trade-through is a p
 
 The MIT license applies to the project code. Market-data provenance is recorded separately in the manifest.
 
+
+### Dashboard browser verification
+
+With the optional Playwright package and Chromium installed, run `python scripts/verify_carry_dashboard.py` to exercise all eight windows in the generated offline dashboard. To check GitHub Pages, pass the dashboard URL as the first argument. Use `--channel msedge` to select an installed Microsoft Edge browser. The checks exercise visible data marks, zoom and navigation, keyboard trace controls, minute-level drawdowns, grouped risk events, formatted reports and mobile layouts.
