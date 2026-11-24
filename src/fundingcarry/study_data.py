@@ -18,7 +18,7 @@ import pyarrow.csv as pc
 from mmbacktest.data.archive import CDN, S3, digest, download_one, get
 from mmbacktest.data.pipeline import save_json
 
-from .sources import DAY, HOUR, MINUTE, SYMBOL, iso, month_start, months, ms
+from .sources import DAY, HOUR, MINUTE, SYMBOL, iso, month_start, months, ms, save_funding_snapshot
 
 PREFIX = {
     "funding": "futures/um/monthly/fundingRate/ETHUSDT/",
@@ -190,7 +190,7 @@ def rest_month(root, m, start, end):
         rows = get(url).json()
         if not isinstance(rows, list) or not 0 < len(rows) < 1000:
             raise ValueError("missing or truncated REST funding history")
-        save_json(p, rows)
+        save_funding_snapshot(p, rows)
         record = {
             "url": url,
             "path": p.relative_to(root).as_posix(),

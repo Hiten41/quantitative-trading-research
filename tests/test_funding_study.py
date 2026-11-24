@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from fundingcarry.sources import MINUTE
+from fundingcarry.sources import MINUTE, save_funding_snapshot
 from fundingcarry.study_data import acquire, price_event, select, stats
 from fundingcarry.study_engine import price_bar, settlement, signal, simulate
 
@@ -227,3 +227,13 @@ def test_policy_specific_config_keeps_other_policies_independent(cfg):
     custom = cfg | {"policies": {"C": {"signals": {"entry_bps": 10000}}}}
     assert run(custom, "B", prior=prior)[0]["executed_notional"] > 0
     assert run(custom, "C", prior=prior)[0]["executed_notional"] == 0
+
+
+def test_funding_snapshot_preserves_locked_bytes(tmp_path):
+    snapshot = tmp_path / "funding.json"
+    save_funding_snapshot(snapshot, [{"rate": "0.0001"}])
+    assert snapshot.read_bytes() == b'[\r\n  {\r\n    "rate": "0.0001"\r\n  }\r\n]'
+
+    with pytest.raises(ValueError):
+        save_funding_snapshot(snapshot, [{"rate": float("nan")}])
+    assert json.loads(snapshot.read_bytes()) == [{"rate": "0.0001"}]

@@ -26,6 +26,18 @@ DAY = 24 * HOUR
 SYMBOL = "ETHUSDT"
 
 
+def save_funding_snapshot(path: Path, rows: list) -> None:
+    """Keep the original REST snapshot encoding stable across operating systems."""
+    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as tmp:
+        staging = Path(tmp.name)
+    try:
+        with staging.open("w", encoding="utf8", newline="\r\n") as stream:
+            json.dump(rows, stream, indent=2, allow_nan=False)
+        os.replace(staging, path)
+    finally:
+        staging.unlink(missing_ok=True)
+
+
 def ms(timestamp: str) -> int:
     return int(datetime.fromisoformat(timestamp).timestamp() * 1000)
 
@@ -155,7 +167,7 @@ def sources(config, root: Path, reference: Path | None = None):
             payload = get(url).json()
             if not isinstance(payload, list) or not 0 < len(payload) < 1000:
                 raise ValueError("invalid or paginated funding history")
-            save_json(p, payload)
+            save_funding_snapshot(p, payload)
         records.append(
             {"url": url, "path": rel, "sha256": digest(p), "kind": "history", "window": w["name"]}
         )

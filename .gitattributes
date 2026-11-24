@@ -1,0 +1,3 @@
+# The published protocol SHA-256 values cover these exact bytes.
+/configs/carry_study.json -text
+/configs/carry_margin_stress.json -text
