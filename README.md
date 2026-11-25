@@ -1,6 +1,10 @@
 # Quantitative Trading Research
 
-**[Open the interactive funding-carry dashboard](https://hiten41.github.io/quantitative-trading-research/)** · [Funding-carry paper](reports/funding-carry/final/research.md) · [Market-making paper](reports/research.md)
+**[Open the live research website](https://hiten41.github.io/quantitative-trading-research/)**
+
+The public GitHub Pages site lets you compare strategies across eight historical windows, read the benchmark audit, and filter the underlying results. All prices, funding rates, and simulated trades shown on the dashboard come from saved ETHUSDT replays. Refreshing the page reloads those results.
+
+[Research paper](https://hiten41.github.io/quantitative-trading-research/reports/funding-carry/final/research.html) · [Data explorer](https://hiten41.github.io/quantitative-trading-research/reports/funding-carry/final/data.html) · [Market-making paper](reports/research.md)
 
 Two historical ETHUSDT experiments examine whether trading revenue survives execution costs and risk constraints. The market-making simulator tests passive quotes against trade and order-book events. The funding-carry simulator pairs spot ETH with a short perpetual and tracks each wallet separately. All results are simulated and denominated in USDT.
 
